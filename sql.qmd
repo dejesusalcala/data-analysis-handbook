@@ -1,0 +1,61 @@
+---
+title: "SQL"
+---
+
+In this module, you'll learn how to do data modeling, engineering, and analysis by using Structured Query Language (SQL). Applying your knowledge of DataFrames and tabular data, you'll create entity relationship diagrams (ERDs), import data into a database, troubleshoot common errors, and create queries that use data to answer questions. Databases are used everywhere—in small and large businesses and even by individuals working on personal projects. And, SQL is one of the most widely used database query languages. Its ability to organize and query data, especially on a large scale, makes SQL knowledge a skill that’s highly sought after in the workforce.
+
+## Introduction to SQL 
+
+#### Overview
+
+This lesson will introduce you to one of the most popular programming languages for working with databases: SQL. SQL programmers are in high demand, so this language is important to learn. The lesson will begin with a brief overview of SQL. Then, you’ll complete a series of exercises that consist of using SQL to create both tables and simple queries.
+
+#### What You'll Learn
+
+By the end of this lesson, you will be able to:
+
+ - Run Postgres and pgAdmin.
+
+- Create a SQL database and its tables by using pgAdmin.
+
+- Define SQL data types, primary keys, and unique values.
+
+- Load the data from CSV files into a database and then query the data.
+
+- Explain the four basic functions of persistent storage—create, read, update, delete (CRUD)—and apply them to a database.
+
+- Combine the data from multiple tables by using JOIN clauses.
+
+## Advanced SQL Queries
+
+#### Overview
+
+This lesson will expand your knowledge of SQL. It will begin with a deeper dive into queries by covering aggregates, grouping, and ordering. Then, after a series of practical activities that involve those topics, the lesson will turn to creating subqueries, creating views, and combining both of them.
+
+#### What You'll Learn
+
+By the end of this lesson, you will be able to:
+
+- Create aggregate queries.
+
+- Create subqueries to further explore data.
+
+- Create views and run subqueries off of them.
+
+## Data Modeling
+
+#### Overview
+
+Today's lesson will focus on data modeling and the best practices for designing a database. First, you’ll learn how to normalize data and how the tables in a database are related. Later in the lesson, you’ll learn how to create visualizations of databases by using ERDs.
+
+#### What You'll Learn
+
+By the end of this lesson, you will be able to:
+
+- Apply data modeling techniques to database design.
+
+- Normalize data.
+
+- Identify data relationships.
+
+- Create visual representations of a database by using ERDs.

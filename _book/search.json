@@ -1,0 +1,394 @@
+[
+  {
+    "objectID": "index.html",
+    "href": "index.html",
+    "title": "Data Analysis Bootcamp Notes",
+    "section": "",
+    "text": "Preface\nThe purpose of this book is to organize the notes from the Data Analysis Bootcamp. The class goes through various data analysis topics such as Python, SQL, data collection, and much more. I want to use this book as a way to better understand these topics and so that I can use these notes as a future reference."
+  },
+  {
+    "objectID": "intro.html",
+    "href": "intro.html",
+    "title": "1  Introduction",
+    "section": "",
+    "text": "This is a book created from markdown and executable code.\nSee Knuth (1984) for additional discussion of literate programming.\n\n\nCode\n1 + 1\n\n\n[1] 2\n\n\n\n\n\n\n\n\nKnuth, Donald E. 1984. “Literate Programming.” Comput. J. 27 (2): 97–111. https://doi.org/10.1093/comjnl/27.2.97."
+  },
+  {
+    "objectID": "summary.html",
+    "href": "summary.html",
+    "title": "2  Summary",
+    "section": "",
+    "text": "In summary, this book has no content whatsoever.\n\n\nCode\n1 + 1\n\n\n[1] 2"
+  },
+  {
+    "objectID": "references.html",
+    "href": "references.html",
+    "title": "References",
+    "section": "",
+    "text": "Knuth, Donald E. 1984. “Literate Programming.” Comput.\nJ. 27 (2): 97–111. https://doi.org/10.1093/comjnl/27.2.97."
+  },
+  {
+    "objectID": "10-advanced-sql.html",
+    "href": "10-advanced-sql.html",
+    "title": "3  advanced-sql",
+    "section": "",
+    "text": "4 Module 10: Advanced SQL\nIn this module, you’ll receive an introduction to three new tools: SQLite, SQLAlchemy, and Flask. You’ll use these tools to build on your knowledge of SQL database structures and querying methods. You’ll also write and run Python code in a Jupyter notebook and create graphs by using Python."
+  },
+  {
+    "objectID": "10-advanced-sql.html#introduction-to-sqlalchemy",
+    "href": "10-advanced-sql.html#introduction-to-sqlalchemy",
+    "title": "3  advanced-sql",
+    "section": "4.1 Introduction to SQLAlchemy",
+    "text": "4.1 Introduction to SQLAlchemy\n\n4.1.1 Overview\nThis lesson will combine what we learned last week about SQL with our favorite programming language: Python. Before getting started, you’ll need to install SQLite. SQLite is a SQL dialect that shares much of its syntax with PostgreSQL, but it’s entirely serverless.The lesson will first introduce you to SQLAlchemy, a Python library that’s designed to work with SQL databases. You’ll then complete an activity in which you’ll analyze weather data by using SQLAlchemy. After another activity in which you’ll create new DataFrames based on United States census data, your instructor will lead you through a crash course in object-oriented programming (OOP).\n\n\n4.1.2 What You’ll Learn\nBy the end of this lesson, you will be able to:\n\nConnect to a SQL database by using SQLAlchemy.\nPerform basic SQL queries by using engine.execute().\nCreate Python classes and objects.\nPerform create, read, update, delete (CRUD) operations on data in a SQL database by using the SQLAlchemy object-relational mapper (ORM)."
+  },
+  {
+    "objectID": "10-advanced-sql.html#advanced-usage-of-the-sqlalchemy-orm",
+    "href": "10-advanced-sql.html#advanced-usage-of-the-sqlalchemy-orm",
+    "title": "3  advanced-sql",
+    "section": "4.2 Advanced Usage of the SQLAlchemy ORM",
+    "text": "4.2 Advanced Usage of the SQLAlchemy ORM\n\n4.2.1 Overview\nThis lesson will introduce you to the finer details of working with the SQLAlchemy ORM. You’ll learn how to create complex queries, update rows, perform joins, and use ORM methods to run queries.\n\n\n4.2.2 What You’ll Learn\nBy the end of this lesson, you will be able to:\n\nCreate classes that model tables by using the SQLAlchemy ORM.\nPerform CRUD operations on databases by using the SQLAlchemy ORM.\nReflect existing databases.\nReview the table names in a database by using SQLAlchemy inspection.\nPlot query results that are retrieved by using SQLAlchemy.\nRun a t-test to validate differences in means."
+  },
+  {
+    "objectID": "10-advanced-sql.html#introduction-to-flask-and-serving-data-with-apis",
+    "href": "10-advanced-sql.html#introduction-to-flask-and-serving-data-with-apis",
+    "title": "3  advanced-sql",
+    "section": "4.3 Introduction to Flask and Serving Data with APIs",
+    "text": "4.3 Introduction to Flask and Serving Data with APIs\n\n4.3.1 Overview\nIn today’s lesson, you’ll learn the fundamentals of both the web and client-server architecture. This will include using Flask to create a database-backed server and to design and implement API endpoints.\n\n\n4.3.2 What You’ll Learn\nBy the end of this lesson, you will be able to:\n\nCreate and run a server by using Flask.\nDefine endpoints by using a Flask decorator.\nExtract query-variable path values from GET requests.\nRun database queries on behalf of the client by using variable paths.\nReturn JSONified query results from API endpoints."
+  },
+  {
+    "objectID": "advanced-sql.html",
+    "href": "advanced-sql.html",
+    "title": "3  Advanced SQL",
+    "section": "",
+    "text": "4 Introduction to SQLAlchemy"
+  },
+  {
+    "objectID": "advanced-sql.html#introduction-to-sqlalchemy",
+    "href": "advanced-sql.html#introduction-to-sqlalchemy",
+    "title": "4  Advanced SQL",
+    "section": "4.1 Introduction to SQLAlchemy",
+    "text": "4.1 Introduction to SQLAlchemy\n\nOverview\nThis lesson will combine what we learned last week about SQL with our favorite programming language: Python. Before getting started, you’ll need to install SQLite. SQLite is a SQL dialect that shares much of its syntax with PostgreSQL, but it’s entirely serverless.The lesson will first introduce you to SQLAlchemy, a Python library that’s designed to work with SQL databases. You’ll then complete an activity in which you’ll analyze weather data by using SQLAlchemy. After another activity in which you’ll create new DataFrames based on United States census data, your instructor will lead you through a crash course in object-oriented programming (OOP).\n\n\nWhat You’ll Learn\nBy the end of this lesson, you will be able to:\n\nConnect to a SQL database by using SQLAlchemy.\nPerform basic SQL queries by using engine.execute().\nCreate Python classes and objects.\nPerform create, read, update, delete (CRUD) operations on data in a SQL database by using the SQLAlchemy object-relational mapper (ORM).\n\n\n\n4.1.1 SQL Alchemy\nSQLAlchemy is a Python library that allows users to access and manage SQL databases. SQLAlchemy provides a powerful interface to interact with relational databases.\nSQLAlchemy bridges the differences amon various SQL dialects. A single script that uses SQLAlchemy can perform the same query across the different SQL dialects such as, PostgreSQL, SQLite, MySQL, etc.\nTo help us begin to connect to a database we will use the function create_engine() from sqlalchemy to connect to the database.\n\n\nCode\nfrom sqlalchemy import create_engine, text\n\n# Path too sqlite file\ndatabase_path = \"../modules/10-advanced-sql/day-01/resources/Census_Data.sqlite\"\n\n# Create engine to talk to the database\nengine = create_engine(f\"sqlite:///{database_path}\")\n\n\nThe engine above creates a Dialect object that is tailored towards SQLite and Pool object that will establish a DBAPI connection. So far we have not established the connection to the database. The connection happens when we make a function call to engine.connect() or engine.begin().\nFirst, let’s use engine.execute() to perform a SQL query. Inside of engine.execute() we can pass a SQL query in the form of a string\n\n\nCode\n# Query the the first five records the databse\ndata = engine.execute(\"SELECT * FROM Census_Data LIMIT 5\")\n\n# Print the results\nfor i in data:\n    print(i)\n\n\n('HOUSTON, TX', 'HOUSTON', 'TX', 3061887, 1775897, 684416, 11586, 230549, 1368287, 54180, 387082, 62520, 100014, 349920, 138882, 42491, 27737, 633609, 1593803, 122895, 67484, 22637, 33.43958333, 32.55, 34.36354167, 56206.5, 32239.52083, 956.7083333, 178233.6842, 29.77573444, -95.41454828)\n('CHICAGO, IL', 'CHICAGO', 'IL', 2702091, 1318869, 843633, 7554, 161478, 785374, 32800, 370569, 50202, 100972, 385664, 178511, 54636, 26956, 588639, 1439118, 173087, 45864, 18209, 34.52678571, 33.79821429, 35.14107143, 57735.96429, 38730.83929, 1119.928571, 264739.2857, 41.86783754, -87.67343993)\n('BROOKLYN, NY', 'BROOKLYN', 'NY', 2595259, 1126111, 870465, 8744, 297890, 509243, 48934, 389177, 65899, 107313, 348413, 164826, 39328, 17446, 597404, 1297832, 129667, 33644, 14845, 35.17567568, 33.36756757, 36.57837838, 51469.18919, 28309.67568, 1261.783784, 605743.2432, 40.65280511, -73.9565277)\n('LOS ANGELES, CA', 'LOS ANGELES', 'CA', 2426413, 1068202, 324842, 15949, 273829, 1292382, 62684, 280325, 22924, 83153, 312270, 104024, 40600, 19436, 626981, 1273305, 141105, 26989, 12329, 35.33548387, 34.53548387, 36.06129032, 47494.58333, 30073.19355, 1201.766667, 557115.0, 34.04220912, -118.3034679)\n('MIAMI, FL', 'MIAMI', 'FL', 1820704, 1361009, 363514, 2250, 33144, 1162711, 27137, 322521, 30827, 113990, 231241, 79888, 36586, 15913, 338765, 935326, 91584, 20714, 6969, 38.74074074, 37.12037037, 40.26296296, 51232.90741, 25949.35185, 1260.833333, 243279.6296, 25.7602677, -80.2985105)\n\n\nNow let’s establish a connection to get our data and we can also use the pandas library to work with our data\n\n\nCode\nimport pandas as pd\n\nconnection = engine.connect()\n\ndf = pd.read_sql(\"SELECT * FROM Census_Data\", connection)\n\ndf.head()\n\n\n\n\n\n\n\n\n\nCityState\ncity\nstate\nPopulation\nWhite Population\nBlack Population\nNative American Population\nAsian Population\nHispanic Population\nEducation None\n...\nEmployment Female Computer Engineering\nMedian Age\nMedian Male Age\nMedian Female Age\nHousehold Income\nIncome Per Capita\nMedian Gross Rent\nMedian Home Value\nlat\nlng\n\n\n\n\n0\nHOUSTON, TX\nHOUSTON\nTX\n3061887\n1775897\n684416\n11586\n230549\n1368287\n54180\n...\n22637\n33.439583\n32.550000\n34.363542\n56206.50000\n32239.52083\n956.708333\n178233.6842\n29.775734\n-95.414548\n\n\n1\nCHICAGO, IL\nCHICAGO\nIL\n2702091\n1318869\n843633\n7554\n161478\n785374\n32800\n...\n18209\n34.526786\n33.798214\n35.141071\n57735.96429\n38730.83929\n1119.928571\n264739.2857\n41.867838\n-87.673440\n\n\n2\nBROOKLYN, NY\nBROOKLYN\nNY\n2595259\n1126111\n870465\n8744\n297890\n509243\n48934\n...\n14845\n35.175676\n33.367568\n36.578378\n51469.18919\n28309.67568\n1261.783784\n605743.2432\n40.652805\n-73.956528\n\n\n3\nLOS ANGELES, CA\nLOS ANGELES\nCA\n2426413\n1068202\n324842\n15949\n273829\n1292382\n62684\n...\n12329\n35.335484\n34.535484\n36.061290\n47494.58333\n30073.19355\n1201.766667\n557115.0000\n34.042209\n-118.303468\n\n\n4\nMIAMI, FL\nMIAMI\nFL\n1820704\n1361009\n363514\n2250\n33144\n1162711\n27137\n...\n6969\n38.740741\n37.120370\n40.262963\n51232.90741\n25949.35185\n1260.833333\n243279.6296\n25.760268\n-80.298511\n\n\n\n\n5 rows × 31 columns\n\n\n\n\n\n4.1.2 Python Classes\nAnother useful aspect of SQLAlchemy is that it can also update a SQL database using Python classes.\nClasses are essentially blueprints for Python objects; they allow developers to create organized variables with keys, values, and methods on the fly.\nFor example we can have the following\n\n\nCode\nfrom sqlalchemy.ext.declarative import declarative_base\nfrom sqlalchemy import Column, Integer, String, Float\n\n# Sets an object to use the default declarative base in SQLAlchemy\nBase = declarative_base()\n\n# Creates Classes which will serve as the anchor points for our tables\nclass Dog(Base):\n    __tablename__ = \"dog\"\n    id = Column(Integer, primary_key = True)\n    name = Column(String(255))\n    color = Column(String(255))\n    age = Column(Integer)\n\nclass Cat(Base):\n    __tablename__ = \"cat\"\n    id = Column(Integer, primary_key = True)\n    name = Column(String(255))\n    color = Column(String(255))\n    age = Column(Integer)\n\n# Create a specific instance of the Dog and Cat classes\ndog = Dog(name = \"Charles\", color = \"brown\", age = 4)\ncat = Cat(name = \"Lucy\", color = \"gray\", age = 7)\n\nprint(f\"The dog's name is {dog.name}. He's a {dog.color} dog and he's {dog.age} years old.\")\nprint(f\"The cat's name is {cat.name}. She's a {cat.color} cat and she's {cat.age} years old.\")\n\n\nThe dog's name is Charles. He's a brown dog and he's 4 years old.\n\n\n\nThe cat's name is Lucy. She's a gray cat and she's 7 years old.\n\n\n\n\n4.1.3 SQLAlchemy’s Object-Relational Mapper (ORM)"
+  },
+  {
+    "objectID": "advanced-sql.html#advanced-usage-of-the-sqlalchemy-orm",
+    "href": "advanced-sql.html#advanced-usage-of-the-sqlalchemy-orm",
+    "title": "4  Advanced SQL",
+    "section": "4.2 Advanced Usage of the SQLAlchemy ORM",
+    "text": "4.2 Advanced Usage of the SQLAlchemy ORM\n\nOverview\nThis lesson will introduce you to the finer details of working with the SQLAlchemy ORM. You’ll learn how to create complex queries, update rows, perform joins, and use ORM methods to run queries.\n\n\nWhat You’ll Learn\nBy the end of this lesson, you will be able to:\n\nCreate classes that model tables by using the SQLAlchemy ORM.\nPerform CRUD operations on databases by using the SQLAlchemy ORM.\nReflect existing databases.\nReview the table names in a database by using SQLAlchemy inspection.\nPlot query results that are retrieved by using SQLAlchemy.\nRun a t-test to validate differences in means."
+  },
+  {
+    "objectID": "advanced-sql.html#introduction-to-flask-and-serving-data-with-apis",
+    "href": "advanced-sql.html#introduction-to-flask-and-serving-data-with-apis",
+    "title": "4  Advanced SQL",
+    "section": "4.3 Introduction to Flask and Serving Data with APIs",
+    "text": "4.3 Introduction to Flask and Serving Data with APIs\n\nOverview\nIn today’s lesson, you’ll learn the fundamentals of both the web and client-server architecture. This will include using Flask to create a database-backed server and to design and implement API endpoints.\n\n\nWhat You’ll Learn\nBy the end of this lesson, you will be able to:\n\nCreate and run a server by using Flask.\nDefine endpoints by using a Flask decorator.\nExtract query-variable path values from GET requests.\nRun database queries on behalf of the client by using variable paths.\nReturn JSONified query results from API endpoints."
+  },
+  {
+    "objectID": "data-collection.html",
+    "href": "data-collection.html",
+    "title": "4  Data Collection",
+    "section": "",
+    "text": "5 Scraping HTML"
+  },
+  {
+    "objectID": "data-collection.html#scraping-html",
+    "href": "data-collection.html#scraping-html",
+    "title": "5  Data Collection",
+    "section": "5.1 Scraping HTML",
+    "text": "5.1 Scraping HTML\n\nOverview\nThis lesson will introduce you to HTML, then show you how to apply this knowledge to scraping a website. In the first part of class, you’ll go over the basic structure of how HTML and CSS build a webpage so that you will have the foundational knowledge you need in order to scrape a website. In the second part of class, you will complete your first web scraping project by using the Python package Beautiful Soup.\n\n\nWhat You’ll Learn\n\nIdentify HTML components in a website.\nCreate a basic HTML document.\nScrape data from a website by using BeautifulSoup.\nStyle HTML elements by using CSS."
+  },
+  {
+    "objectID": "advanced-sql.html#overview",
+    "href": "advanced-sql.html#overview",
+    "title": "3  Advanced SQL",
+    "section": "4.1 Overview",
+    "text": "4.1 Overview\nThis lesson will combine what we learned last week about SQL with our favorite programming language: Python. Before getting started, you’ll need to install SQLite. SQLite is a SQL dialect that shares much of its syntax with PostgreSQL, but it’s entirely serverless.The lesson will first introduce you to SQLAlchemy, a Python library that’s designed to work with SQL databases. You’ll then complete an activity in which you’ll analyze weather data by using SQLAlchemy. After another activity in which you’ll create new DataFrames based on United States census data, your instructor will lead you through a crash course in object-oriented programming (OOP)."
+  },
+  {
+    "objectID": "advanced-sql.html#what-youll-learn",
+    "href": "advanced-sql.html#what-youll-learn",
+    "title": "3  Advanced SQL",
+    "section": "4.2 What You’ll Learn",
+    "text": "4.2 What You’ll Learn\nBy the end of this lesson, you will be able to:\n\nConnect to a SQL database by using SQLAlchemy.\nPerform basic SQL queries by using engine.execute().\nCreate Python classes and objects.\nPerform create, read, update, delete (CRUD) operations on data in a SQL database by using the SQLAlchemy object-relational mapper (ORM)."
+  },
+  {
+    "objectID": "advanced-sql.html#overview-1",
+    "href": "advanced-sql.html#overview-1",
+    "title": "3  Advanced SQL",
+    "section": "5.1 Overview",
+    "text": "5.1 Overview\nThis lesson will introduce you to the finer details of working with the SQLAlchemy ORM. You’ll learn how to create complex queries, update rows, perform joins, and use ORM methods to run queries."
+  },
+  {
+    "objectID": "advanced-sql.html#what-youll-learn-1",
+    "href": "advanced-sql.html#what-youll-learn-1",
+    "title": "3  Advanced SQL",
+    "section": "5.2 What You’ll Learn",
+    "text": "5.2 What You’ll Learn\nBy the end of this lesson, you will be able to:\n\nCreate classes that model tables by using the SQLAlchemy ORM.\nPerform CRUD operations on databases by using the SQLAlchemy ORM.\nReflect existing databases.\nReview the table names in a database by using SQLAlchemy inspection.\nPlot query results that are retrieved by using SQLAlchemy.\nRun a t-test to validate differences in means."
+  },
+  {
+    "objectID": "data-collection.html#overview",
+    "href": "data-collection.html#overview",
+    "title": "4  Data Collection",
+    "section": "5.1 Overview",
+    "text": "5.1 Overview\nThis lesson will introduce you to HTML, then show you how to apply this knowledge to scraping a website. In the first part of class, you’ll go over the basic structure of how HTML and CSS build a webpage so that you will have the foundational knowledge you need in order to scrape a website. In the second part of class, you will complete your first web scraping project by using the Python package Beautiful Soup."
+  },
+  {
+    "objectID": "data-collection.html#what-youll-learn",
+    "href": "data-collection.html#what-youll-learn",
+    "title": "4  Data Collection",
+    "section": "5.2 What You’ll Learn",
+    "text": "5.2 What You’ll Learn\n\nIdentify HTML components in a website.\nCreate a basic HTML document.\nScrape data from a website by using BeautifulSoup.\nStyle HTML elements by using CSS."
+  },
+  {
+    "objectID": "sql.html#introduction-to-sql",
+    "href": "sql.html#introduction-to-sql",
+    "title": "3  SQL",
+    "section": "3.1 Introduction to SQL",
+    "text": "3.1 Introduction to SQL\n\nOverview\nThis lesson will introduce you to one of the most popular programming languages for working with databases: SQL. SQL programmers are in high demand, so this language is important to learn. The lesson will begin with a brief overview of SQL. Then, you’ll complete a series of exercises that consist of using SQL to create both tables and simple queries.\n\n\nWhat You’ll Learn\nBy the end of this lesson, you will be able to:\n\nRun Postgres and pgAdmin.\nCreate a SQL database and its tables by using pgAdmin.\nDefine SQL data types, primary keys, and unique values.\nLoad the data from CSV files into a database and then query the data.\nExplain the four basic functions of persistent storage—create, read, update, delete (CRUD)—and apply them to a database.\nCombine the data from multiple tables by using JOIN clauses."
+  },
+  {
+    "objectID": "sql.html#advanced-sql-queries",
+    "href": "sql.html#advanced-sql-queries",
+    "title": "3  SQL",
+    "section": "3.2 Advanced SQL Queries",
+    "text": "3.2 Advanced SQL Queries\n\nOverview\nThis lesson will expand your knowledge of SQL. It will begin with a deeper dive into queries by covering aggregates, grouping, and ordering. Then, after a series of practical activities that involve those topics, the lesson will turn to creating subqueries, creating views, and combining both of them.\n\n\nWhat You’ll Learn\nBy the end of this lesson, you will be able to:\n\nCreate aggregate queries.\nCreate subqueries to further explore data.\nCreate views and run subqueries off of them."
+  },
+  {
+    "objectID": "sql.html#data-modeling",
+    "href": "sql.html#data-modeling",
+    "title": "3  SQL",
+    "section": "3.3 Data Modeling",
+    "text": "3.3 Data Modeling\n\nOverview\nToday’s lesson will focus on data modeling and the best practices for designing a database. First, you’ll learn how to normalize data and how the tables in a database are related. Later in the lesson, you’ll learn how to create visualizations of databases by using ERDs.\n\n\nWhat You’ll Learn\nBy the end of this lesson, you will be able to:\n\nApply data modeling techniques to database design.\nNormalize data.\nIdentify data relationships.\nCreate visual representations of a database by using ERDs."
+  },
+  {
+    "objectID": "python-api.html#python-apis",
+    "href": "python-api.html#python-apis",
+    "title": "2  Python API’s",
+    "section": "2.1 Python API’s",
+    "text": "2.1 Python API’s\n\nOverview\nToday’s lesson focuses on API calls. It begins with a brief overview of APIs and JSON traversal. Then, once you understand the fundamental process, you’ll learnhow you can make API requests with the Requests libraryLinks to an external site., using the OMDbLinks to an external site. and New York TimesLinks to an external site. APIs.\n\n\nWhat You’ll Learn\nBy the end of this lesson, you will be able to:\n\nMake get requests with the Request library.\nConvert JSON into a Python dictionary.\nRead and apply API documentation.\nSign up for and use an API key."
+  },
+  {
+    "objectID": "python-api.html#working-with-weather-and-city-apis",
+    "href": "python-api.html#working-with-weather-and-city-apis",
+    "title": "2  Python API’s",
+    "section": "2.2 Working with Weather and City API’s",
+    "text": "2.2 Working with Weather and City API’s\n\nOverview\nToday’s lesson will expand your API querying capabilities by introducing you to a variety of new APIs. The class will begin with a short review activity, where you will traverse a JSON file using your knowledge of Python. Then, after you’ve warmed up, you will work with the OpenWeatherMap API to an external site., which provides developers with various meteorological data.\nLater in the lesson, you will learn about exception handling, which can be helpful when databases and API requests have missing values. Finally, the lesson will conclude with a few activities to help you build familiarity with API usage and reading complex documentation.\n\n\nWhat You’ll Learn\nBy the end of this lesson, you will be able to:\n\nCreate applications with your knowledge of Python and an API’s documentation.\nLoad JSON from API responses into a Pandas DataFrame.\nUse try-except blocks to handle errors."
+  },
+  {
+    "objectID": "python-api.html#apis-and-geospatial-visualization",
+    "href": "python-api.html#apis-and-geospatial-visualization",
+    "title": "2  Python API’s",
+    "section": "2.3 API’s and Geospatial Visualization",
+    "text": "2.3 API’s and Geospatial Visualization\n\nOverview\nIn this class, you will be introduced to the Geoapify API to obtain information about geographic areas and the GeoViews Python library to create maps in Jupyter Notebook. Using these new tools and data from the U.S. Census, you will create visualizations to capture the socioeconomic trend of banking deserts to an external site..\n\n\nWhat You’ll Learn\nBy the end of this lesson, you will be able to:\n\nUse the Geoapify API to obtain information about geographic areas.\nUse the Census API wrapper.\nExplain the concept of rate limits and the importance of creating test cases before running large scripts.\nDissect new API documentation."
+  },
+  {
+    "objectID": "python-api.html#further-reading-and-helpful-links",
+    "href": "python-api.html#further-reading-and-helpful-links",
+    "title": "2  Python API’s",
+    "section": "2.4 Further Reading and Helpful Links",
+    "text": "2.4 Further Reading and Helpful Links\nThis module will introduce you to all the information that you’ll need to become employer-ready. But, you can become employer-competitive by diving more deeply into the topics discussed in class. Remember that the data field is constantly changing. And as a professional, you’ll be expected to stay up to date on the latest developments and conversations.\nIf you’re interested in learning more about a particular topic or need a refresher, use the following resources:\n\nJSON\nOMDb API\nThe New York Times API\nOpen Weather Map API\nThe World Bank API\nGeoapify API"
+  },
+  {
+    "objectID": "data-collection.html#web-scraping-with-css-selectors",
+    "href": "data-collection.html#web-scraping-with-css-selectors",
+    "title": "5  Data Collection",
+    "section": "5.2 Web Scraping with CSS Selectors",
+    "text": "5.2 Web Scraping with CSS Selectors\n\nOverview\nThis lesson will build on the topics from the previous lesson, so it’s important that you are comfortable with HTML, CSS, and Beautiful Soup. You will work on more advanced web scraping activities by using CSS selectors to identify elements to extract. In addition, you will use Chrome DevTools to explore elements within websites that you are targeting.\n\n\nWhat You’ll Learn\n\nUse CSS selectors to scrape targeted elements.\nUse Chrome DevTools to identify elements and their CSS selectors."
+  },
+  {
+    "objectID": "data-collection.html#automated-browsing",
+    "href": "data-collection.html#automated-browsing",
+    "title": "5  Data Collection",
+    "section": "5.3 Automated Browsing",
+    "text": "5.3 Automated Browsing\n\nOverview\nThis lesson will introduce you to automated web browsing and scraping by using Splinter. By using Splinter alongside Beautiful Soup, you will be able to automate the scraping process and perform more advanced web scraping projects. Since you’ll be scraping real websites, rather than saved HTML, you’ll learn about the ethics and legality of web scraping. This will help you make good choices if you decide to pursue your own web scraping projects.\n\n\nWhat You’ll Learn\n\nUse Splinter to perform automated browser actions.\nAutomate the web scraping process by using Splinter and Beautiful Soup.\nOrganize scraped information into a Python data structure."
+  },
+  {
+    "objectID": "nosql-databases.html#introduction-to-nosql-and-mongodb",
+    "href": "nosql-databases.html#introduction-to-nosql-and-mongodb",
+    "title": "6  NoSQL Databases",
+    "section": "6.1 Introduction to NoSQL and MongoDB",
+    "text": "6.1 Introduction to NoSQL and MongoDB\n\nOverview\nIn this lesson, you’ll learn about NoSQL databases with a focus on MongoDB. MongoDB is a document database that has more flexibility than a structured database, like a SQL database, for storing data. It can handle both smaller, personal projects and larger-scale projects that a company might require. For this module, MongoDB is a better choice than SQL because you’ll use data that is stored in JSON files, which is very similar to the Mongo BSON format.\nThe lesson will begin with an overview of NoSQL databases and how they differ from SQL databases. Then, your instructor will lead you through an activity about working with basic MongoDB queries using the Mongo shell. Once you feel comfortable creating elements in a Mongo database, you’ll learn how to update and delete data. Finally, you’ll learn how to import CSV and JSON files into a Mongo database from your Terminal.\n\n\nWhat You’ll Learn\n\nBy the end of this lesson, you will be able to:\nIdentify the key differences between SQL and NoSQL databases to aid decisions around what kind of database to use in different situations.\nCreate and connect to local Mongo databases.\nPerform create, read, update, delete (CRUD) operations on Mongo documents by using the Mongo shell.\nImport data from CSV and JSON files into a local MongoDB database."
+  },
+  {
+    "objectID": "nosql-databases.html#pymongo-and-advanced-queries",
+    "href": "nosql-databases.html#pymongo-and-advanced-queries",
+    "title": "6  NoSQL Databases",
+    "section": "6.2 PyMongo and Advanced Queries",
+    "text": "6.2 PyMongo and Advanced Queries\n\nOverview\nIn this lesson, you’ll learn how to perform advanced queries to retrieve documents from a Mongo database. The lesson will begin with a brief introduction to the PyMongo library, which developers can use to work with Mongo from Python. Then, you will practice importing data that you can use with the PyMongo library. The rest of the class will follow the structure of instructor demo, student activity, and review so that you’ll learn different advanced techniques for retrieving data from a Mongo database.\n\n\nWhat You’ll Learn\n\nBy the end of this lesson, you will be able to:\nUse the PyMongo library to interface with MongoDB and perform basic CRUD operations.\nSelect specific fields when retrieving documents from MongoDB.\nUse comparison operators to find documents in MongoDB.\nUse sort and limit with PyMongo when retrieving documents from MongoDB."
+  },
+  {
+    "objectID": "nosql-databases.html#aggregation-analysis-and-integration-with-mongodb",
+    "href": "nosql-databases.html#aggregation-analysis-and-integration-with-mongodb",
+    "title": "6  NoSQL Databases",
+    "section": "6.3 Aggregation, Analysis, and Integration with MongoDB",
+    "text": "6.3 Aggregation, Analysis, and Integration with MongoDB\n\nOverview\nIn this lesson, you’ll learn how to create aggregation pipelines to assist with performing analysis on documents in a Mongo database. The lesson will begin with a class warm-up activity where you will import the data you will use for the whole lesson. Then, you’ll be introduced to aggregation functionality and aggregation pipelines with PyMongo. Finally, during the second half of the class, you will work in groups on a mini-project to bring together the Mongo skills you have developed and integrate them with APIs, Pandas, and Matplotlib.\n\n\nWhat You’ll Learn\n\nBy the end of this lesson, you will be able to:\nUse aggregation and aggregation pipelines with MongoDB to analyze a subset of a MongoDB collection.\nConvert a MongoDB result to a Pandas DataFrame.\nImport data from an API to save to MongoDB.\nUse data from a Mongo database to plot charts with Matplotlib."
+  },
+  {
+    "objectID": "etl.html#extract-transform-and-load",
+    "href": "etl.html#extract-transform-and-load",
+    "title": "7  Extract, Transform, and Load",
+    "section": "7.1 Extract, Transform, and Load",
+    "text": "7.1 Extract, Transform, and Load\n\nOverview\nFor today’s lesson, you’ll learn to use Python and Pandas methods and functions and to list comprehensions to extract, transform, and clean data. Then, you’ll pair with a partner to start working on the ETL mini project.\n\n\nWhat You’ll Learn\nBy the end of this lesson, you will be able to:\n\nExtract data by using Python and Pandas.\nTransform and clean data by using Python and Pandas.\nParse string data into a Python dictionary.\nUse list comprehensions to make code more readable.\nUse regular expressions to manipulate string data."
+  },
+  {
+    "objectID": "etl.html#transformation-and-cleaning-with-regular-expressions",
+    "href": "etl.html#transformation-and-cleaning-with-regular-expressions",
+    "title": "7  Extract, Transform, and Load",
+    "section": "7.2 Transformation and Cleaning with Regular Expressions",
+    "text": "7.2 Transformation and Cleaning with Regular Expressions\n\nOverview\nFor today’s lesson, you’ll learn how to use regular expressions to find patterns and extract data from text and string data.\nTowards the end of class you’ll pair with a partner to begin working on the ETL mini project. Seek help from your instructor, TAs, and fellow students when you need it.\n\n\nWhat You’ll Learn\nBy the end of this lesson, you will:\n\nUse wildcards, sets, and escape characters in regular expressions to extract information.\nUse special characters in regular expressions to extract information.\nCreate and use capture groups in regular expressions to extract information.\nContinue working on the ETL mini project."
+  },
+  {
+    "objectID": "interactive-visualizations.html#introduction-to-javascript-visualizations",
+    "href": "interactive-visualizations.html#introduction-to-javascript-visualizations",
+    "title": "8  Interactive Visualizations",
+    "section": "8.1 Introduction to JavaScript Visualizations",
+    "text": "8.1 Introduction to JavaScript Visualizations\n\nOverview\nIn this lesson, you will be introduced to the fundamentals of JavaScript by creating basic charts with the Plotly library. First, you will learn how to store data using variables, objects, and arrays in JavaScript. Then, after you understand the basic concepts in JavaScript, you’ll create a corresponding chart in Plotly. Next, you’ll learn how to control flow with iterations and conditionals by using JavaScript. You’ll also use Plotly to create multiple traces and the data array object that generates our multiple trace charts. Finally, you’ll learn how to use functions in JavaScript and apply that knowledge to an activity where you will use Plotly to create a barchart to visualize data about movie ratings.\n\n\nWhat You’ll Learn\nBy the end of this lesson, you will be able to:\n\nDescribe JavaScript variables, arrays, data types, and statements.\nImplement basic JavaScript control flow (functions, loops, if/else statements).\nCreate functions in JavaScript.\nCreate, update, and iterate JavaScript objects.\nCreate basic charts, including bar charts and line charts, by using Plotly.\nUse Plotly’s layout object to customize the appearance of charts.\nAnnotate charts with labels, text, and hover text.\n\n\n\n8.1.1 Variables, Objects, Arrays\nJavascript variables are are assigned with the keyword let\n\n\nCode\n%%javascript\n\nlet name = \"Homer Simpson\"\n\nlet isEmployed = true \n\nlet age = 39\n\n\n\n\n\nJavaScript has objects which act similar to Python dictionaries\n\n\nCode\n%%javascript\n\nlet Berkeley = {\n    state: \"California\"\n    square_miles: 10.5\n};\n\nlet LosAngeles = {\n    state: \"California\",\n    square_miles: 502.7\n}\n\nlet Denver = {\n    state: \"Colorado\",\n    square_miles: 155\n};\n\nlet Miami = {\n    state: \"Florida\",\n    square_miles: 55.3\n};\n\nlet Phoenix = {\n    state: \"Arizona\",\n    square_miles: 517.9\n};\n\n\n\n\n\nWe can access the elements of these objects with either bracket notation or dot notation\n\n\nCode\n%%javascript\n\n// console.log is a print statement in JavaScript\n// dot notation is\n\nconsole.log(city[\"state\"])\nconsole.log(city.state)\n\n\n\n\n\nElements can be added to JavaScript objects in the following way\n\n\nCode\n%%javascript\n\nBerkeley.population = 117145\nLosAngeles.population = 3849000000\nDenver.population = 711463\n\n\n\n\n\n\n\n8.1.2 Conditional Statements and For-Loops\nThere are also if, else, and else if conditions Javascript.\n\n\nCode\n%%javascript\n\n// 1. Simple conditional\nif (condition) {\n  // execute this statement if true\n}\n\n// 2. if-else\nif (condition) {\n  // execute this statement if true\n} else {\n  // execute this statement if false\n}\n\n// 3. else-if\nif (condition1) {\n  // execute this statement if condition1 is true\n} else if (condition2) {\n  // execute this statement if condition1 is false and condition2 is true\n} else {\n  // execute this statement if condition1 and condition2 are false\n}\n\n// 4. logical operators\nif (condition1 && condition2) {\n  // execute this statement only if condition1 and condition2 are true\n}\n\nif (condition1 || condition2) {\n  // execute this statement if either condition1 or condition2 is true\n}\n\n\n\n\n\nNote that the statements to be executed are wrapped in curly braces {}. This is different that in Python where indentation is critical. In Javascrpit it’s not necessary to indent, but it does make the code much more readable.\nA for-loop in Javascript will have the following structure\n\n\nCode\n%%javascript\n\n// Prototypical use case increments loop counter  by one on each iteration\n\nfor (let i = 0; i &lt; 10; i++) {\n  console.log(\"Iteration #\", i);\n}\n\n// Looping through an array\n\nlet x = [0, 1, 1, 2, 3, 5, 8];\n\nfor (let i = 0; i &lt; x.length; j++) {\n  console.log(x[j]);\n}\n\n\n\n\n\n\n\n8.1.3 Functions\nCreating functions in JavaScript consists of using the keyword function and the name of your choice for the function\n\n\nCode\n%%javascript\n\n// Create a function that adds two numbers\n\nfunction addition(a, b) {\n    let sum = a + b\n  return sum;\n}"
+  },
+  {
+    "objectID": "interactive-visualizations.html#functional-programing-for-data-processing",
+    "href": "interactive-visualizations.html#functional-programing-for-data-processing",
+    "title": "8  Interactive Visualizations",
+    "section": "8.2 Functional Programing for Data Processing",
+    "text": "8.2 Functional Programing for Data Processing\n\nOverview\nIn this lesson, you’ll learn about JavaScript methods that will help you organize and prepare data for charts in Plotly. The class will begin with an introduction to functional programming methods in JavaScript through preprocessing data for a Plotly chart. Once you understand functional programming conceptually, you will complete two activities applying your knowledge of JavaScript to create charts using Plotly. Then the lesson will transition to the .filter method. Again, you’ll learn the concept in JavaScript first, then have an opportunity to put your new skills to work by creating a bar chart in Plotly. The lesson will wrap up with an activity in which you will sort, slice, and reverse an array of Greek god search results to build a horizontal bar chart with Plotly.\n\n\nWhat You’ll Learn\nBy the end of this lesson, you will be able to:\n\nApply the map() method and filter to parse data.\nCreate and use arrow functions to simplify code.\nUse the filter() and arrow functions to manipulate and filter datasets.\nUse ES6 JavaScript methods.\n\n\n\n8.2.1 The map() function\nThe map() function can be extremely useful in Javascript. One of the main uses for this function is iterating over an array which can help us create new arrays.\nHere are some attributes of map():\n\ncreates a new array from calling a function for every array element.\ndoes not execute the function for empty elements.\ndoes not change the original array.\n\nThe syntax for map() is the following\narray.map(function(currentValue, index, arr), thisValue)\nwhere\n\n\n\n\n\n\n\nParameter\nDescription\n\n\n\n\nfunction()\nRequired. A function to be run for each array element.\n\n\ncurrentValue\nRequired. The value of the current element.\n\n\nindex\nOptional. The index of the current element.\n\n\narr\nOptional. The array of the current element.\n\n\nthisValue\nOptional. Default value undefined. A value passed to the function to be used as its this value.\n\n\n\nLet’s consider the following example\n\n\nCode\n%%javascript\n\n// Create array of numbers\nconst numbers = [1, 2, 3, 4];\n\n// Pass a function to map and return the output\nconst squares = numbers.map(x =&gt; x*x)\n\n// Print output\nconsole.log(squares);\n\n// Output:\n// [1, 4, 9, 16]\n\n\n\n\n\nWe can also rewrite it in the following way which can help with readability\n\n\nCode\n%%javascript\n\n// Create a function to use\nconst squareFunction = x =&gt; x*x;\n\n// Call the function\nconst squareArray = numbers.map(squareFunction);\n\nconsole.log(squareArray);\n\n// Output:\n// [1, 4, 9, 16]"
+  },
+  {
+    "objectID": "interactive-visualizations.html#javascript-with-d3.js",
+    "href": "interactive-visualizations.html#javascript-with-d3.js",
+    "title": "8  Interactive Visualizations",
+    "section": "8.3 JavaScript with D3.js",
+    "text": "8.3 JavaScript with D3.js\n\nOverview\nIn this lesson, you will learn how to add custom interactivity to your web visualizations. First, you’ll be introduced to basic document object model (DOM) selection, manipulation, and events using D3.js to an external site., an industry-standard data visualization library written in JavaScript. The lesson will begin with an overview of D3 and D3.json from your instructor. Then, the lesson will turn to D3 Select and append. After a brief overview from your instructor, you will complete an activity using D3 to add a new row of data to a table. Then, after a walkthrough and activity using the this keyword, class will finish with a demonstration and activity on how to create dropdown menus by using Plotly.\n\n\nWhat You’ll Learn\nBy the end of this lesson, you will be able to:\n\nCreate charts by using data from API calls.\nUse D3 for basic document object model (DOM) manipulation and event handling.\nApply the this keyword to reference elements within a function.\nDynamically manipulate the DOM through events.\nManipulate charts through dropdown events and click events.\nUse Plotly.restyle() to create dynamic charts."
+  },
+  {
+    "objectID": "advanced-interactive-visualizations.html#data-visualization-with-leaflet",
+    "href": "advanced-interactive-visualizations.html#data-visualization-with-leaflet",
+    "title": "9  Advanced Interactive Visualizations",
+    "section": "9.1 Data Visualization with Leaflet",
+    "text": "9.1 Data Visualization with Leaflet\n\nOverview\nIn this lesson, you’ll learn to create data visualizations with maps. First, your instructor will lead a brief demonstration of creating a Leaflet map. Next, you’ll have the opportunity to create your own map using Leaflet and complete a brief labeling exercise. Then the class will transition to a discussion of Scalable Vector Graphics (SVG) shapes to use as markers such as points, circles, polygons, polylines and rectangles. With these new skills under your belt, you’ll complete two more advanced activities: a visualization of the world GDP per capita, and enhancement to your existing US Cities map to include populations for the states and cities. Finally, the class will end with an introduction to working with GeoJSON data and an activity in which you will plot the occurrences of earthquakes\n\n\nWhat You’ll Learn\nBy the end of this lesson, you will be able to:\n\nExplain the benefits of visualizing data with maps.\nCreate maps and plot data with the Leaflet.js library.\nParse data from the GeoJSON format to create map-based data visualizations.\nDescribe the concepts of layers and layer controls and how they are applied to add interactivity to maps."
+  },
+  {
+    "objectID": "advanced-interactive-visualizations.html#section",
+    "href": "advanced-interactive-visualizations.html#section",
+    "title": "9  Advanced Interactive Visualizations with Javascript",
+    "section": "9.2 ",
+    "text": "9.2 \n\nOverview\nIn this lesson, we’ll continue our discussion of GeoJSON and learn how to extend the functionality of Leaflet with third-party plugins. The class will begin with an activity mapping New York City neighborhoods. Then your instructor will introduce you to Leaflet plugins, which are third party libraries that integrate with Leaflet to provide additional features. To ensure you’re familiar with these new tools, you’ll complete an activity to create a heatmap of crime in San Francisco using the leaflet.heat plug in. Next, you’ll complete two additional activities with the guidance of your instructor: First you will rodent clusters in New York City, then you’ll work with a partner to complete a Chroropleth map of Florida’s school districts. The class will end with a group activity where you will create a map on your own and present it to the class.\n\n\nWhat You’ll Learn\nBy the end of this lesson, you will be able to:\n\nProduce heat maps, marker clusters, and choropleth maps using third-party Leaflet.js plugins.\nResearch how to use additional third-party Leaflet.js plugins and JavaScript libraries.\nDifferentiate between maps and map elements for visualizing different datasets.\nCreate and deploy custom interactive dashboards."
+  },
+  {
+    "objectID": "advanced-interactive-visualizations.html#geojson-and-leaflet-plugins",
+    "href": "advanced-interactive-visualizations.html#geojson-and-leaflet-plugins",
+    "title": "9  Advanced Interactive Visualizations",
+    "section": "9.2 GeoJSON and Leaflet Plugins",
+    "text": "9.2 GeoJSON and Leaflet Plugins\n\nOverview\nIn this lesson, we’ll continue our discussion of GeoJSON and learn how to extend the functionality of Leaflet with third-party plugins. The class will begin with an activity mapping New York City neighborhoods. Then your instructor will introduce you to Leaflet plugins, which are third party libraries that integrate with Leaflet to provide additional features. To ensure you’re familiar with these new tools, you’ll complete an activity to create a heatmap of crime in San Francisco using the leaflet.heat plug in. Next, you’ll complete two additional activities with the guidance of your instructor: First you will rodent clusters in New York City, then you’ll work with a partner to complete a Chroropleth map of Florida’s school districts. The class will end with a group activity where you will create a map on your own and present it to the class.\n\n\nWhat You’ll Learn\nBy the end of this lesson, you will be able to:\n\nProduce heat maps, marker clusters, and choropleth maps using third-party Leaflet.js plugins.\nResearch how to use additional third-party Leaflet.js plugins and JavaScript libraries.\nDifferentiate between maps and map elements for visualizing different datasets.\nCreate and deploy custom interactive dashboards."
+  },
+  {
+    "objectID": "advanced-interactive-visualizations.html#citi-bike-project-with-leaflet-and-intro-to-projects",
+    "href": "advanced-interactive-visualizations.html#citi-bike-project-with-leaflet-and-intro-to-projects",
+    "title": "9  Advanced Interactive Visualizations",
+    "section": "9.3 Citi Bike Project with Leaflet and Intro to Projects",
+    "text": "9.3 Citi Bike Project with Leaflet and Intro to Projects\n\nOverview\nYou will further develop your Leaflet skills in this lesson. To get started, your instructor will demonstrate how to use the Python HTTP server. Next, you’ll use the Citi Bike API to create a Leaflet map displaying the locations of Citi Bike stations in New York. After you’ve created your map, you will deploy the Citi Bike project to GitHub Pages. Finally, you’ll be assigned to a group for your next project. Your team will use the remaining class time to brainstorm and draft your Project 3 proposals.\n\n\nWhat You’ll Learn\nBy the end of this lesson, you will be able to:\n\nComplete an in-class group project using Leaflet.js.\nDeploy data visualizations to GitHub Pages.\nDraft a project proposal in a team setting."
+  },
+  {
+    "objectID": "advanced-interactive-visualizations.html#citi-bike-project-with-leaflet",
+    "href": "advanced-interactive-visualizations.html#citi-bike-project-with-leaflet",
+    "title": "9  Advanced Interactive Visualizations",
+    "section": "9.3 Citi Bike Project with Leaflet",
+    "text": "9.3 Citi Bike Project with Leaflet\n\nOverview\nYou will further develop your Leaflet skills in this lesson. To get started, your instructor will demonstrate how to use the Python HTTP server. Next, you’ll use the Citi Bike API to create a Leaflet map displaying the locations of Citi Bike stations in New York. After you’ve created your map, you will deploy the Citi Bike project to GitHub Pages.\n\n\nWhat You’ll Learn\nBy the end of this lesson, you will be able to:\n\nComplete an in-class group project using Leaflet.js.\nDeploy data visualizations to GitHub Pages.\nDraft a project proposal in a team setting."
+  },
+  {
+    "objectID": "tableau.html#introduction-to-tableau",
+    "href": "tableau.html#introduction-to-tableau",
+    "title": "10  Tableau",
+    "section": "10.1 Introduction to Tableau",
+    "text": "10.1 Introduction to Tableau\n\nOverview\nIn today’s lesson, you’ll be introduced to Tableau and many of its built-in functions. To begin, your instructor will give a brief introduction to Tableau and confirm that everyone has correctly installed Tableau Public. Then, you’ll complete a series of hands-on activities on how to load and explore data, create visualizations, and join and split data in Tableau. After a short break, you will complete two more activities in Tableau: In the first, you will create charts to compare candies to practice your sizing, coloring, and labeling skills. In the final activity, you will practice your storytelling skills by developing a visualization to illustrate the best-paid college major and the impact of attending graduate school on long-term pay.\n\n\nWhat You’ll Learn\n\nBy the end of this lesson, you will be able to do the following using Tableau:\nImport data from various sources, including CSV files and Excel spreadsheets.\nPerform joins on multiple data sources.\nCreate and customize basic visualizations.\nCreate storyboards."
+  },
+  {
+    "objectID": "tableau.html#deeper-into-tableau",
+    "href": "tableau.html#deeper-into-tableau",
+    "title": "10  Tableau",
+    "section": "10.2 Deeper into Tableau",
+    "text": "10.2 Deeper into Tableau\n\nOverview\nIn today’s lesson, you’ll expand your Tableau knowledge to gain experience in more advanced tasks, including custom calculations, maps, and level-of-detail calculations. To get started, your instructor will begin with an overview of how to create groups and sets in Tableau. Then, you’ll practice these new skills in an activity using movie rental data. Next, you will practice calculations by creating visualizations using a dataset on motor vehicle accidents in New York City. After a short break, you will complete three more activities in the second half of class: One on mapping, a second on creating a dashboard, and in the third and final activity of the class, you’ll practice creating level of detail (LOD) calculations with sample data.\n\n\nWhat You’ll Learn\n\nBy the end of this lesson, you will be able to do the following using Tableau:\nCreate groups and sets.\nCreate maps and use built-in U.S. Census data.\nCreate custom calculations.\nApply LOD calculations.\nCreate dashboards."
+  },
+  {
+    "objectID": "unsupervised-learning.html#introduction-to-machine-learning",
+    "href": "unsupervised-learning.html#introduction-to-machine-learning",
+    "title": "11  Unsupervised Learning",
+    "section": "11.1 Introduction to Machine Learning",
+    "text": "11.1 Introduction to Machine Learning\n\nOverview\nThis lesson will introduce you to machine learning, especially to one approach that we use in this field called unsupervised learning. Often with unsupervised learning, the goal is to let the machine learning help us figure out what groups, patterns, and structures to use for our data. The machine learning can do all that on its own—without us telling it what those groups, patterns, and structures are. Instead, it learns from the data that we give it and figures them out by itself. In this lesson, we’ll learn how to use an unsupervised learning algorithm named K-means to help cluster our data into groups.\n\n\nWhat You’ll Learn\n\nBy the end of this lesson, you will be able to:\nRecognize the differences between supervised and unsupervised machine learning.\nDefine clustering and how people use it in data analysis.\nApply the K-means algorithm to identify the clusters in a dataset.\nDetermine the optimal number of clusters for a dataset by using the elbow method."
+  },
+  {
+    "objectID": "unsupervised-learning.html#machine-learning-in-practice",
+    "href": "unsupervised-learning.html#machine-learning-in-practice",
+    "title": "11  Unsupervised Learning",
+    "section": "11.2 Machine Learning in Practice",
+    "text": "11.2 Machine Learning in Practice\n\nOverview\nThis lesson delves more deeply into machine learning by beginning with a recap of the previous lesson and then delving into normalizing, preprocessing, and segmenting data. The goal of the lesson is to enable you to refine your unsupervised learning algorithms and flexibly apply them to various applications.\n\n\nWhat You’ll Learn\nBy the end of this lesson, you will be able to:\n\nSegment data.\nPrepare data for complex algorithms.\nExplain the importance of preprocessing data for unsupervised learning.\nTransform categorical variables into a numerical representation using Pandas.\nScale data by using the StandardScaler module from scikit-learn."
+  },
+  {
+    "objectID": "unsupervised-learning.html#principal-component-analysis-pca",
+    "href": "unsupervised-learning.html#principal-component-analysis-pca",
+    "title": "11  Unsupervised Learning",
+    "section": "11.3 Principal Component Analysis (PCA)",
+    "text": "11.3 Principal Component Analysis (PCA)\n\nOverview\nWith machine learning, accuracy isn’t the only performance metric to consider. Clustering algorithms, such as K-means, often suffer from something known as the curse of dimensionality—or too many features than we can make sense of in a single model. However, we can often fix this and improve the efficiency of our clustering by applying a technique called principal component analysis (PCA).\n\n\nWhat You’ll Learn\n\nBy the end of this lesson, you will be able to:\nExplain what PCA is and how to use it to reduce the dimensionality of data.\nExplain how PCA relates to K-means and other applications in machine learning.\nUse PCA to reduce the number of features in an unsupervised learning setting."
+  },
+  {
+    "objectID": "supervised-learning.html#supervised-learning",
+    "href": "supervised-learning.html#supervised-learning",
+    "title": "12  Supervised Learning",
+    "section": "12.1 Supervised Learning",
+    "text": "12.1 Supervised Learning\n\nOverview\nThe first lesson will introduce you to linear regression and mainly cover two topics. The first is a supervised learning model for classification for the logistic regression model. The second is evaluating whether a classification model produces adequate results. In the process, you’ll use the scikit-learn data science package, specifically to train and evaluate models and make them more efficient and effective at determining the probability of outcomes.\n\n\nWhat You’ll Learn\nBy the end of this lesson, you’ll be able to:\n\nModel and fit several supervised learning classification models using scikit-learn.\nConceptualize and build training and test datasets for supervised learning analysis.\nDefine classification in the context of machine learning.\nEvaluate classification algorithms using a confusion matrix and classification report."
+  },
+  {
+    "objectID": "supervised-learning.html#classification-models",
+    "href": "supervised-learning.html#classification-models",
+    "title": "12  Supervised Learning",
+    "section": "12.2 Classification Models",
+    "text": "12.2 Classification Models\n\nOverview\nIn this lesson, you’ll explore supervised learning in-depth. You’ll learn more about classification models like support vector machines (SVMs), decision trees, and k-nearest neighbors (KNN) and about ensemble learning techniques by using the random forest model.\n\n\nWhat You’ll Learn\nBy the end of this lesson, you’ll be able to:\n\nExplain how SVMs work as a binary classifier.\nExplain how decision trees and random forest work as classifiers, and how they differ from each other.\nExplain how the KNN algorithm works as a classifier and how it differs from other classifiers.\nApply fundamental classification algorithms, namely SVMs, random forest, decision trees, and KNN in machine learning models."
+  },
+  {
+    "objectID": "neural-networks-and-deep-learning.html#introduction-to-advanced-machine-learning",
+    "href": "neural-networks-and-deep-learning.html#introduction-to-advanced-machine-learning",
+    "title": "13  Neural Networks and Deep Learning",
+    "section": "13.1 Introduction to Advanced Machine Learning",
+    "text": "13.1 Introduction to Advanced Machine Learning\n\nOverview\nIn this lesson, you’ll be introduced to neural networks, a powerful class of machine learning algorithms that are an essential tool for machine learning engineers. Neural networks are collections of perceptron models, which are related to logistic regressions. The lesson will begin with a warm-up activity in which you will use the logistic regression to build a binary classification model, which is the precursor to neural networks. Then we will turn our attention to the basics of neural networks with a series of lectures and hands-on activities that will introduce you to the perceptron model, the TensorFlow Playground, and Google Colab. The class will conclude with a final activity which will give you hands-on experience building your own neural network.\n\n\nWhat You’ll Learn\nBy the end of this lesson, you will be able to:\n\nCompare and contrast traditional machine learning classification and regression models and neural network models.\nDescribe the perceptron model and its components.\nImplement neural network models using TensorFlow."
+  },
+  {
+    "objectID": "neural-networks-and-deep-learning.html#neural-network-models-in-the-real-world",
+    "href": "neural-networks-and-deep-learning.html#neural-network-models-in-the-real-world",
+    "title": "13  Neural Networks and Deep Learning",
+    "section": "13.2 Neural Network Models in the Real World",
+    "text": "13.2 Neural Network Models in the Real World\n\nOverview\nThis lesson focuses on deep learning, an essential technique for advanced machine learning solutions including medical image analysis, self-driving cars, and fraud detection. The lesson will begin with a lecture from your instructor defining deep learning models. Then, after you understand the fundamentals, you’ll build a deep learning classification model that can adequately predict the class from our moons dummy dataset. Next, we’ll turn our attention to model optimization. After a demonstration from your instructor, you will complete an activity using KerasTuner to create a model that can adequately predict scikit-learn’s make_circles dataset. In the final activity, you will preprocess a medical dataset and create a deep learning model that can predict whether a patient will be diagnosed with myopia.\n\n\nWhat You’ll Learn\nBy the end of this lesson, you will be able to:\n\nImplement deep neural network models using TensorFlow.\nExplain how different neural network structures change algorithm performance.\nSave trained TensorFlow models for later use."
+  },
+  {
+    "objectID": "neural-networks-and-deep-learning.html#machine-learning-decisions-and-deployment",
+    "href": "neural-networks-and-deep-learning.html#machine-learning-decisions-and-deployment",
+    "title": "13  Neural Networks and Deep Learning",
+    "section": "13.3 Machine Learning Decisions and Deployment",
+    "text": "13.3 Machine Learning Decisions and Deployment\n\nOverview\nThis lesson begins with a recap of what you’ve learned about data analysis and machine learning. Then you’ll work with teams to develop a strategy on how you can solve the great debate question that we asked in our very first class: “Which do Americans prefer: Italian or Mexican food?” This will lead to an activity in which you will work with a group to brainstorm how to create a machine learning model that predicts a Yelp user’s average rating of Italian restaurants. The second half of the class will focus on how to use Amazon SageMaker, which is built to streamline the process of training and deploying models. After a brief introduction from your instructor, you will complete a series of activities creating, deploying, and then deleting a notebook instance in Amazon SageMaker.\n\n\nWhat You’ll Learn\nBy the end of this lesson, you will be able to:\n\nEvaluate the trade-offs between machine learning models.\nSelect and build an appropriate machine learning model for a given dataset and business case.\nDesign an appropriate machine learning pipeline.\nCreate and deploy a machine learning pipeline."
+  },
+  {
+    "objectID": "big-data.html#introduction-to-big-data",
+    "href": "big-data.html#introduction-to-big-data",
+    "title": "14  Big Data",
+    "section": "14.1 Introduction to Big Data",
+    "text": "14.1 Introduction to Big Data\n\nOverview\nFor today’s lesson, you’ll learn how to identify parts of the Apache Hadoop ecosystem. Then, you’ll learn how to write Python scripts that implement the Apache MapReduce programming model. Next, you’ll learn the differences between the Apache Hadoop and Apache Spark environments. Finally, you’ll learn how to create and filter DataFrames using PySpark.\n\n\nWhat You’ll Learn\nBy the end of this lesson, you will be able to:\n\nIdentify the parts of the Hadoop ecosystem.\nWrite a Python script that implements the MapReduce programming model.\nIdentify the differences between the Hadoop and Spark environments.\nCreate a DataFrame by using PySpark.\nFilter and order a DataFrame by using Spark."
+  },
+  {
+    "objectID": "big-data.html#querying-big-data-with-pyspark",
+    "href": "big-data.html#querying-big-data-with-pyspark",
+    "title": "14  Big Data",
+    "section": "14.2 Querying Big Data with PySpark",
+    "text": "14.2 Querying Big Data with PySpark\n\nOverview\nFor today’s lesson, you’ll learn how to group, aggregate, and order data, and learn how to parse, format a date to a timestamp, and plot time series data. Then, you’ll learn how to create temporary views to run Spark SQL queries faster with large datasets. Finally, you’ll combine PySpark and Spark SQL to run SQL queries.\n\n\nWhat You’ll Learn\nBy the end of this lesson, you will be able to:\n\nApply grouping and aggregation functions to a dataset by using Spark.\nParse and format date timestamps by using Spark.\nUse temporary tables to prepare data for SQL.\nCombine PySpark and SQL to run queries."
+  },
+  {
+    "objectID": "big-data.html#optimizing-spark-storage-partitioning-and-caching",
+    "href": "big-data.html#optimizing-spark-storage-partitioning-and-caching",
+    "title": "14  Big Data",
+    "section": "14.3 Optimizing Spark: Storage, Partitioning, and Caching",
+    "text": "14.3 Optimizing Spark: Storage, Partitioning, and Caching\n\nOverview\nFor today’s lesson, you’ll learn how to store data in parquet format and partition the parquet data to optimize query execution times. Then you’ll practice caching data and determine optimal query execution times between partitioned and cached data.\n\n\nWhat You’ll Learn\nBy the end of this lesson, you will be able to:\n\nCompare the file storage types (other than tabular) that work the best for Spark.\nUnderstand how partitioning affects Spark performance.\nExplain the cause of shuffling and limit it when possible.\nIdentify when caching is the best option.\nExplain how to broadcast a lookup table, and force it when it doesn’t happen automatically.\nSet the shuffle partitions to an appropriate value and demonstrate how to cache data."
+  },
+  {
+    "objectID": "big-data.html#databricks",
+    "href": "big-data.html#databricks",
+    "title": "14  Big Data",
+    "section": "14.4 Databricks",
+    "text": "14.4 Databricks\n\nOverview\nIn today’s class, you will use Spark on Databricks to perform data analysis in the cloud. Through a series of exercises, you will gain hands-on experience with the Python and SQL interfaces of Databricks, with an emphasis on using the SQL interface for increasingly complex queries. The class will conclude with a group activity in which you will query a database in SQL, create a brief report with recommendations, and report your findings to the class.\n\n\nWhat You’ll Learn\nBy the end of this lesson, you will be able to:\n\nExplain the purpose, key features, and applications of Databricks.\nSet up a Databricks environment.\nIdentify the key components of a Databricks environment.\nNavigate the Databricks workspace using dbutils.\nImport data into a new notebook by using Parquet files, CSV files, and S3.\nExplain the advantage of Parquet as a big data storage format.\nPerform complex data analysis, including joins, using the Python and SQL interfaces.\nDescribe two advantages of using Databricks over PySpark for data analysis."
+  }
+]

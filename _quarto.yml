@@ -1,0 +1,40 @@
+project:
+  type: book
+
+book:
+  title: "Data Analysis Bootcamp Notes"
+  author: "Angel Alcala Ruiz"
+  date: "10/19/2023"
+  chapters:
+    - index.qmd
+    - intro.qmd
+    - python-api.qmd
+    - sql.qmd
+    - advanced-sql.qmd
+    - data-collection.qmd
+    - nosql-databases.qmd
+    - etl.qmd
+    - interactive-visualizations.qmd
+    - advanced-interactive-visualizations.qmd
+    - tableau.qmd
+    - unsupervised-learning.qmd
+    - supervised-learning.qmd
+    - neural-networks-and-deep-learning.qmd
+    - big-data.qmd
+    - references.qmd
+
+bibliography: references.bib
+
+format:
+  html:
+    theme: simplex
+    code-fold: show
+    code-tools: true
+    number-depth: 3
+    toc-depth: 3 
+
+
+  pdf:
+    documentclass: scrreprt
+
+

@@ -1,0 +1,42 @@
+---
+title: "Supervised Learning"
+format: html
+---
+
+Supervised learning involves connecting a large amount of observable information to those outcomes that we're interested in predicting. By the end of this module, you'll have gained familiarity with supervised learning models for continuous outcomes, like linear regression. You'll also have competency in running and evaluating classification models for logistic regression. Overall, you'll be proficient in using supervised learning approaches to predict categorical conclusions and outcomes.
+
+## Supervised Learning
+
+#### Overview
+
+The first lesson will introduce you to linear regression and mainly cover two topics. The first is a supervised learning model for classification for the logistic regression model. The second is evaluating whether a classification model produces adequate results. In the process, you’ll use the `scikit-learn` data science package, specifically to train and evaluate models and make them more efficient and effective at determining the probability of outcomes.
+
+#### What You’ll Learn
+
+By the end of this lesson, you’ll be able to:
+
+- Model and fit several supervised learning classification models using `scikit-learn`.
+
+- Conceptualize and build training and test datasets for supervised learning analysis.
+
+- Define classification in the context of machine learning.
+
+- Evaluate classification algorithms using a confusion matrix and classification report.
+
+## Classification Models
+
+#### Overview
+
+In this lesson, you’ll explore supervised learning in-depth. You’ll learn more about classification models like support vector machines (SVMs), decision trees, and k-nearest neighbors (KNN) and about ensemble learning techniques by using the random forest model.
+
+#### What You’ll Learn
+
+By the end of this lesson, you’ll be able to:
+
+- Explain how SVMs work as a binary classifier.
+
+- Explain how decision trees and random forest work as classifiers, and how they differ from each other.
+
+- Explain how the KNN algorithm works as a classifier and how it differs from other classifiers.
+
+- Apply fundamental classification algorithms, namely SVMs, random forest, decision trees, and KNN in machine learning models.

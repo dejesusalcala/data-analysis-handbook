@@ -1,0 +1,150 @@
+---
+title: "Advanced SQL"
+editor: visual
+---
+
+In this module, you'll receive an introduction to three new tools: SQLite, SQLAlchemy, and Flask. You'll use these tools to build on your knowledge of SQL database structures and querying methods. You'll also write and run Python code in a Jupyter notebook and create graphs by using Python.
+
+## Introduction to SQLAlchemy
+
+#### Overview
+
+This lesson will combine what we learned last week about SQL with our favorite programming language: Python. Before getting started, you'll need to install SQLite. SQLite is a SQL dialect that shares much of its syntax with PostgreSQL, but it's entirely serverless.The lesson will first introduce you to SQLAlchemy, a Python library that's designed to work with SQL databases. You'll then complete an activity in which you'll analyze weather data by using SQLAlchemy. After another activity in which you'll create new DataFrames based on United States census data, your instructor will lead you through a crash course in object-oriented programming (OOP).
+
+#### What You'll Learn
+
+By the end of this lesson, you will be able to:
+
+-   Connect to a SQL database by using SQLAlchemy.
+
+-   Perform basic SQL queries by using `engine.execute()`.
+
+-   Create Python classes and objects.
+
+-   Perform create, read, update, delete (CRUD) operations on data in a SQL database by using the SQLAlchemy object-relational mapper (ORM).
+
+### SQL Alchemy
+
+SQLAlchemy is a Python library that allows users to access and manage SQL databases. SQLAlchemy provides a powerful interface to interact with relational databases.
+
+SQLAlchemy bridges the differences amon various SQL dialects. A single script that uses SQLAlchemy can perform the same query across the different SQL dialects such as, *PostgreSQL*, *SQLite*, *MySQL*, etc.
+
+To help us begin to connect to a database we will use the function `create_engine()` from `sqlalchemy` to connect to the database.
+
+```{python}
+from sqlalchemy import create_engine, text
+
+# Path too sqlite file
+database_path = "../modules/10-advanced-sql/day-01/resources/Census_Data.sqlite"
+
+# Create engine to talk to the database
+engine = create_engine(f"sqlite:///{database_path}")
+```
+
+The `engine` above creates a `Dialect` object that is tailored towards SQLite and `Pool` object that will establish a DBAPI connection. So far we have **not** established the connection to the database. The connection happens when we make a function call to `engine.connect()` or `engine.begin()`.
+
+First, let's use `engine.execute()` to perform a SQL query. Inside of `engine.execute()` we can pass a SQL query in the form of a string
+
+```{python}
+# Query the the first five records the databse
+data = engine.execute("SELECT * FROM Census_Data LIMIT 5")
+
+# Print the results
+for i in data:
+    print(i)
+```
+
+Now let's establish a connection to get our data and we can also use the `pandas` library to work with our data
+
+```{python}
+import pandas as pd
+
+connection = engine.connect()
+
+df = pd.read_sql("SELECT * FROM Census_Data", connection)
+
+df.head()
+```
+
+### Python Classes
+
+Another useful aspect of SQLAlchemy is that it can also update a SQL database using Python classes.
+
+Classes are essentially blueprints for Python objects; they allow developers to create organized variables with keys, values, and methods on the fly. 
+
+For example we can have the following
+
+```{python}
+from sqlalchemy.ext.declarative import declarative_base
+from sqlalchemy import Column, Integer, String, Float
+
+# Sets an object to use the default declarative base in SQLAlchemy
+Base = declarative_base()
+
+# Creates Classes which will serve as the anchor points for our tables
+class Dog(Base):
+    __tablename__ = "dog"
+    id = Column(Integer, primary_key = True)
+    name = Column(String(255))
+    color = Column(String(255))
+    age = Column(Integer)
+
+class Cat(Base):
+    __tablename__ = "cat"
+    id = Column(Integer, primary_key = True)
+    name = Column(String(255))
+    color = Column(String(255))
+    age = Column(Integer)
+
+# Create a specific instance of the Dog and Cat classes
+dog = Dog(name = "Charles", color = "brown", age = 4)
+cat = Cat(name = "Lucy", color = "gray", age = 7)
+
+print(f"The dog's name is {dog.name}. He's a {dog.color} dog and he's {dog.age} years old.")
+print(f"The cat's name is {cat.name}. She's a {cat.color} cat and she's {cat.age} years old.")
+```
+
+
+### SQLAlchemy's Object-Relational Mapper (ORM)
+
+## Advanced Usage of the SQLAlchemy ORM
+
+#### Overview
+
+This lesson will introduce you to the finer details of working with the SQLAlchemy ORM. You'll learn how to create complex queries, update rows, perform joins, and use ORM methods to run queries.
+
+#### What You'll Learn
+
+By the end of this lesson, you will be able to:
+
+-   Create classes that model tables by using the SQLAlchemy ORM.
+
+-   Perform CRUD operations on databases by using the SQLAlchemy ORM.
+
+-   Reflect existing databases.
+
+-   Review the table names in a database by using SQLAlchemy inspection.
+
+-   Plot query results that are retrieved by using SQLAlchemy.
+
+-   Run a t-test to validate differences in means.
+
+## Introduction to Flask and Serving Data with APIs
+
+#### Overview
+
+In today's lesson, you'll learn the fundamentals of both the web and client-server architecture. This will include using Flask to create a database-backed server and to design and implement API endpoints.
+
+#### What You'll Learn
+
+By the end of this lesson, you will be able to:
+
+-   Create and run a server by using Flask.
+
+-   Define endpoints by using a Flask decorator.
+
+-   Extract query-variable path values from `GET` requests.
+
+-   Run database queries on behalf of the client by using variable paths.
+
+-   Return JSONified query results from API endpoints.

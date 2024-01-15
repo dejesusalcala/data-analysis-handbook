@@ -1,0 +1,63 @@
+---
+title: "NoSQL Databases"
+editor: visual
+---
+
+In this module, you'll be introduced to the concept of the NoSQL database with MongoDB, the leading database management system for this language. You will then expand on your data skills to work with non-relational documents, utilizing the PyMongo library to interface with your Mongo databases using Python. Finally, you'll learn how to build aggregation pipelines when retrieving data, and integrate skills you have learned in previous classes, such as Pandas, APIs, and Matplotlib.
+
+## Introduction to NoSQL and MongoDB
+
+#### Overview
+
+In this lesson, you’ll learn about NoSQL databases with a focus on MongoDB. MongoDB is a document database that has more flexibility than a structured database, like a SQL database, for storing data. It can handle both smaller, personal projects and larger-scale projects that a company might require. For this module, MongoDB is a better choice than SQL because you'll use data that is stored in JSON files, which is very similar to the Mongo BSON format.
+
+The lesson will begin with an overview of NoSQL databases and how they differ from SQL databases. Then, your instructor will lead you through an activity about working with basic MongoDB queries using the Mongo shell. Once you feel comfortable creating elements in a Mongo database, you’ll learn how to update and delete data. Finally, you’ll learn how to import CSV and JSON files into a Mongo database from your Terminal.
+
+#### What You'll Learn
+
+- By the end of this lesson, you will be able to:
+
+- Identify the key differences between SQL and NoSQL databases to aid decisions around what kind of database to use in different situations.
+
+- Create and connect to local Mongo databases.
+
+- Perform create, read, update, delete (CRUD) operations on Mongo documents by using the Mongo shell.
+
+- Import data from CSV and JSON files into a local MongoDB database.
+
+
+## PyMongo and Advanced Queries
+
+#### Overview
+
+In this lesson, you’ll learn how to perform advanced queries to retrieve documents from a Mongo database. The lesson will begin with a brief introduction to the PyMongo library, which developers can use to work with Mongo from Python. Then, you will practice importing data that you can use with the PyMongo library. The rest of the class will follow the structure of instructor demo, student activity, and review so that you'll learn different advanced techniques for retrieving data from a Mongo database.
+
+#### What You'll Learn
+
+- By the end of this lesson, you will be able to:
+
+- Use the PyMongo library to interface with MongoDB and perform basic CRUD operations.
+
+- Select specific fields when retrieving documents from MongoDB.
+
+- Use comparison operators to find documents in MongoDB.
+
+- Use sort and limit with PyMongo when retrieving documents from MongoDB.
+
+## Aggregation, Analysis, and Integration with MongoDB
+
+#### Overview
+
+In this lesson, you’ll learn how to create aggregation pipelines to assist with performing analysis on documents in a Mongo database. The lesson will begin with a class warm-up activity where you will import the data you will use for the whole lesson. Then, you'll be introduced to aggregation functionality and aggregation pipelines with PyMongo. Finally, during the second half of the class, you will work in groups on a mini-project to bring together the Mongo skills you have developed and integrate them with APIs, Pandas, and Matplotlib.
+
+#### What You'll Learn
+
+- By the end of this lesson, you will be able to:
+
+- Use aggregation and aggregation pipelines with MongoDB to analyze a subset of a MongoDB collection.
+
+- Convert a MongoDB result to a Pandas DataFrame.
+
+- Import data from an API to save to MongoDB.
+
+- Use data from a Mongo database to plot charts with Matplotlib.

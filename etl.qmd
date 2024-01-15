@@ -1,0 +1,44 @@
+---
+title: "Extract, Transform, and Load"
+---
+
+## Extract, Transform, and Load
+
+#### Overview
+
+For today's lesson, you'll learn to use Python and Pandas methods and functions and to list comprehensions to extract, transform, and clean data. Then, you'll pair with a partner to start working on the ETL mini project.
+
+#### What You'll Learn
+
+By the end of this lesson, you will be able to:
+
+- Extract data by using Python and Pandas.
+
+- Transform and clean data by using Python and Pandas.
+
+- Parse string data into a Python dictionary.
+
+- Use list comprehensions to make code more readable.
+
+- Use regular expressions to manipulate string data.
+
+## Transformation and Cleaning with Regular Expressions
+
+
+#### Overview
+
+For today's lesson, you'll learn how to use regular expressions to find patterns and extract data from text and string data.
+
+Towards the end of class you'll pair with a partner to begin working on the ETL mini project. Seek help from your instructor, TAs, and fellow students when you need it.
+
+#### What You'll Learn
+
+By the end of this lesson, you will:
+
+- Use wildcards, sets, and escape characters in regular expressions to extract information.
+
+- Use special characters in regular expressions to extract information.
+
+- Create and use capture groups in regular expressions to extract information.
+
+- Continue working on the ETL mini project.

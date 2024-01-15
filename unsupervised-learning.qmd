@@ -1,0 +1,64 @@
+---
+title: "Unsupervised Learning"
+format: html
+---
+
+Welcome to your first module about machine learning! Machine learning is a type of artificial intelligence that uses algorithms and statistical models to make decisions or predictions about data. With today's computing power, machine learning is changing the world faster than ever before.
+
+This module focuses on a machine learning concept known as unsupervised learning. With unsupervised learning, algorithms use test data to build models that categorize the relationships among data points. For example, when you review an item for purchase on a website, unsupervised learning algorithms might identify related items that people frequently purchase together.
+
+For using unsupervised learning models, you’ll get introduced to a powerful Python package named `scikit-learn`.
+
+## Introduction to Machine Learning
+
+#### Overview
+
+This lesson will introduce you to machine learning, especially to one approach that we use in this field called unsupervised learning. Often with unsupervised learning, the goal is to let the machine learning help us figure out what groups, patterns, and structures to use for our data. The machine learning can do all that on its own—without us telling it what those groups, patterns, and structures are. Instead, it learns from the data that we give it and figures them out by itself. In this lesson, we’ll learn how to use an unsupervised learning algorithm named K-means to help cluster our data into groups.
+
+#### What You'll Learn
+
+- By the end of this lesson, you will be able to:
+
+- Recognize the differences between supervised and unsupervised machine learning.
+
+- Define clustering and how people use it in data analysis.
+
+- Apply the K-means algorithm to identify the clusters in a dataset.
+
+- Determine the optimal number of clusters for a dataset by using the elbow method.
+
+## Machine Learning in Practice
+
+#### Overview
+
+This lesson delves more deeply into machine learning by beginning with a recap of the previous lesson and then delving into normalizing, preprocessing, and segmenting data. The goal of the lesson is to enable you to refine your unsupervised learning algorithms and flexibly apply them to various applications.
+
+#### What You'll Learn
+
+By the end of this lesson, you will be able to:
+
+- Segment data.
+
+- Prepare data for complex algorithms.
+
+- Explain the importance of preprocessing data for unsupervised learning.
+
+- Transform categorical variables into a numerical representation using Pandas.
+
+- Scale data by using the StandardScaler module from scikit-learn.
+
+## Principal Component Analysis (PCA)
+
+#### Overview
+
+With machine learning, accuracy isn’t the only performance metric to consider. Clustering algorithms, such as K-means, often suffer from something known as the **curse of dimensionality**—or too many features than we can make sense of in a single model. However, we can often fix this and improve the efficiency of our clustering by applying a technique called principal component analysis (PCA).
+
+#### What You'll Learn
+
+- By the end of this lesson, you will be able to:
+
+- Explain what PCA is and how to use it to reduce the dimensionality of data.
+
+- Explain how PCA relates to K-means and other applications in machine learning.
+
+- Use PCA to reduce the number of features in an unsupervised learning setting.

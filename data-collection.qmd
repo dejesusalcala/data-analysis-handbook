@@ -1,0 +1,49 @@
+---
+title: "Data Collection"
+---
+
+This week will focus on collecting data from websites via web scraping techniques. First, you'll learn about how websites are made by using HTML and CSS. You will build your own simple websites to make sure that you understand how HTML and CSS work together to design the content and style of web pages. Then, you'll use your knowledge of HTML and CSS, alongside the Python package Beautiful Soup, to extract specific information from HTML code.
+
+Once you have developed your web scraping skills, you'll take them even further by scraping real websites. You'll use the automated browsing package Splinter to extract and store data from multiple pages of the same website. There’s a lot to cover, so let’s get started!
+
+## Scraping HTML
+
+#### Overview
+
+This lesson will introduce you to HTML, then show you how to apply this knowledge to scraping a website. In the first part of class, you'll go over the basic structure of how HTML and CSS build a webpage so that you will have the foundational knowledge you need in order to scrape a website. In the second part of class, you will complete your first web scraping project by using the Python package Beautiful Soup.
+
+#### What You'll Learn
+
+- Identify HTML components in a website.
+
+- Create a basic HTML document.
+
+- Scrape data from a website by using BeautifulSoup.
+
+- Style HTML elements by using CSS.
+
+## Web Scraping with CSS Selectors
+
+#### Overview
+
+This lesson will build on the topics from the previous lesson, so it's important that you are comfortable with HTML, CSS, and Beautiful Soup. You will work on more advanced web scraping activities by using CSS selectors to identify elements to extract. In addition, you will use Chrome DevTools to explore elements within websites that you are targeting.
+
+#### What You'll Learn
+
+- Use CSS selectors to scrape targeted elements.
+
+- Use Chrome DevTools to identify elements and their CSS selectors.
+
+## Automated Browsing
+
+#### Overview
+
+This lesson will introduce you to automated web browsing and scraping by using Splinter. By using Splinter alongside Beautiful Soup, you will be able to automate the scraping process and perform more advanced web scraping projects. Since you'll be scraping real websites, rather than saved HTML, you'll learn about the ethics and legality of web scraping. This will help you make good choices if you decide to pursue your own web scraping projects.
+
+#### What You'll Learn
+
+- Use Splinter to perform automated browser actions.
+
+- Automate the web scraping process by using Splinter and Beautiful Soup.
+
+- Organize scraped information into a Python data structure.

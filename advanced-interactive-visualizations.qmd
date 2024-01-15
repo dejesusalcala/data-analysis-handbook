@@ -1,0 +1,59 @@
+---
+title: "Advanced Interactive Visualizations"
+editor: visual
+---
+
+Creating effective, interactive maps is a critical skill for anyone in the data field. Used across a wide variety of applications and fields, maps allow us to explore, understand and make decisions about our world. In this module, you’ll build on your JavaScript skills and the D3 library to create interactive maps. You’ll use GeoJSON, a type of JSON file specifically designed to host geographical information, to develop points, linestrings, and polygons. You’ll also explore non-spatial attributes, or data that is independent of all geometric considerations, and packaged in the hierarchical structure of GeoJSON files.
+
+## Data Visualization with Leaflet
+
+#### Overview
+
+In this lesson, you’ll learn to create data visualizations with maps. First, your instructor will lead a brief demonstration of creating a Leaflet map. Next, you’ll have the opportunity to create your own map using Leaflet and complete a brief labeling exercise. Then the class will transition to a discussion of Scalable Vector Graphics (SVG) shapes to use as markers such as points, circles, polygons, polylines and rectangles. With these new skills under your belt, you’ll complete two more advanced activities: a visualization of the world GDP per capita, and enhancement to your existing US Cities map to include populations for the states and cities. Finally, the class will end with an introduction to working with GeoJSON data and an activity in which you will plot the occurrences of earthquakes
+
+#### What You'll Learn
+
+By the end of this lesson, you will be able to:
+
+- Explain the benefits of visualizing data with maps.
+
+- Create maps and plot data with the Leaflet.js library.
+
+- Parse data from the GeoJSON format to create map-based data visualizations.
+
+- Describe the concepts of layers and layer controls and how they are applied to add interactivity to maps.
+
+## GeoJSON and Leaflet Plugins
+
+#### Overview
+
+In this lesson, we'll continue our discussion of GeoJSON and learn how to extend the functionality of Leaflet with third-party plugins. The class will begin with an activity mapping New York City neighborhoods. Then your instructor will introduce you to Leaflet plugins, which are third party libraries that integrate with Leaflet to provide additional features. To ensure you’re familiar with these new tools, you’ll complete an activity to create a heatmap of crime in San Francisco using the `leaflet.heat` plug in. Next, you’ll complete two additional activities with the guidance of your instructor: First you will rodent clusters in New York City, then you’ll work with a partner to complete a Chroropleth map of Florida’s school districts. The class will end with a group activity where you will create a map on your own and present it to the class.
+
+#### What You'll Learn
+
+By the end of this lesson, you will be able to:
+
+- Produce heat maps, marker clusters, and choropleth maps using third-party Leaflet.js plugins.
+
+- Research how to use additional third-party Leaflet.js plugins and JavaScript libraries.
+
+- Differentiate between maps and map elements for visualizing different datasets.
+
+- Create and deploy custom interactive dashboards.
+
+## Citi Bike Project with Leaflet
+
+#### Overview
+
+You will further develop your Leaflet skills in this lesson. To get started, your instructor will demonstrate how to use the Python HTTP server. Next, you’ll use the Citi Bike API to create a Leaflet map displaying the locations of Citi Bike stations in New York. After you’ve created your map, you will deploy the Citi Bike project to GitHub Pages.
+
+#### What You'll Learn
+
+By the end of this lesson, you will be able to:
+
+- Complete an in-class group project using Leaflet.js.
+
+- Deploy data visualizations to GitHub Pages.
+
+- Draft a project proposal in a team setting.
+

@@ -1,0 +1,83 @@
+---
+title: "Python API's"
+---
+
+With the help of the Pandas library, you can now perform quantitative analysis and create compelling data visualizations. However, you will need special tools to programmatically obtain and parse real-world data. That’s where APIs come in. An application programming interface (API) is a set of functions that applications use to automate the back-and-forth communication between computers.
+
+This week, you will use APIs to obtain and parse data from sources such as OpenWeatherMap, the U.S. Census, OMDb, and more. You will also have an opportunity to test your skills by plotting DataFrames from the API data by using Matplotlib.
+
+## Python API's
+
+#### Overview
+
+Today's lesson focuses on API calls. It begins with a brief overview of APIs and JSON traversal. Then, once you understand the fundamental process, you’ll learnhow you can make API requests with the Requests libraryLinks to an external site., using the OMDbLinks to an external site. and New York TimesLinks to an external site. APIs.
+
+#### What You'll Learn
+
+By the end of this lesson, you will be able to:
+
+- Make get requests with the Request library.
+
+- Convert JSON into a Python dictionary.
+
+- Read and apply API documentation.
+
+- Sign up for and use an API key.
+
+## Working with Weather and City API's
+
+#### Overview
+
+Today’s lesson will expand your API querying capabilities by introducing you to a variety of new APIs. The class will begin with a short review activity, where you will traverse a JSON file using your knowledge of Python. Then, after you’ve warmed up, you will work with the [OpenWeatherMap API](https://openweathermap.org/api) to an external site., which provides developers with various meteorological data.
+
+Later in the lesson, you will learn about exception handling, which can be helpful when databases and API requests have missing values. Finally, the lesson will conclude with a few activities to help you build familiarity with API usage and reading complex documentation.
+
+#### What You'll Learn
+
+By the end of this lesson, you will be able to:
+
+- Create applications with your knowledge of Python and an API’s documentation.
+
+- Load JSON from API responses into a Pandas DataFrame.
+
+- Use `try-except` blocks to handle errors.
+
+## API's and Geospatial Visualization
+
+#### Overview
+
+In this class, you will be introduced to the Geoapify API to obtain information about geographic areas and the GeoViews Python library to create maps in Jupyter Notebook. Using these new tools and data from the U.S. Census, you will create visualizations to capture the socioeconomic trend of [banking deserts](https://www.theatlantic.com/business/archive/2016/03/banking-desert-ny-fed/473436/) to an external site..
+
+#### What You'll Learn
+
+By the end of this lesson, you will be able to:
+
+- Use the Geoapify API to obtain information about geographic areas.
+
+- Use the Census API wrapper.
+
+- Explain the concept of rate limits and the importance of creating test cases before running large scripts.
+
+- Dissect new API documentation.
+
+## Further Reading and Helpful Links
+
+This module will introduce you to all the information that you'll need to become employer-ready. But, you can become employer-competitive by diving more deeply into the topics discussed in class. Remember that the data field is constantly changing. And as a professional, you'll be expected to stay up to date on the latest developments and conversations.
+
+If you’re interested in learning more about a particular topic or need a refresher, use the following resources:
+
+- [JSON](https://jsonplaceholder.typicode.com/)
+
+- [OMDb API](https://www.omdbapi.com/)
+
+- [The New York Times API](https://developer.nytimes.com/)
+
+- [Open Weather Map API](https://openweathermap.org/api)
+
+- [The World Bank API](https://datahelpdesk.worldbank.org/knowledgebase/topics/125589)
+
+- [Geoapify API](https://apidocs.geoapify.com/)
+
+
+
+

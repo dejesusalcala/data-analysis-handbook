@@ -1,0 +1,274 @@
+---
+title: "Interactive Visualizations"
+---
+
+In this module, you will use Plotly, a JavaScript data visualization library, to create data visualizations that are attractive, accessible, and interactive. Libraries like Plotly offer interactivity, which can help your audience better understand your data and draw the same conclusions that you did. Later, you’ll use JavaScript to enhance the interactive features of your visualizations by building out buttons and dropdown menus. You’ll also build on your JavaScript foundation to manipulate, parse, transform, and retrieve data from external sources like .csv files and APIs. Finally, you’ll deploy a polished data visualization to the web, all using the power of JavaScript.
+
+## Introduction to JavaScript Visualizations
+
+#### Overview
+
+In this lesson, you will be introduced to the fundamentals of JavaScript by creating basic charts with the Plotly library. First, you will learn how to store data using variables, objects, and arrays in JavaScript. Then, after you understand the basic concepts in JavaScript, you’ll create a corresponding chart in Plotly. Next, you’ll learn how to control flow with iterations and conditionals by using JavaScript. You'll also use Plotly to create multiple traces and the data array object that generates our multiple trace charts. Finally, you’ll learn how to use functions in JavaScript and apply that knowledge to an activity where you will use Plotly to create a barchart to visualize data about movie ratings.
+
+#### What You'll Learn
+
+By the end of this lesson, you will be able to:
+
+- Describe JavaScript variables, arrays, data types, and statements.
+
+- Implement basic JavaScript control flow (functions, loops, if/else statements).
+
+- Create functions in JavaScript.
+
+- Create, update, and iterate JavaScript objects.
+
+- Create basic charts, including bar charts and line charts, by using Plotly.
+
+- Use Plotly's layout object to customize the appearance of charts.
+
+- Annotate charts with labels, text, and hover text.
+
+### Variables, Objects, Arrays
+
+Javascript variables are are assigned with the keyword `let`
+
+```{python}
+%%javascript
+
+let name = "Homer Simpson"
+
+let isEmployed = true 
+
+let age = 39
+```
+
+JavaScript has objects which act similar to Python dictionaries
+
+```{python}
+%%javascript
+
+let Berkeley = {
+    state: "California"
+    square_miles: 10.5
+};
+
+let LosAngeles = {
+    state: "California",
+    square_miles: 502.7
+}
+
+let Denver = {
+    state: "Colorado",
+    square_miles: 155
+};
+
+let Miami = {
+    state: "Florida",
+    square_miles: 55.3
+};
+
+let Phoenix = {
+    state: "Arizona",
+    square_miles: 517.9
+};
+```
+
+We can access the elements of these objects with either **bracket notation** or **dot notation**
+
+```{python}
+%%javascript
+
+// console.log is a print statement in JavaScript
+// dot notation is
+
+console.log(city["state"])
+console.log(city.state)
+```
+
+Elements can be added to JavaScript objects in the following way
+
+```{python}
+%%javascript
+
+Berkeley.population = 117145
+LosAngeles.population = 3849000000
+Denver.population = 711463
+```
+
+### Conditional Statements and For-Loops
+
+There are also `if`, `else`, and `else if` conditions Javascript. 
+
+```{python}
+%%javascript
+
+// 1. Simple conditional
+if (condition) {
+  // execute this statement if true
+}
+
+// 2. if-else
+if (condition) {
+  // execute this statement if true
+} else {
+  // execute this statement if false
+}
+
+// 3. else-if
+if (condition1) {
+  // execute this statement if condition1 is true
+} else if (condition2) {
+  // execute this statement if condition1 is false and condition2 is true
+} else {
+  // execute this statement if condition1 and condition2 are false
+}
+
+// 4. logical operators
+if (condition1 && condition2) {
+  // execute this statement only if condition1 and condition2 are true
+}
+
+if (condition1 || condition2) {
+  // execute this statement if either condition1 or condition2 is true
+}
+```
+
+Note that the statements to be executed are wrapped in curly braces `{}`. This is different that in Python where indentation is critical. In Javascrpit it's not necessary to indent, but it does make the code much more readable.
+
+A for-loop in Javascript will have the following structure
+
+```{python}
+%%javascript
+
+// Prototypical use case increments loop counter  by one on each iteration
+
+for (let i = 0; i < 10; i++) {
+  console.log("Iteration #", i);
+}
+
+// Looping through an array
+
+let x = [0, 1, 1, 2, 3, 5, 8];
+
+for (let i = 0; i < x.length; j++) {
+  console.log(x[j]);
+}
+```
+
+### Functions
+
+Creating functions in JavaScript consists of using the keyword `function` and the name of your choice for the function
+
+```{python}
+%%javascript
+
+// Create a function that adds two numbers
+
+function addition(a, b) {
+    let sum = a + b
+  return sum;
+}
+```
+
+## Functional Programing for Data Processing
+
+#### Overview
+
+In this lesson, you’ll learn about JavaScript methods that will help you organize and prepare data for charts in Plotly. The class will begin with an introduction to functional programming methods in JavaScript through preprocessing data for a Plotly chart. Once you understand functional programming conceptually, you will complete two activities applying your knowledge of JavaScript to create charts using Plotly. Then the lesson will transition to the `.filter` method. Again, you’ll learn the concept in JavaScript first, then have an opportunity to put your new skills to work by creating a bar chart in Plotly. The lesson will wrap up with an activity in which you will sort, slice, and reverse an array of Greek god search results to build a horizontal bar chart with Plotly.
+
+#### What You'll Learn
+
+By the end of this lesson, you will be able to:
+
+- Apply the `map()` method and filter to parse data.
+
+- Create and use arrow functions to simplify code.
+
+- Use the `filter()` and arrow functions to manipulate and filter datasets.
+
+- Use ES6 JavaScript methods.
+
+### The `map()` function
+
+The `map()` function can be extremely useful in Javascript. One of the main uses for this function is iterating over an array which can help us create new arrays.
+
+Here are some attributes of `map()`:
+
+ - creates a new array from calling a function for every array element.
+ 
+- does not execute the function for empty elements.
+
+- does not change the original array.
+
+The syntax for `map()` is the following
+
+`array.map(function(currentValue, index, arr), thisValue)
+`
+
+where
+
+| Parameter      | Description |
+| ----------- | ----------- |
+| `function()` |	Required. A function to be run for each array element. |
+| `currentValue` |	Required. The value of the current element. |
+| `index`	| Optional. The index of the current element. |
+| `arr` |	Optional. The array of the current element. |
+| `thisValue`	| Optional. Default value undefined. A value passed to the function to be used as its this value.   |
+
+Let's consider the following example
+
+```{python}
+%%javascript
+
+// Create array of numbers
+const numbers = [1, 2, 3, 4];
+
+// Pass a function to map and return the output
+const squares = numbers.map(x => x*x)
+
+// Print output
+console.log(squares);
+
+// Output:
+// [1, 4, 9, 16]
+
+```
+
+We can also rewrite it in the following way which can help with readability
+
+```{python}
+%%javascript
+
+// Create a function to use
+const squareFunction = x => x*x;
+
+// Call the function
+const squareArray = numbers.map(squareFunction);
+
+console.log(squareArray);
+
+// Output:
+// [1, 4, 9, 16]
+```
+
+## JavaScript with D3.js
+
+#### Overview
+
+In this lesson, you will learn how to add custom interactivity to your web visualizations. First, you’ll be introduced to basic document object model (DOM) selection, manipulation, and events using [D3.js](https://d3js.org/) to an external site., an industry-standard data visualization library written in JavaScript. The lesson will begin with an overview of D3 and D3.json from your instructor. Then, the lesson will turn to D3 Select and append. After a brief overview from your instructor, you will complete an activity using D3 to add a new row of data to a table. Then, after a walkthrough and activity using the `this` keyword, class will finish with a demonstration and activity on how to create dropdown menus by using Plotly.
+
+#### What You'll Learn
+
+By the end of this lesson, you will be able to:
+
+- Create charts by using data from API calls.
+
+- Use D3 for basic document object model (DOM) manipulation and event handling.
+
+- Apply the `this` keyword to reference elements within a function.
+
+- Dynamically manipulate the DOM through events.
+
+- Manipulate charts through dropdown events and click events.
+
+- Use `Plotly.restyle()` to create dynamic charts.

@@ -1,0 +1,57 @@
+---
+title: "Neural Networks and Deep Learning"
+format: html
+---
+
+In this module, we'll explore and implement neural networks using the TensorFlow platform in Python. We'll discuss the background and history of computational neurons as well as current implementations of neural networks as they apply to deep learning and the major costs and benefits of different neural networks. We’ll compare these costs to traditional machine learning classification and regression models. Throughout the module, we'll practice implementing neural networks and deep neural networks across a number of different datasets including image, natural language, and numerical datasets. We’ll close out the module by learning how to store and retrieve trained models for more robust uses.
+
+## Introduction to Advanced Machine Learning
+
+#### Overview
+
+In this lesson, you’ll be introduced to neural networks, a powerful class of machine learning algorithms that are an essential tool for machine learning engineers. Neural networks are collections of perceptron models, which are related to logistic regressions. The lesson will begin with a warm-up activity in which you will use the logistic regression to build a binary classification model, which is the precursor to neural networks. Then we will turn our attention to the basics of neural networks with a series of lectures and hands-on activities that will introduce you to the perceptron model, the TensorFlow Playground, and Google Colab. The class will conclude with a final activity which will give you hands-on experience building your own neural network.
+
+#### What You'll Learn
+
+By the end of this lesson, you will be able to:
+
+- Compare and contrast traditional machine learning classification and regression models and neural network models.
+
+- Describe the perceptron model and its components.
+
+- Implement neural network models using TensorFlow.
+
+## Neural Network Models in the Real World
+
+#### Overview
+
+This lesson focuses on deep learning, an essential technique for advanced machine learning solutions including medical image analysis, self-driving cars, and fraud detection. The lesson will begin with a lecture from your instructor defining deep learning models. Then, after you understand the fundamentals, you’ll build a deep learning classification model that can adequately predict the class from our moons dummy dataset. Next, we’ll turn our attention to model optimization. After a demonstration from your instructor, you will complete an activity using KerasTuner to create a model that can adequately predict scikit-learn's `make_circles` dataset. In the final activity, you will preprocess a medical dataset and create a deep learning model that can predict whether a patient will be diagnosed with myopia.
+
+#### What You'll Learn
+
+By the end of this lesson, you will be able to:
+
+- Implement deep neural network models using TensorFlow.
+
+- Explain how different neural network structures change algorithm performance.
+
+- Save trained TensorFlow models for later use.
+
+
+## Machine Learning Decisions and Deployment
+
+#### Overview
+
+This lesson begins with a recap of what you’ve learned about data analysis and machine learning. Then you’ll work with teams to develop a strategy on how you can solve the great debate question that we asked in our very first class: "Which do Americans prefer: Italian or Mexican food?" This will lead to an activity in which you will work with a group to brainstorm how to create a machine learning model that predicts a Yelp user's average rating of Italian restaurants. The second half of the class will focus on how to use Amazon SageMaker, which is built to streamline the process of training and deploying models. After a brief introduction from your instructor, you will complete a series of activities creating, deploying, and then deleting a notebook instance in Amazon SageMaker.
+
+#### What You'll Learn
+
+By the end of this lesson, you will be able to:
+
+- Evaluate the trade-offs between machine learning models.
+
+- Select and build an appropriate machine learning model for a given dataset and business case.
+
+- Design an appropriate machine learning pipeline.
+
+- Create and deploy a machine learning pipeline.
