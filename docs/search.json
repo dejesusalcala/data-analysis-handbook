@@ -250,5 +250,40 @@
     "title": "2  Python API’s",
     "section": "2.4 Further Reading and Helpful Links",
     "text": "2.4 Further Reading and Helpful Links\nThis module will introduce you to all the information that you’ll need to become employer-ready. But, you can become employer-competitive by diving more deeply into the topics discussed in class. Remember that the data field is constantly changing. And as a professional, you’ll be expected to stay up to date on the latest developments and conversations.\nIf you’re interested in learning more about a particular topic or need a refresher, use the following resources:\n\nJSON\nOMDb API\nThe New York Times API\nOpen Weather Map API\nThe World Bank API\nGeoapify API"
+  },
+  {
+    "objectID": "intro.html",
+    "href": "intro.html",
+    "title": "1  Introduction to Python",
+    "section": "",
+    "text": "2 Introduction to Python"
+  },
+  {
+    "objectID": "intro.html#variables-and-assignments",
+    "href": "intro.html#variables-and-assignments",
+    "title": "1  Introduction to Python",
+    "section": "1.1 Variables and Assignments",
+    "text": "1.1 Variables and Assignments"
+  },
+  {
+    "objectID": "intro.html#loops-in-python",
+    "href": "intro.html#loops-in-python",
+    "title": "1  Introduction to Python",
+    "section": "1.2 Loops in Python",
+    "text": "1.2 Loops in Python"
+  },
+  {
+    "objectID": "intro.html#conditionals",
+    "href": "intro.html#conditionals",
+    "title": "1  Introduction to Python",
+    "section": "1.3 Conditionals",
+    "text": "1.3 Conditionals"
+  },
+  {
+    "objectID": "intro.html#functions",
+    "href": "intro.html#functions",
+    "title": "1  Introduction to Python",
+    "section": "1.4 Functions",
+    "text": "1.4 Functions"
   }
 ]

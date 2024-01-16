@@ -1,3 +1,14 @@
-# Introduction to Python
+---
+title: "Introduction to Python"
+editor: visual
+---
 
+In this chapter we'll cover some of the basics of Python. This will include using Python as a calculator, variables in Python, loops, conditionals, and functions. This will help form a basic understanding of the fundamentals of programming with Python's syntax
 
+## Variables and Assignments
+
+## Loops in Python
+
+## Conditionals
+
+## Functions
