@@ -3,7 +3,7 @@ project:
   output-dir: docs
 
 book:
-  title: "Data Analysis Bootcamp Notes"
+  title: "Data Analysis Notes"
   author: "Angel Alcala Ruiz"
   date: "10/19/2023"
   chapters:
