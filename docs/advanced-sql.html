@@ -1,0 +1,1044 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
+
+<meta charset="utf-8">
+<meta name="generator" content="quarto-1.3.450">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+
+
+<title>Data Analysis Bootcamp Notes - 4&nbsp; Advanced SQL</title>
+<style>
+code{white-space: pre-wrap;}
+span.smallcaps{font-variant: small-caps;}
+div.columns{display: flex; gap: min(4vw, 1.5em);}
+div.column{flex: auto; overflow-x: auto;}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+  width: 0.8em;
+  margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
+  vertical-align: middle;
+}
+/* CSS for syntax highlighting */
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+  }
+pre.numberSource { margin-left: 3em;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
+</style>
+
+
+<script src="site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="site_libs/quarto-nav/headroom.min.js"></script>
+<script src="site_libs/clipboard/clipboard.min.js"></script>
+<script src="site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="site_libs/quarto-search/fuse.min.js"></script>
+<script src="site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="./">
+<link href="./data-collection.html" rel="next">
+<link href="./sql.html" rel="prev">
+<script src="site_libs/quarto-html/quarto.js"></script>
+<script src="site_libs/quarto-html/popper.min.js"></script>
+<script src="site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="site_libs/quarto-html/anchor.min.js"></script>
+<link href="site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" id="quarto-bootstrap" data-mode="light">
+<script id="quarto-search-options" type="application/json">{
+  "location": "sidebar",
+  "copy-button": false,
+  "collapse-after": 3,
+  "panel-placement": "start",
+  "type": "textbox",
+  "limit": 20,
+  "language": {
+    "search-no-results-text": "No results",
+    "search-matching-documents-text": "matching documents",
+    "search-copy-link-title": "Copy link to search",
+    "search-hide-matches-text": "Hide additional matches",
+    "search-more-match-text": "more match in this document",
+    "search-more-matches-text": "more matches in this document",
+    "search-clear-button-title": "Clear",
+    "search-detached-cancel-button-title": "Cancel",
+    "search-submit-button-title": "Submit",
+    "search-label": "Search"
+  }
+}</script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.6/require.min.js" integrity="sha512-c3Nl8+7g4LMSTdrm621y7kf9v3SDPnhxLNhcjFJbKECVnmZHTdo+IRO05sNLTH/D3vA6u1X32ehoLC7WFVdheg==" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js" integrity="sha512-bLT0Qm9VnAYZDflyKcBaQ2gg0hSYNQrJ8RilYldYQ1FxQYoCLtUjuuRuZo+fjqhx/qtq/1itJ0C2ejDxltZVFg==" crossorigin="anonymous"></script>
+<script type="application/javascript">define('jquery', [],function() {return window.jQuery;})</script>
+
+
+</head>
+
+<body class="nav-sidebar floating">
+
+
+<div id="quarto-search-results"></div>
+  <header id="quarto-header" class="headroom fixed-top">
+  <nav class="quarto-secondary-nav">
+    <div class="container-fluid d-flex">
+      <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar,#quarto-sidebar-glass" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+        <i class="bi bi-layout-text-sidebar-reverse"></i>
+      </button>
+      <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./advanced-sql.html"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">Advanced SQL</span></a></li></ol></nav>
+      <a class="flex-grow-1" role="button" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar,#quarto-sidebar-glass" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
+      </a>
+      <button type="button" class="btn quarto-search-button" aria-label="" onclick="window.quartoOpenSearch();">
+        <i class="bi bi-search"></i>
+      </button>
+    </div>
+  </nav>
+</header>
+<!-- content -->
+<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article">
+<!-- sidebar -->
+  <nav id="quarto-sidebar" class="sidebar collapse collapse-horizontal sidebar-navigation floating overflow-auto">
+    <div class="pt-lg-2 mt-2 text-left sidebar-header">
+    <div class="sidebar-title mb-0 py-0">
+      <a href="./">Data Analysis Bootcamp Notes</a> 
+    </div>
+      </div>
+        <div class="mt-2 flex-shrink-0 align-items-center">
+        <div class="sidebar-search">
+        <div id="quarto-search" class="" title="Search"></div>
+        </div>
+        </div>
+    <div class="sidebar-menu-container"> 
+    <ul class="list-unstyled mt-1">
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./index.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Preface</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./intro.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">1</span>&nbsp; <span class="chapter-title">Introduction</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./python-api.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">Python API’s</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./sql.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">SQL</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./advanced-sql.html" class="sidebar-item-text sidebar-link active">
+ <span class="menu-text"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">Advanced SQL</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./data-collection.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">5</span>&nbsp; <span class="chapter-title">Data Collection</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./nosql-databases.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">6</span>&nbsp; <span class="chapter-title">NoSQL Databases</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./etl.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">7</span>&nbsp; <span class="chapter-title">Extract, Transform, and Load</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./interactive-visualizations.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">8</span>&nbsp; <span class="chapter-title">Interactive Visualizations</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./advanced-interactive-visualizations.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">9</span>&nbsp; <span class="chapter-title">Advanced Interactive Visualizations</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./tableau.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">10</span>&nbsp; <span class="chapter-title">Tableau</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./unsupervised-learning.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">11</span>&nbsp; <span class="chapter-title">Unsupervised Learning</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./supervised-learning.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">12</span>&nbsp; <span class="chapter-title">Supervised Learning</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./neural-networks-and-deep-learning.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">13</span>&nbsp; <span class="chapter-title">Neural Networks and Deep Learning</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./big-data.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">14</span>&nbsp; <span class="chapter-title">Big Data</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./references.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">References</span></a>
+  </div>
+</li>
+    </ul>
+    </div>
+</nav>
+<div id="quarto-sidebar-glass" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar,#quarto-sidebar-glass"></div>
+<!-- margin-sidebar -->
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">Table of contents</h2>
+   
+  <ul>
+  <li><a href="#introduction-to-sqlalchemy" id="toc-introduction-to-sqlalchemy" class="nav-link active" data-scroll-target="#introduction-to-sqlalchemy"><span class="header-section-number">4.1</span> Introduction to SQLAlchemy</a>
+  <ul class="collapse">
+  <li><a href="#sql-alchemy" id="toc-sql-alchemy" class="nav-link" data-scroll-target="#sql-alchemy"><span class="header-section-number">4.1.1</span> SQL Alchemy</a></li>
+  <li><a href="#python-classes" id="toc-python-classes" class="nav-link" data-scroll-target="#python-classes"><span class="header-section-number">4.1.2</span> Python Classes</a></li>
+  <li><a href="#sqlalchemys-object-relational-mapper-orm" id="toc-sqlalchemys-object-relational-mapper-orm" class="nav-link" data-scroll-target="#sqlalchemys-object-relational-mapper-orm"><span class="header-section-number">4.1.3</span> SQLAlchemy’s Object-Relational Mapper (ORM)</a></li>
+  </ul></li>
+  <li><a href="#advanced-usage-of-the-sqlalchemy-orm" id="toc-advanced-usage-of-the-sqlalchemy-orm" class="nav-link" data-scroll-target="#advanced-usage-of-the-sqlalchemy-orm"><span class="header-section-number">4.2</span> Advanced Usage of the SQLAlchemy ORM</a></li>
+  <li><a href="#introduction-to-flask-and-serving-data-with-apis" id="toc-introduction-to-flask-and-serving-data-with-apis" class="nav-link" data-scroll-target="#introduction-to-flask-and-serving-data-with-apis"><span class="header-section-number">4.3</span> Introduction to Flask and Serving Data with APIs</a></li>
+  </ul>
+</nav>
+    </div>
+<!-- main -->
+<main class="content" id="quarto-document-content">
+
+<header id="title-block-header" class="quarto-title-block default">
+<div class="quarto-title">
+<div class="quarto-title-block"><div><h1 class="title"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">Advanced SQL</span></h1><button type="button" class="btn code-tools-button dropdown-toggle" id="quarto-code-tools-menu" data-bs-toggle="dropdown" aria-expanded="false"><i class="bi"></i> Code</button><ul class="dropdown-menu dropdown-menu-end" aria-labelelledby="quarto-code-tools-menu"><li><a id="quarto-show-all-code" class="dropdown-item" href="javascript:void(0)" role="button">Show All Code</a></li><li><a id="quarto-hide-all-code" class="dropdown-item" href="javascript:void(0)" role="button">Hide All Code</a></li><li><hr class="dropdown-divider"></li><li><a id="quarto-view-source" class="dropdown-item" href="javascript:void(0)" role="button">View Source</a></li></ul></div></div>
+</div>
+
+
+
+<div class="quarto-title-meta">
+
+    
+  
+    
+  </div>
+  
+
+</header>
+
+<p>In this module, you’ll receive an introduction to three new tools: SQLite, SQLAlchemy, and Flask. You’ll use these tools to build on your knowledge of SQL database structures and querying methods. You’ll also write and run Python code in a Jupyter notebook and create graphs by using Python.</p>
+<section id="introduction-to-sqlalchemy" class="level2" data-number="4.1">
+<h2 data-number="4.1" class="anchored" data-anchor-id="introduction-to-sqlalchemy"><span class="header-section-number">4.1</span> Introduction to SQLAlchemy</h2>
+<section id="overview" class="level4">
+<h4 class="anchored" data-anchor-id="overview">Overview</h4>
+<p>This lesson will combine what we learned last week about SQL with our favorite programming language: Python. Before getting started, you’ll need to install SQLite. SQLite is a SQL dialect that shares much of its syntax with PostgreSQL, but it’s entirely serverless.The lesson will first introduce you to SQLAlchemy, a Python library that’s designed to work with SQL databases. You’ll then complete an activity in which you’ll analyze weather data by using SQLAlchemy. After another activity in which you’ll create new DataFrames based on United States census data, your instructor will lead you through a crash course in object-oriented programming (OOP).</p>
+</section>
+<section id="what-youll-learn" class="level4">
+<h4 class="anchored" data-anchor-id="what-youll-learn">What You’ll Learn</h4>
+<p>By the end of this lesson, you will be able to:</p>
+<ul>
+<li><p>Connect to a SQL database by using SQLAlchemy.</p></li>
+<li><p>Perform basic SQL queries by using <code>engine.execute()</code>.</p></li>
+<li><p>Create Python classes and objects.</p></li>
+<li><p>Perform create, read, update, delete (CRUD) operations on data in a SQL database by using the SQLAlchemy object-relational mapper (ORM).</p></li>
+</ul>
+</section>
+<section id="sql-alchemy" class="level3" data-number="4.1.1">
+<h3 data-number="4.1.1" class="anchored" data-anchor-id="sql-alchemy"><span class="header-section-number">4.1.1</span> SQL Alchemy</h3>
+<p>SQLAlchemy is a Python library that allows users to access and manage SQL databases. SQLAlchemy provides a powerful interface to interact with relational databases.</p>
+<p>SQLAlchemy bridges the differences amon various SQL dialects. A single script that uses SQLAlchemy can perform the same query across the different SQL dialects such as, <em>PostgreSQL</em>, <em>SQLite</em>, <em>MySQL</em>, etc.</p>
+<p>To help us begin to connect to a database we will use the function <code>create_engine()</code> from <code>sqlalchemy</code> to connect to the database.</p>
+<div class="cell" data-execution_count="1">
+<details open="">
+<summary>Code</summary>
+<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> sqlalchemy <span class="im">import</span> create_engine, text</span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a><span class="co"># Path too sqlite file</span></span>
+<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a>database_path <span class="op">=</span> <span class="st">"../modules/10-advanced-sql/day-01/resources/Census_Data.sqlite"</span></span>
+<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a><span class="co"># Create engine to talk to the database</span></span>
+<span id="cb1-7"><a href="#cb1-7" aria-hidden="true" tabindex="-1"></a>engine <span class="op">=</span> create_engine(<span class="ss">f"sqlite:///</span><span class="sc">{</span>database_path<span class="sc">}</span><span class="ss">"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</details>
+</div>
+<p>The <code>engine</code> above creates a <code>Dialect</code> object that is tailored towards SQLite and <code>Pool</code> object that will establish a DBAPI connection. So far we have <strong>not</strong> established the connection to the database. The connection happens when we make a function call to <code>engine.connect()</code> or <code>engine.begin()</code>.</p>
+<p>First, let’s use <code>engine.execute()</code> to perform a SQL query. Inside of <code>engine.execute()</code> we can pass a SQL query in the form of a string</p>
+<div class="cell" data-execution_count="2">
+<details open="">
+<summary>Code</summary>
+<div class="sourceCode cell-code" id="cb2"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Query the the first five records the databse</span></span>
+<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a>data <span class="op">=</span> engine.execute(<span class="st">"SELECT * FROM Census_Data LIMIT 5"</span>)</span>
+<span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-4"><a href="#cb2-4" aria-hidden="true" tabindex="-1"></a><span class="co"># Print the results</span></span>
+<span id="cb2-5"><a href="#cb2-5" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span> i <span class="kw">in</span> data:</span>
+<span id="cb2-6"><a href="#cb2-6" aria-hidden="true" tabindex="-1"></a>    <span class="bu">print</span>(i)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</details>
+<div class="cell-output cell-output-stdout">
+<pre><code>('HOUSTON, TX', 'HOUSTON', 'TX', 3061887, 1775897, 684416, 11586, 230549, 1368287, 54180, 387082, 62520, 100014, 349920, 138882, 42491, 27737, 633609, 1593803, 122895, 67484, 22637, 33.43958333, 32.55, 34.36354167, 56206.5, 32239.52083, 956.7083333, 178233.6842, 29.77573444, -95.41454828)
+('CHICAGO, IL', 'CHICAGO', 'IL', 2702091, 1318869, 843633, 7554, 161478, 785374, 32800, 370569, 50202, 100972, 385664, 178511, 54636, 26956, 588639, 1439118, 173087, 45864, 18209, 34.52678571, 33.79821429, 35.14107143, 57735.96429, 38730.83929, 1119.928571, 264739.2857, 41.86783754, -87.67343993)
+('BROOKLYN, NY', 'BROOKLYN', 'NY', 2595259, 1126111, 870465, 8744, 297890, 509243, 48934, 389177, 65899, 107313, 348413, 164826, 39328, 17446, 597404, 1297832, 129667, 33644, 14845, 35.17567568, 33.36756757, 36.57837838, 51469.18919, 28309.67568, 1261.783784, 605743.2432, 40.65280511, -73.9565277)
+('LOS ANGELES, CA', 'LOS ANGELES', 'CA', 2426413, 1068202, 324842, 15949, 273829, 1292382, 62684, 280325, 22924, 83153, 312270, 104024, 40600, 19436, 626981, 1273305, 141105, 26989, 12329, 35.33548387, 34.53548387, 36.06129032, 47494.58333, 30073.19355, 1201.766667, 557115.0, 34.04220912, -118.3034679)
+('MIAMI, FL', 'MIAMI', 'FL', 1820704, 1361009, 363514, 2250, 33144, 1162711, 27137, 322521, 30827, 113990, 231241, 79888, 36586, 15913, 338765, 935326, 91584, 20714, 6969, 38.74074074, 37.12037037, 40.26296296, 51232.90741, 25949.35185, 1260.833333, 243279.6296, 25.7602677, -80.2985105)</code></pre>
+</div>
+</div>
+<p>Now let’s establish a connection to get our data and we can also use the <code>pandas</code> library to work with our data</p>
+<div class="cell" data-execution_count="3">
+<details open="">
+<summary>Code</summary>
+<div class="sourceCode cell-code" id="cb4"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> pandas <span class="im">as</span> pd</span>
+<span id="cb4-2"><a href="#cb4-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-3"><a href="#cb4-3" aria-hidden="true" tabindex="-1"></a>connection <span class="op">=</span> engine.<span class="ex">connect</span>()</span>
+<span id="cb4-4"><a href="#cb4-4" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-5"><a href="#cb4-5" aria-hidden="true" tabindex="-1"></a>df <span class="op">=</span> pd.read_sql(<span class="st">"SELECT * FROM Census_Data"</span>, connection)</span>
+<span id="cb4-6"><a href="#cb4-6" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-7"><a href="#cb4-7" aria-hidden="true" tabindex="-1"></a>df.head()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</details>
+<div class="cell-output cell-output-display" data-execution_count="3">
+<div>
+
+
+<table class="dataframe table table-sm table-striped small" data-quarto-postprocess="true" data-border="1">
+<thead>
+<tr class="header">
+<th data-quarto-table-cell-role="th"></th>
+<th data-quarto-table-cell-role="th">CityState</th>
+<th data-quarto-table-cell-role="th">city</th>
+<th data-quarto-table-cell-role="th">state</th>
+<th data-quarto-table-cell-role="th">Population</th>
+<th data-quarto-table-cell-role="th">White Population</th>
+<th data-quarto-table-cell-role="th">Black Population</th>
+<th data-quarto-table-cell-role="th">Native American Population</th>
+<th data-quarto-table-cell-role="th">Asian Population</th>
+<th data-quarto-table-cell-role="th">Hispanic Population</th>
+<th data-quarto-table-cell-role="th">Education None</th>
+<th data-quarto-table-cell-role="th">...</th>
+<th data-quarto-table-cell-role="th">Employment Female Computer Engineering</th>
+<th data-quarto-table-cell-role="th">Median Age</th>
+<th data-quarto-table-cell-role="th">Median Male Age</th>
+<th data-quarto-table-cell-role="th">Median Female Age</th>
+<th data-quarto-table-cell-role="th">Household Income</th>
+<th data-quarto-table-cell-role="th">Income Per Capita</th>
+<th data-quarto-table-cell-role="th">Median Gross Rent</th>
+<th data-quarto-table-cell-role="th">Median Home Value</th>
+<th data-quarto-table-cell-role="th">lat</th>
+<th data-quarto-table-cell-role="th">lng</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td data-quarto-table-cell-role="th">0</td>
+<td>HOUSTON, TX</td>
+<td>HOUSTON</td>
+<td>TX</td>
+<td>3061887</td>
+<td>1775897</td>
+<td>684416</td>
+<td>11586</td>
+<td>230549</td>
+<td>1368287</td>
+<td>54180</td>
+<td>...</td>
+<td>22637</td>
+<td>33.439583</td>
+<td>32.550000</td>
+<td>34.363542</td>
+<td>56206.50000</td>
+<td>32239.52083</td>
+<td>956.708333</td>
+<td>178233.6842</td>
+<td>29.775734</td>
+<td>-95.414548</td>
+</tr>
+<tr class="even">
+<td data-quarto-table-cell-role="th">1</td>
+<td>CHICAGO, IL</td>
+<td>CHICAGO</td>
+<td>IL</td>
+<td>2702091</td>
+<td>1318869</td>
+<td>843633</td>
+<td>7554</td>
+<td>161478</td>
+<td>785374</td>
+<td>32800</td>
+<td>...</td>
+<td>18209</td>
+<td>34.526786</td>
+<td>33.798214</td>
+<td>35.141071</td>
+<td>57735.96429</td>
+<td>38730.83929</td>
+<td>1119.928571</td>
+<td>264739.2857</td>
+<td>41.867838</td>
+<td>-87.673440</td>
+</tr>
+<tr class="odd">
+<td data-quarto-table-cell-role="th">2</td>
+<td>BROOKLYN, NY</td>
+<td>BROOKLYN</td>
+<td>NY</td>
+<td>2595259</td>
+<td>1126111</td>
+<td>870465</td>
+<td>8744</td>
+<td>297890</td>
+<td>509243</td>
+<td>48934</td>
+<td>...</td>
+<td>14845</td>
+<td>35.175676</td>
+<td>33.367568</td>
+<td>36.578378</td>
+<td>51469.18919</td>
+<td>28309.67568</td>
+<td>1261.783784</td>
+<td>605743.2432</td>
+<td>40.652805</td>
+<td>-73.956528</td>
+</tr>
+<tr class="even">
+<td data-quarto-table-cell-role="th">3</td>
+<td>LOS ANGELES, CA</td>
+<td>LOS ANGELES</td>
+<td>CA</td>
+<td>2426413</td>
+<td>1068202</td>
+<td>324842</td>
+<td>15949</td>
+<td>273829</td>
+<td>1292382</td>
+<td>62684</td>
+<td>...</td>
+<td>12329</td>
+<td>35.335484</td>
+<td>34.535484</td>
+<td>36.061290</td>
+<td>47494.58333</td>
+<td>30073.19355</td>
+<td>1201.766667</td>
+<td>557115.0000</td>
+<td>34.042209</td>
+<td>-118.303468</td>
+</tr>
+<tr class="odd">
+<td data-quarto-table-cell-role="th">4</td>
+<td>MIAMI, FL</td>
+<td>MIAMI</td>
+<td>FL</td>
+<td>1820704</td>
+<td>1361009</td>
+<td>363514</td>
+<td>2250</td>
+<td>33144</td>
+<td>1162711</td>
+<td>27137</td>
+<td>...</td>
+<td>6969</td>
+<td>38.740741</td>
+<td>37.120370</td>
+<td>40.262963</td>
+<td>51232.90741</td>
+<td>25949.35185</td>
+<td>1260.833333</td>
+<td>243279.6296</td>
+<td>25.760268</td>
+<td>-80.298511</td>
+</tr>
+</tbody>
+</table>
+
+<p>5 rows × 31 columns</p>
+</div>
+</div>
+</div>
+</section>
+<section id="python-classes" class="level3" data-number="4.1.2">
+<h3 data-number="4.1.2" class="anchored" data-anchor-id="python-classes"><span class="header-section-number">4.1.2</span> Python Classes</h3>
+<p>Another useful aspect of SQLAlchemy is that it can also update a SQL database using Python classes.</p>
+<p>Classes are essentially blueprints for Python objects; they allow developers to create organized variables with keys, values, and methods on the fly.</p>
+<p>For example we can have the following</p>
+<div class="cell" data-execution_count="4">
+<details open="">
+<summary>Code</summary>
+<div class="sourceCode cell-code" id="cb5"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> sqlalchemy.ext.declarative <span class="im">import</span> declarative_base</span>
+<span id="cb5-2"><a href="#cb5-2" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> sqlalchemy <span class="im">import</span> Column, Integer, String, Float</span>
+<span id="cb5-3"><a href="#cb5-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb5-4"><a href="#cb5-4" aria-hidden="true" tabindex="-1"></a><span class="co"># Sets an object to use the default declarative base in SQLAlchemy</span></span>
+<span id="cb5-5"><a href="#cb5-5" aria-hidden="true" tabindex="-1"></a>Base <span class="op">=</span> declarative_base()</span>
+<span id="cb5-6"><a href="#cb5-6" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb5-7"><a href="#cb5-7" aria-hidden="true" tabindex="-1"></a><span class="co"># Creates Classes which will serve as the anchor points for our tables</span></span>
+<span id="cb5-8"><a href="#cb5-8" aria-hidden="true" tabindex="-1"></a><span class="kw">class</span> Dog(Base):</span>
+<span id="cb5-9"><a href="#cb5-9" aria-hidden="true" tabindex="-1"></a>    __tablename__ <span class="op">=</span> <span class="st">"dog"</span></span>
+<span id="cb5-10"><a href="#cb5-10" aria-hidden="true" tabindex="-1"></a>    <span class="bu">id</span> <span class="op">=</span> Column(Integer, primary_key <span class="op">=</span> <span class="va">True</span>)</span>
+<span id="cb5-11"><a href="#cb5-11" aria-hidden="true" tabindex="-1"></a>    name <span class="op">=</span> Column(String(<span class="dv">255</span>))</span>
+<span id="cb5-12"><a href="#cb5-12" aria-hidden="true" tabindex="-1"></a>    color <span class="op">=</span> Column(String(<span class="dv">255</span>))</span>
+<span id="cb5-13"><a href="#cb5-13" aria-hidden="true" tabindex="-1"></a>    age <span class="op">=</span> Column(Integer)</span>
+<span id="cb5-14"><a href="#cb5-14" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb5-15"><a href="#cb5-15" aria-hidden="true" tabindex="-1"></a><span class="kw">class</span> Cat(Base):</span>
+<span id="cb5-16"><a href="#cb5-16" aria-hidden="true" tabindex="-1"></a>    __tablename__ <span class="op">=</span> <span class="st">"cat"</span></span>
+<span id="cb5-17"><a href="#cb5-17" aria-hidden="true" tabindex="-1"></a>    <span class="bu">id</span> <span class="op">=</span> Column(Integer, primary_key <span class="op">=</span> <span class="va">True</span>)</span>
+<span id="cb5-18"><a href="#cb5-18" aria-hidden="true" tabindex="-1"></a>    name <span class="op">=</span> Column(String(<span class="dv">255</span>))</span>
+<span id="cb5-19"><a href="#cb5-19" aria-hidden="true" tabindex="-1"></a>    color <span class="op">=</span> Column(String(<span class="dv">255</span>))</span>
+<span id="cb5-20"><a href="#cb5-20" aria-hidden="true" tabindex="-1"></a>    age <span class="op">=</span> Column(Integer)</span>
+<span id="cb5-21"><a href="#cb5-21" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb5-22"><a href="#cb5-22" aria-hidden="true" tabindex="-1"></a><span class="co"># Create a specific instance of the Dog and Cat classes</span></span>
+<span id="cb5-23"><a href="#cb5-23" aria-hidden="true" tabindex="-1"></a>dog <span class="op">=</span> Dog(name <span class="op">=</span> <span class="st">"Charles"</span>, color <span class="op">=</span> <span class="st">"brown"</span>, age <span class="op">=</span> <span class="dv">4</span>)</span>
+<span id="cb5-24"><a href="#cb5-24" aria-hidden="true" tabindex="-1"></a>cat <span class="op">=</span> Cat(name <span class="op">=</span> <span class="st">"Lucy"</span>, color <span class="op">=</span> <span class="st">"gray"</span>, age <span class="op">=</span> <span class="dv">7</span>)</span>
+<span id="cb5-25"><a href="#cb5-25" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb5-26"><a href="#cb5-26" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="ss">f"The dog's name is </span><span class="sc">{</span>dog<span class="sc">.</span>name<span class="sc">}</span><span class="ss">. He's a </span><span class="sc">{</span>dog<span class="sc">.</span>color<span class="sc">}</span><span class="ss"> dog and he's </span><span class="sc">{</span>dog<span class="sc">.</span>age<span class="sc">}</span><span class="ss"> years old."</span>)</span>
+<span id="cb5-27"><a href="#cb5-27" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="ss">f"The cat's name is </span><span class="sc">{</span>cat<span class="sc">.</span>name<span class="sc">}</span><span class="ss">. She's a </span><span class="sc">{</span>cat<span class="sc">.</span>color<span class="sc">}</span><span class="ss"> cat and she's </span><span class="sc">{</span>cat<span class="sc">.</span>age<span class="sc">}</span><span class="ss"> years old."</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</details>
+<div class="cell-output cell-output-stdout">
+<pre><code>The dog's name is Charles. He's a brown dog and he's 4 years old.
+The cat's name is Lucy. She's a gray cat and she's 7 years old.</code></pre>
+</div>
+</div>
+</section>
+<section id="sqlalchemys-object-relational-mapper-orm" class="level3" data-number="4.1.3">
+<h3 data-number="4.1.3" class="anchored" data-anchor-id="sqlalchemys-object-relational-mapper-orm"><span class="header-section-number">4.1.3</span> SQLAlchemy’s Object-Relational Mapper (ORM)</h3>
+</section>
+</section>
+<section id="advanced-usage-of-the-sqlalchemy-orm" class="level2" data-number="4.2">
+<h2 data-number="4.2" class="anchored" data-anchor-id="advanced-usage-of-the-sqlalchemy-orm"><span class="header-section-number">4.2</span> Advanced Usage of the SQLAlchemy ORM</h2>
+<section id="overview-1" class="level4">
+<h4 class="anchored" data-anchor-id="overview-1">Overview</h4>
+<p>This lesson will introduce you to the finer details of working with the SQLAlchemy ORM. You’ll learn how to create complex queries, update rows, perform joins, and use ORM methods to run queries.</p>
+</section>
+<section id="what-youll-learn-1" class="level4">
+<h4 class="anchored" data-anchor-id="what-youll-learn-1">What You’ll Learn</h4>
+<p>By the end of this lesson, you will be able to:</p>
+<ul>
+<li><p>Create classes that model tables by using the SQLAlchemy ORM.</p></li>
+<li><p>Perform CRUD operations on databases by using the SQLAlchemy ORM.</p></li>
+<li><p>Reflect existing databases.</p></li>
+<li><p>Review the table names in a database by using SQLAlchemy inspection.</p></li>
+<li><p>Plot query results that are retrieved by using SQLAlchemy.</p></li>
+<li><p>Run a t-test to validate differences in means.</p></li>
+</ul>
+</section>
+</section>
+<section id="introduction-to-flask-and-serving-data-with-apis" class="level2" data-number="4.3">
+<h2 data-number="4.3" class="anchored" data-anchor-id="introduction-to-flask-and-serving-data-with-apis"><span class="header-section-number">4.3</span> Introduction to Flask and Serving Data with APIs</h2>
+<section id="overview-2" class="level4">
+<h4 class="anchored" data-anchor-id="overview-2">Overview</h4>
+<p>In today’s lesson, you’ll learn the fundamentals of both the web and client-server architecture. This will include using Flask to create a database-backed server and to design and implement API endpoints.</p>
+</section>
+<section id="what-youll-learn-2" class="level4">
+<h4 class="anchored" data-anchor-id="what-youll-learn-2">What You’ll Learn</h4>
+<p>By the end of this lesson, you will be able to:</p>
+<ul>
+<li><p>Create and run a server by using Flask.</p></li>
+<li><p>Define endpoints by using a Flask decorator.</p></li>
+<li><p>Extract query-variable path values from <code>GET</code> requests.</p></li>
+<li><p>Run database queries on behalf of the client by using variable paths.</p></li>
+<li><p>Return JSONified query results from API endpoints.</p></li>
+</ul>
+
+
+<!-- -->
+
+</section>
+</section>
+
+</main> <!-- /main -->
+<script id="quarto-html-after-body" type="application/javascript">
+window.document.addEventListener("DOMContentLoaded", function (event) {
+  const toggleBodyColorMode = (bsSheetEl) => {
+    const mode = bsSheetEl.getAttribute("data-mode");
+    const bodyEl = window.document.querySelector("body");
+    if (mode === "dark") {
+      bodyEl.classList.add("quarto-dark");
+      bodyEl.classList.remove("quarto-light");
+    } else {
+      bodyEl.classList.add("quarto-light");
+      bodyEl.classList.remove("quarto-dark");
+    }
+  }
+  const toggleBodyColorPrimary = () => {
+    const bsSheetEl = window.document.querySelector("link#quarto-bootstrap");
+    if (bsSheetEl) {
+      toggleBodyColorMode(bsSheetEl);
+    }
+  }
+  toggleBodyColorPrimary();  
+  const icon = "";
+  const anchorJS = new window.AnchorJS();
+  anchorJS.options = {
+    placement: 'right',
+    icon: icon
+  };
+  anchorJS.add('.anchored');
+  const isCodeAnnotation = (el) => {
+    for (const clz of el.classList) {
+      if (clz.startsWith('code-annotation-')) {                     
+        return true;
+      }
+    }
+    return false;
+  }
+  const clipboard = new window.ClipboardJS('.code-copy-button', {
+    text: function(trigger) {
+      const codeEl = trigger.previousElementSibling.cloneNode(true);
+      for (const childEl of codeEl.children) {
+        if (isCodeAnnotation(childEl)) {
+          childEl.remove();
+        }
+      }
+      return codeEl.innerText;
+    }
+  });
+  clipboard.on('success', function(e) {
+    // button target
+    const button = e.trigger;
+    // don't keep focus
+    button.blur();
+    // flash "checked"
+    button.classList.add('code-copy-button-checked');
+    var currentTitle = button.getAttribute("title");
+    button.setAttribute("title", "Copied!");
+    let tooltip;
+    if (window.bootstrap) {
+      button.setAttribute("data-bs-toggle", "tooltip");
+      button.setAttribute("data-bs-placement", "left");
+      button.setAttribute("data-bs-title", "Copied!");
+      tooltip = new bootstrap.Tooltip(button, 
+        { trigger: "manual", 
+          customClass: "code-copy-button-tooltip",
+          offset: [0, -8]});
+      tooltip.show();    
+    }
+    setTimeout(function() {
+      if (tooltip) {
+        tooltip.hide();
+        button.removeAttribute("data-bs-title");
+        button.removeAttribute("data-bs-toggle");
+        button.removeAttribute("data-bs-placement");
+      }
+      button.setAttribute("title", currentTitle);
+      button.classList.remove('code-copy-button-checked');
+    }, 1000);
+    // clear code selection
+    e.clearSelection();
+  });
+  const viewSource = window.document.getElementById('quarto-view-source') ||
+                     window.document.getElementById('quarto-code-tools-source');
+  if (viewSource) {
+    const sourceUrl = viewSource.getAttribute("data-quarto-source-url");
+    viewSource.addEventListener("click", function(e) {
+      if (sourceUrl) {
+        // rstudio viewer pane
+        if (/\bcapabilities=\b/.test(window.location)) {
+          window.open(sourceUrl);
+        } else {
+          window.location.href = sourceUrl;
+        }
+      } else {
+        const modal = new bootstrap.Modal(document.getElementById('quarto-embedded-source-code-modal'));
+        modal.show();
+      }
+      return false;
+    });
+  }
+  function toggleCodeHandler(show) {
+    return function(e) {
+      const detailsSrc = window.document.querySelectorAll(".cell > details > .sourceCode");
+      for (let i=0; i<detailsSrc.length; i++) {
+        const details = detailsSrc[i].parentElement;
+        if (show) {
+          details.open = true;
+        } else {
+          details.removeAttribute("open");
+        }
+      }
+      const cellCodeDivs = window.document.querySelectorAll(".cell > .sourceCode");
+      const fromCls = show ? "hidden" : "unhidden";
+      const toCls = show ? "unhidden" : "hidden";
+      for (let i=0; i<cellCodeDivs.length; i++) {
+        const codeDiv = cellCodeDivs[i];
+        if (codeDiv.classList.contains(fromCls)) {
+          codeDiv.classList.remove(fromCls);
+          codeDiv.classList.add(toCls);
+        } 
+      }
+      return false;
+    }
+  }
+  const hideAllCode = window.document.getElementById("quarto-hide-all-code");
+  if (hideAllCode) {
+    hideAllCode.addEventListener("click", toggleCodeHandler(false));
+  }
+  const showAllCode = window.document.getElementById("quarto-show-all-code");
+  if (showAllCode) {
+    showAllCode.addEventListener("click", toggleCodeHandler(true));
+  }
+  function tippyHover(el, contentFn) {
+    const config = {
+      allowHTML: true,
+      content: contentFn,
+      maxWidth: 500,
+      delay: 100,
+      arrow: false,
+      appendTo: function(el) {
+          return el.parentElement;
+      },
+      interactive: true,
+      interactiveBorder: 10,
+      theme: 'quarto',
+      placement: 'bottom-start'
+    };
+    window.tippy(el, config); 
+  }
+  const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+  for (var i=0; i<noterefs.length; i++) {
+    const ref = noterefs[i];
+    tippyHover(ref, function() {
+      // use id or data attribute instead here
+      let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+      try { href = new URL(href).hash; } catch {}
+      const id = href.replace(/^#\/?/, "");
+      const note = window.document.getElementById(id);
+      return note.innerHTML;
+    });
+  }
+      let selectedAnnoteEl;
+      const selectorForAnnotation = ( cell, annotation) => {
+        let cellAttr = 'data-code-cell="' + cell + '"';
+        let lineAttr = 'data-code-annotation="' +  annotation + '"';
+        const selector = 'span[' + cellAttr + '][' + lineAttr + ']';
+        return selector;
+      }
+      const selectCodeLines = (annoteEl) => {
+        const doc = window.document;
+        const targetCell = annoteEl.getAttribute("data-target-cell");
+        const targetAnnotation = annoteEl.getAttribute("data-target-annotation");
+        const annoteSpan = window.document.querySelector(selectorForAnnotation(targetCell, targetAnnotation));
+        const lines = annoteSpan.getAttribute("data-code-lines").split(",");
+        const lineIds = lines.map((line) => {
+          return targetCell + "-" + line;
+        })
+        let top = null;
+        let height = null;
+        let parent = null;
+        if (lineIds.length > 0) {
+            //compute the position of the single el (top and bottom and make a div)
+            const el = window.document.getElementById(lineIds[0]);
+            top = el.offsetTop;
+            height = el.offsetHeight;
+            parent = el.parentElement.parentElement;
+          if (lineIds.length > 1) {
+            const lastEl = window.document.getElementById(lineIds[lineIds.length - 1]);
+            const bottom = lastEl.offsetTop + lastEl.offsetHeight;
+            height = bottom - top;
+          }
+          if (top !== null && height !== null && parent !== null) {
+            // cook up a div (if necessary) and position it 
+            let div = window.document.getElementById("code-annotation-line-highlight");
+            if (div === null) {
+              div = window.document.createElement("div");
+              div.setAttribute("id", "code-annotation-line-highlight");
+              div.style.position = 'absolute';
+              parent.appendChild(div);
+            }
+            div.style.top = top - 2 + "px";
+            div.style.height = height + 4 + "px";
+            let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
+            if (gutterDiv === null) {
+              gutterDiv = window.document.createElement("div");
+              gutterDiv.setAttribute("id", "code-annotation-line-highlight-gutter");
+              gutterDiv.style.position = 'absolute';
+              const codeCell = window.document.getElementById(targetCell);
+              const gutter = codeCell.querySelector('.code-annotation-gutter');
+              gutter.appendChild(gutterDiv);
+            }
+            gutterDiv.style.top = top - 2 + "px";
+            gutterDiv.style.height = height + 4 + "px";
+          }
+          selectedAnnoteEl = annoteEl;
+        }
+      };
+      const unselectCodeLines = () => {
+        const elementsIds = ["code-annotation-line-highlight", "code-annotation-line-highlight-gutter"];
+        elementsIds.forEach((elId) => {
+          const div = window.document.getElementById(elId);
+          if (div) {
+            div.remove();
+          }
+        });
+        selectedAnnoteEl = undefined;
+      };
+      // Attach click handler to the DT
+      const annoteDls = window.document.querySelectorAll('dt[data-target-cell]');
+      for (const annoteDlNode of annoteDls) {
+        annoteDlNode.addEventListener('click', (event) => {
+          const clickedEl = event.target;
+          if (clickedEl !== selectedAnnoteEl) {
+            unselectCodeLines();
+            const activeEl = window.document.querySelector('dt[data-target-cell].code-annotation-active');
+            if (activeEl) {
+              activeEl.classList.remove('code-annotation-active');
+            }
+            selectCodeLines(clickedEl);
+            clickedEl.classList.add('code-annotation-active');
+          } else {
+            // Unselect the line
+            unselectCodeLines();
+            clickedEl.classList.remove('code-annotation-active');
+          }
+        });
+      }
+  const findCites = (el) => {
+    const parentEl = el.parentElement;
+    if (parentEl) {
+      const cites = parentEl.dataset.cites;
+      if (cites) {
+        return {
+          el,
+          cites: cites.split(' ')
+        };
+      } else {
+        return findCites(el.parentElement)
+      }
+    } else {
+      return undefined;
+    }
+  };
+  var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+  for (var i=0; i<bibliorefs.length; i++) {
+    const ref = bibliorefs[i];
+    const citeInfo = findCites(ref);
+    if (citeInfo) {
+      tippyHover(citeInfo.el, function() {
+        var popup = window.document.createElement('div');
+        citeInfo.cites.forEach(function(cite) {
+          var citeDiv = window.document.createElement('div');
+          citeDiv.classList.add('hanging-indent');
+          citeDiv.classList.add('csl-entry');
+          var biblioDiv = window.document.getElementById('ref-' + cite);
+          if (biblioDiv) {
+            citeDiv.innerHTML = biblioDiv.innerHTML;
+          }
+          popup.appendChild(citeDiv);
+        });
+        return popup.innerHTML;
+      });
+    }
+  }
+});
+</script>
+<nav class="page-navigation">
+  <div class="nav-page nav-page-previous">
+      <a href="./sql.html" class="pagination-link">
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">SQL</span></span>
+      </a>          
+  </div>
+  <div class="nav-page nav-page-next">
+      <a href="./data-collection.html" class="pagination-link">
+        <span class="nav-page-text"><span class="chapter-number">5</span>&nbsp; <span class="chapter-title">Data Collection</span></span> <i class="bi bi-arrow-right-short"></i>
+      </a>
+  </div>
+</nav><div class="modal fade" id="quarto-embedded-source-code-modal" tabindex="-1" aria-labelledby="quarto-embedded-source-code-modal-label" aria-hidden="true"><div class="modal-dialog modal-dialog-scrollable"><div class="modal-content"><div class="modal-header"><h5 class="modal-title" id="quarto-embedded-source-code-modal-label">Source Code</h5><button class="btn-close" data-bs-dismiss="modal"></button></div><div class="modal-body"><div class="">
+<div class="sourceCode" id="cb7" data-shortcodes="false"><pre class="sourceCode markdown code-with-copy"><code class="sourceCode markdown"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a><span class="co">---</span></span>
+<span id="cb7-2"><a href="#cb7-2" aria-hidden="true" tabindex="-1"></a><span class="an">title:</span><span class="co"> "Advanced SQL"</span></span>
+<span id="cb7-3"><a href="#cb7-3" aria-hidden="true" tabindex="-1"></a><span class="an">editor:</span><span class="co"> visual</span></span>
+<span id="cb7-4"><a href="#cb7-4" aria-hidden="true" tabindex="-1"></a><span class="co">---</span></span>
+<span id="cb7-5"><a href="#cb7-5" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb7-6"><a href="#cb7-6" aria-hidden="true" tabindex="-1"></a>In this module, you'll receive an introduction to three new tools: SQLite, SQLAlchemy, and Flask. You'll use these tools to build on your knowledge of SQL database structures and querying methods. You'll also write and run Python code in a Jupyter notebook and create graphs by using Python.</span>
+<span id="cb7-7"><a href="#cb7-7" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb7-8"><a href="#cb7-8" aria-hidden="true" tabindex="-1"></a><span class="fu">## Introduction to SQLAlchemy</span></span>
+<span id="cb7-9"><a href="#cb7-9" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb7-10"><a href="#cb7-10" aria-hidden="true" tabindex="-1"></a><span class="fu">#### Overview</span></span>
+<span id="cb7-11"><a href="#cb7-11" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb7-12"><a href="#cb7-12" aria-hidden="true" tabindex="-1"></a>This lesson will combine what we learned last week about SQL with our favorite programming language: Python. Before getting started, you'll need to install SQLite. SQLite is a SQL dialect that shares much of its syntax with PostgreSQL, but it's entirely serverless.The lesson will first introduce you to SQLAlchemy, a Python library that's designed to work with SQL databases. You'll then complete an activity in which you'll analyze weather data by using SQLAlchemy. After another activity in which you'll create new DataFrames based on United States census data, your instructor will lead you through a crash course in object-oriented programming (OOP).</span>
+<span id="cb7-13"><a href="#cb7-13" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb7-14"><a href="#cb7-14" aria-hidden="true" tabindex="-1"></a><span class="fu">#### What You'll Learn</span></span>
+<span id="cb7-15"><a href="#cb7-15" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb7-16"><a href="#cb7-16" aria-hidden="true" tabindex="-1"></a>By the end of this lesson, you will be able to:</span>
+<span id="cb7-17"><a href="#cb7-17" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb7-18"><a href="#cb7-18" aria-hidden="true" tabindex="-1"></a><span class="ss">-   </span>Connect to a SQL database by using SQLAlchemy.</span>
+<span id="cb7-19"><a href="#cb7-19" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb7-20"><a href="#cb7-20" aria-hidden="true" tabindex="-1"></a><span class="ss">-   </span>Perform basic SQL queries by using <span class="in">`engine.execute()`</span>.</span>
+<span id="cb7-21"><a href="#cb7-21" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb7-22"><a href="#cb7-22" aria-hidden="true" tabindex="-1"></a><span class="ss">-   </span>Create Python classes and objects.</span>
+<span id="cb7-23"><a href="#cb7-23" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb7-24"><a href="#cb7-24" aria-hidden="true" tabindex="-1"></a><span class="ss">-   </span>Perform create, read, update, delete (CRUD) operations on data in a SQL database by using the SQLAlchemy object-relational mapper (ORM).</span>
+<span id="cb7-25"><a href="#cb7-25" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb7-26"><a href="#cb7-26" aria-hidden="true" tabindex="-1"></a><span class="fu">### SQL Alchemy</span></span>
+<span id="cb7-27"><a href="#cb7-27" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb7-28"><a href="#cb7-28" aria-hidden="true" tabindex="-1"></a>SQLAlchemy is a Python library that allows users to access and manage SQL databases. SQLAlchemy provides a powerful interface to interact with relational databases.</span>
+<span id="cb7-29"><a href="#cb7-29" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb7-30"><a href="#cb7-30" aria-hidden="true" tabindex="-1"></a>SQLAlchemy bridges the differences amon various SQL dialects. A single script that uses SQLAlchemy can perform the same query across the different SQL dialects such as, *PostgreSQL*, *SQLite*, *MySQL*, etc.</span>
+<span id="cb7-31"><a href="#cb7-31" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb7-32"><a href="#cb7-32" aria-hidden="true" tabindex="-1"></a>To help us begin to connect to a database we will use the function <span class="in">`create_engine()`</span> from <span class="in">`sqlalchemy`</span> to connect to the database.</span>
+<span id="cb7-33"><a href="#cb7-33" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb7-36"><a href="#cb7-36" aria-hidden="true" tabindex="-1"></a><span class="in">```{python}</span></span>
+<span id="cb7-37"><a href="#cb7-37" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> sqlalchemy <span class="im">import</span> create_engine, text</span>
+<span id="cb7-38"><a href="#cb7-38" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb7-39"><a href="#cb7-39" aria-hidden="true" tabindex="-1"></a><span class="co"># Path too sqlite file</span></span>
+<span id="cb7-40"><a href="#cb7-40" aria-hidden="true" tabindex="-1"></a>database_path <span class="op">=</span> <span class="st">"../modules/10-advanced-sql/day-01/resources/Census_Data.sqlite"</span></span>
+<span id="cb7-41"><a href="#cb7-41" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb7-42"><a href="#cb7-42" aria-hidden="true" tabindex="-1"></a><span class="co"># Create engine to talk to the database</span></span>
+<span id="cb7-43"><a href="#cb7-43" aria-hidden="true" tabindex="-1"></a>engine <span class="op">=</span> create_engine(<span class="ss">f"sqlite:///</span><span class="sc">{</span>database_path<span class="sc">}</span><span class="ss">"</span>)</span>
+<span id="cb7-44"><a href="#cb7-44" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
+<span id="cb7-45"><a href="#cb7-45" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb7-46"><a href="#cb7-46" aria-hidden="true" tabindex="-1"></a>The <span class="in">`engine`</span> above creates a <span class="in">`Dialect`</span> object that is tailored towards SQLite and <span class="in">`Pool`</span> object that will establish a DBAPI connection. So far we have **not** established the connection to the database. The connection happens when we make a function call to <span class="in">`engine.connect()`</span> or <span class="in">`engine.begin()`</span>.</span>
+<span id="cb7-47"><a href="#cb7-47" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb7-48"><a href="#cb7-48" aria-hidden="true" tabindex="-1"></a>First, let's use <span class="in">`engine.execute()`</span> to perform a SQL query. Inside of <span class="in">`engine.execute()`</span> we can pass a SQL query in the form of a string</span>
+<span id="cb7-49"><a href="#cb7-49" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb7-52"><a href="#cb7-52" aria-hidden="true" tabindex="-1"></a><span class="in">```{python}</span></span>
+<span id="cb7-53"><a href="#cb7-53" aria-hidden="true" tabindex="-1"></a><span class="co"># Query the the first five records the databse</span></span>
+<span id="cb7-54"><a href="#cb7-54" aria-hidden="true" tabindex="-1"></a>data <span class="op">=</span> engine.execute(<span class="st">"SELECT * FROM Census_Data LIMIT 5"</span>)</span>
+<span id="cb7-55"><a href="#cb7-55" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb7-56"><a href="#cb7-56" aria-hidden="true" tabindex="-1"></a><span class="co"># Print the results</span></span>
+<span id="cb7-57"><a href="#cb7-57" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span> i <span class="kw">in</span> data:</span>
+<span id="cb7-58"><a href="#cb7-58" aria-hidden="true" tabindex="-1"></a>    <span class="bu">print</span>(i)</span>
+<span id="cb7-59"><a href="#cb7-59" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
+<span id="cb7-60"><a href="#cb7-60" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb7-61"><a href="#cb7-61" aria-hidden="true" tabindex="-1"></a>Now let's establish a connection to get our data and we can also use the <span class="in">`pandas`</span> library to work with our data</span>
+<span id="cb7-62"><a href="#cb7-62" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb7-65"><a href="#cb7-65" aria-hidden="true" tabindex="-1"></a><span class="in">```{python}</span></span>
+<span id="cb7-66"><a href="#cb7-66" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> pandas <span class="im">as</span> pd</span>
+<span id="cb7-67"><a href="#cb7-67" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb7-68"><a href="#cb7-68" aria-hidden="true" tabindex="-1"></a>connection <span class="op">=</span> engine.<span class="ex">connect</span>()</span>
+<span id="cb7-69"><a href="#cb7-69" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb7-70"><a href="#cb7-70" aria-hidden="true" tabindex="-1"></a>df <span class="op">=</span> pd.read_sql(<span class="st">"SELECT * FROM Census_Data"</span>, connection)</span>
+<span id="cb7-71"><a href="#cb7-71" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb7-72"><a href="#cb7-72" aria-hidden="true" tabindex="-1"></a>df.head()</span>
+<span id="cb7-73"><a href="#cb7-73" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
+<span id="cb7-74"><a href="#cb7-74" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb7-75"><a href="#cb7-75" aria-hidden="true" tabindex="-1"></a><span class="fu">### Python Classes</span></span>
+<span id="cb7-76"><a href="#cb7-76" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb7-77"><a href="#cb7-77" aria-hidden="true" tabindex="-1"></a>Another useful aspect of SQLAlchemy is that it can also update a SQL database using Python classes.</span>
+<span id="cb7-78"><a href="#cb7-78" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb7-79"><a href="#cb7-79" aria-hidden="true" tabindex="-1"></a>Classes are essentially blueprints for Python objects; they allow developers to create organized variables with keys, values, and methods on the fly. </span>
+<span id="cb7-80"><a href="#cb7-80" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb7-81"><a href="#cb7-81" aria-hidden="true" tabindex="-1"></a>For example we can have the following</span>
+<span id="cb7-82"><a href="#cb7-82" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb7-85"><a href="#cb7-85" aria-hidden="true" tabindex="-1"></a><span class="in">```{python}</span></span>
+<span id="cb7-86"><a href="#cb7-86" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> sqlalchemy.ext.declarative <span class="im">import</span> declarative_base</span>
+<span id="cb7-87"><a href="#cb7-87" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> sqlalchemy <span class="im">import</span> Column, Integer, String, Float</span>
+<span id="cb7-88"><a href="#cb7-88" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb7-89"><a href="#cb7-89" aria-hidden="true" tabindex="-1"></a><span class="co"># Sets an object to use the default declarative base in SQLAlchemy</span></span>
+<span id="cb7-90"><a href="#cb7-90" aria-hidden="true" tabindex="-1"></a>Base <span class="op">=</span> declarative_base()</span>
+<span id="cb7-91"><a href="#cb7-91" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb7-92"><a href="#cb7-92" aria-hidden="true" tabindex="-1"></a><span class="co"># Creates Classes which will serve as the anchor points for our tables</span></span>
+<span id="cb7-93"><a href="#cb7-93" aria-hidden="true" tabindex="-1"></a><span class="kw">class</span> Dog(Base):</span>
+<span id="cb7-94"><a href="#cb7-94" aria-hidden="true" tabindex="-1"></a>    __tablename__ <span class="op">=</span> <span class="st">"dog"</span></span>
+<span id="cb7-95"><a href="#cb7-95" aria-hidden="true" tabindex="-1"></a>    <span class="bu">id</span> <span class="op">=</span> Column(Integer, primary_key <span class="op">=</span> <span class="va">True</span>)</span>
+<span id="cb7-96"><a href="#cb7-96" aria-hidden="true" tabindex="-1"></a>    name <span class="op">=</span> Column(String(<span class="dv">255</span>))</span>
+<span id="cb7-97"><a href="#cb7-97" aria-hidden="true" tabindex="-1"></a>    color <span class="op">=</span> Column(String(<span class="dv">255</span>))</span>
+<span id="cb7-98"><a href="#cb7-98" aria-hidden="true" tabindex="-1"></a>    age <span class="op">=</span> Column(Integer)</span>
+<span id="cb7-99"><a href="#cb7-99" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb7-100"><a href="#cb7-100" aria-hidden="true" tabindex="-1"></a><span class="kw">class</span> Cat(Base):</span>
+<span id="cb7-101"><a href="#cb7-101" aria-hidden="true" tabindex="-1"></a>    __tablename__ <span class="op">=</span> <span class="st">"cat"</span></span>
+<span id="cb7-102"><a href="#cb7-102" aria-hidden="true" tabindex="-1"></a>    <span class="bu">id</span> <span class="op">=</span> Column(Integer, primary_key <span class="op">=</span> <span class="va">True</span>)</span>
+<span id="cb7-103"><a href="#cb7-103" aria-hidden="true" tabindex="-1"></a>    name <span class="op">=</span> Column(String(<span class="dv">255</span>))</span>
+<span id="cb7-104"><a href="#cb7-104" aria-hidden="true" tabindex="-1"></a>    color <span class="op">=</span> Column(String(<span class="dv">255</span>))</span>
+<span id="cb7-105"><a href="#cb7-105" aria-hidden="true" tabindex="-1"></a>    age <span class="op">=</span> Column(Integer)</span>
+<span id="cb7-106"><a href="#cb7-106" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb7-107"><a href="#cb7-107" aria-hidden="true" tabindex="-1"></a><span class="co"># Create a specific instance of the Dog and Cat classes</span></span>
+<span id="cb7-108"><a href="#cb7-108" aria-hidden="true" tabindex="-1"></a>dog <span class="op">=</span> Dog(name <span class="op">=</span> <span class="st">"Charles"</span>, color <span class="op">=</span> <span class="st">"brown"</span>, age <span class="op">=</span> <span class="dv">4</span>)</span>
+<span id="cb7-109"><a href="#cb7-109" aria-hidden="true" tabindex="-1"></a>cat <span class="op">=</span> Cat(name <span class="op">=</span> <span class="st">"Lucy"</span>, color <span class="op">=</span> <span class="st">"gray"</span>, age <span class="op">=</span> <span class="dv">7</span>)</span>
+<span id="cb7-110"><a href="#cb7-110" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb7-111"><a href="#cb7-111" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="ss">f"The dog's name is </span><span class="sc">{</span>dog<span class="sc">.</span>name<span class="sc">}</span><span class="ss">. He's a </span><span class="sc">{</span>dog<span class="sc">.</span>color<span class="sc">}</span><span class="ss"> dog and he's </span><span class="sc">{</span>dog<span class="sc">.</span>age<span class="sc">}</span><span class="ss"> years old."</span>)</span>
+<span id="cb7-112"><a href="#cb7-112" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="ss">f"The cat's name is </span><span class="sc">{</span>cat<span class="sc">.</span>name<span class="sc">}</span><span class="ss">. She's a </span><span class="sc">{</span>cat<span class="sc">.</span>color<span class="sc">}</span><span class="ss"> cat and she's </span><span class="sc">{</span>cat<span class="sc">.</span>age<span class="sc">}</span><span class="ss"> years old."</span>)</span>
+<span id="cb7-113"><a href="#cb7-113" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
+<span id="cb7-114"><a href="#cb7-114" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb7-115"><a href="#cb7-115" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb7-116"><a href="#cb7-116" aria-hidden="true" tabindex="-1"></a><span class="fu">### SQLAlchemy's Object-Relational Mapper (ORM)</span></span>
+<span id="cb7-117"><a href="#cb7-117" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb7-118"><a href="#cb7-118" aria-hidden="true" tabindex="-1"></a><span class="fu">## Advanced Usage of the SQLAlchemy ORM</span></span>
+<span id="cb7-119"><a href="#cb7-119" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb7-120"><a href="#cb7-120" aria-hidden="true" tabindex="-1"></a><span class="fu">#### Overview</span></span>
+<span id="cb7-121"><a href="#cb7-121" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb7-122"><a href="#cb7-122" aria-hidden="true" tabindex="-1"></a>This lesson will introduce you to the finer details of working with the SQLAlchemy ORM. You'll learn how to create complex queries, update rows, perform joins, and use ORM methods to run queries.</span>
+<span id="cb7-123"><a href="#cb7-123" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb7-124"><a href="#cb7-124" aria-hidden="true" tabindex="-1"></a><span class="fu">#### What You'll Learn</span></span>
+<span id="cb7-125"><a href="#cb7-125" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb7-126"><a href="#cb7-126" aria-hidden="true" tabindex="-1"></a>By the end of this lesson, you will be able to:</span>
+<span id="cb7-127"><a href="#cb7-127" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb7-128"><a href="#cb7-128" aria-hidden="true" tabindex="-1"></a><span class="ss">-   </span>Create classes that model tables by using the SQLAlchemy ORM.</span>
+<span id="cb7-129"><a href="#cb7-129" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb7-130"><a href="#cb7-130" aria-hidden="true" tabindex="-1"></a><span class="ss">-   </span>Perform CRUD operations on databases by using the SQLAlchemy ORM.</span>
+<span id="cb7-131"><a href="#cb7-131" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb7-132"><a href="#cb7-132" aria-hidden="true" tabindex="-1"></a><span class="ss">-   </span>Reflect existing databases.</span>
+<span id="cb7-133"><a href="#cb7-133" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb7-134"><a href="#cb7-134" aria-hidden="true" tabindex="-1"></a><span class="ss">-   </span>Review the table names in a database by using SQLAlchemy inspection.</span>
+<span id="cb7-135"><a href="#cb7-135" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb7-136"><a href="#cb7-136" aria-hidden="true" tabindex="-1"></a><span class="ss">-   </span>Plot query results that are retrieved by using SQLAlchemy.</span>
+<span id="cb7-137"><a href="#cb7-137" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb7-138"><a href="#cb7-138" aria-hidden="true" tabindex="-1"></a><span class="ss">-   </span>Run a t-test to validate differences in means.</span>
+<span id="cb7-139"><a href="#cb7-139" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb7-140"><a href="#cb7-140" aria-hidden="true" tabindex="-1"></a><span class="fu">## Introduction to Flask and Serving Data with APIs</span></span>
+<span id="cb7-141"><a href="#cb7-141" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb7-142"><a href="#cb7-142" aria-hidden="true" tabindex="-1"></a><span class="fu">#### Overview</span></span>
+<span id="cb7-143"><a href="#cb7-143" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb7-144"><a href="#cb7-144" aria-hidden="true" tabindex="-1"></a>In today's lesson, you'll learn the fundamentals of both the web and client-server architecture. This will include using Flask to create a database-backed server and to design and implement API endpoints.</span>
+<span id="cb7-145"><a href="#cb7-145" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb7-146"><a href="#cb7-146" aria-hidden="true" tabindex="-1"></a><span class="fu">#### What You'll Learn</span></span>
+<span id="cb7-147"><a href="#cb7-147" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb7-148"><a href="#cb7-148" aria-hidden="true" tabindex="-1"></a>By the end of this lesson, you will be able to:</span>
+<span id="cb7-149"><a href="#cb7-149" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb7-150"><a href="#cb7-150" aria-hidden="true" tabindex="-1"></a><span class="ss">-   </span>Create and run a server by using Flask.</span>
+<span id="cb7-151"><a href="#cb7-151" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb7-152"><a href="#cb7-152" aria-hidden="true" tabindex="-1"></a><span class="ss">-   </span>Define endpoints by using a Flask decorator.</span>
+<span id="cb7-153"><a href="#cb7-153" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb7-154"><a href="#cb7-154" aria-hidden="true" tabindex="-1"></a><span class="ss">-   </span>Extract query-variable path values from <span class="in">`GET`</span> requests.</span>
+<span id="cb7-155"><a href="#cb7-155" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb7-156"><a href="#cb7-156" aria-hidden="true" tabindex="-1"></a><span class="ss">-   </span>Run database queries on behalf of the client by using variable paths.</span>
+<span id="cb7-157"><a href="#cb7-157" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb7-158"><a href="#cb7-158" aria-hidden="true" tabindex="-1"></a><span class="ss">-   </span>Return JSONified query results from API endpoints.</span>
+</code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div></div></div></div></div>
+</div> <!-- /content -->
+
+
+
+</body></html>
