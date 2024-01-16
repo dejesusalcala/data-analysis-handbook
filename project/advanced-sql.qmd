@@ -35,7 +35,7 @@ To help us begin to connect to a database we will use the function `create_engin
 from sqlalchemy import create_engine, text
 
 # Path too sqlite file
-database_path = "../modules/10-advanced-sql/day-01/resources/Census_Data.sqlite"
+database_path = "../data/sql-files/Census_Data.sqlite"
 
 # Create engine to talk to the database
 engine = create_engine(f"sqlite:///{database_path}")
