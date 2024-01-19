@@ -285,5 +285,12 @@
     "title": "1  Introduction to Python",
     "section": "1.4 Functions",
     "text": "1.4 Functions"
+  },
+  {
+    "objectID": "intro.html#classes-in-python",
+    "href": "intro.html#classes-in-python",
+    "title": "1  Introduction to Python",
+    "section": "1.5 Classes in Python",
+    "text": "1.5 Classes in Python\nA Class in Python acts as a “blueprint” for creating objects. They are extremely useful for the reusability and organization of code.\nAn instance is an object that belongs to a class.\nLet’s consider the following example\n\n\nCode\nclass Square():\n    def __init__(self, length):\n        self.length = length\n\n    def area(self):\n        return self.length*self.length\n\n    def perimiter(self):\n        return self.length*4\n\n\n\n\nCode\nsquare1 = Square(23)\nsquare2 = Square(23.123)\n2*2\n\n\n4\n\n\n\n\nCode\nsquare1.length\n\n\n23\n\n\n\n\nCode\nsquare1.perimiter\n\n\n&lt;bound method Square.perimiter of &lt;__main__.Square object at 0x105e9d290&gt;&gt;\n\n\n\n\nCode\nsquare1.area\n\n\n&lt;bound method Square.area of &lt;__main__.Square object at 0x105e9d290&gt;&gt;"
   }
 ]

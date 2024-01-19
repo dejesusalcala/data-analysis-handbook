@@ -12,3 +12,44 @@ In this chapter we'll cover some of the basics of Python. This will include usin
 ## Conditionals
 
 ## Functions
+
+## Classes in Python
+
+A **Class** in Python acts as a "blueprint" for creating objects. They are extremely useful for the reusability and organization of code.
+
+An **instance** is an object that belongs to a class.
+
+Let's consider the following example
+
+```{python}
+# Create a class Square
+class Square():
+    
+    def __init__(self, length):
+        self.length = length
+
+    def area(self):
+        return self.length*self.length
+
+    def perimiter(self):
+        return self.length*4
+```
+
+```{python}
+square1 = Square(23)
+square2 = Square(23.123)
+2*2
+```
+
+```{python}
+square1.length
+```
+
+```{python}
+square1.perimiter()
+```
+
+
+```{python}
+square1.area()
+```
