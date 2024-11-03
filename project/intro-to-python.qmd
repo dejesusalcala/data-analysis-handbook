@@ -35,10 +35,11 @@ class Square():
         return self.length*4
 ```
 
+In this case we have created a `class`
+
 ```{python}
 square1 = Square(23)
 square2 = Square(23.123)
-2*2
 ```
 
 ```{python}
@@ -52,4 +53,8 @@ square1.perimiter()
 
 ```{python}
 square1.area()
+```
+
+```{julia}
+2+2
 ```
