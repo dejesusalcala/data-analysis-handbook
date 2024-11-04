@@ -1,0 +1,52 @@
+---
+title: "What is Data Analysis?"
+format: html
+---
+
+When people talk about "data" what exactly do they mean? To understand data we'll discuss three perspectives about the notion of data:
+
+- How do we store and organize data?
+- What are some of the things that analysts tend to think when discussing data?
+- How do programs handle data?
+
+So, in general, what is data? What is data analysis? Who is a data analyst and what do they do?  We can define these terms as the following
+
+Data
+: In general, *data* are facts and statistics collected together for reference or analysis.
+
+Data Analysis
+: *Data analysis* is the collection, transformation, organization of data in order to draw conclusions, make predictions, and drive informed decision-making.
+
+Data Analyst
+: A *data analyst* is someone who collects, transforms, and organizes data in order to help make informed decisions.
+
+Data Analytics
+: *Data analytics* is the science of data.
+
+Let's take a look at the following example:
+
+- - -
+
+Example:
+: *Luke Skywalker* grew up in *Tatooine*. He is a force sensitive *male*, *1.72 meters* tall, and uses a lightsaber.
+
+There are numerous ways to store this data:
+
+- Pen and paper
+- Photo
+- Audio
+- Word Document
+- Plain text file
+
+- - -
+
+In a compter, this data will be stored in a **file**.
+
+File
+: A *file* is simply a block of computer memory. It's a collection of related data typically organized as records.
+ 
+    - can be a few bytes to gigabytes in size
+    - a file format is a way of interpreting the bytes in a file
+
+File Extension
+: A *file extension* is used to identify the file (i.e. the type of file).

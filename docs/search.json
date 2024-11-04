@@ -348,5 +348,12 @@
     "title": "5  Introduction to Python",
     "section": "5.5 Classes in Python",
     "text": "5.5 Classes in Python\nA Class in Python acts as a “blueprint” for creating objects. They are extremely useful for the reusability and organization of code.\nAn instance is an object that belongs to a class.\nLet’s consider the following example\n\n\nCode\n# Create a class Square\nclass Square():\n    \n    def __init__(self, length):\n        self.length = length\n\n    def area(self):\n        return self.length*self.length\n\n    def perimiter(self):\n        return self.length*4\n\n\nIn this case we have created a class\n\n\nCode\nsquare1 = Square(23)\nsquare2 = Square(23.123)\n\n\n\n\nCode\nsquare1.length\n\n\n23\n\n\n\n\nCode\nsquare1.perimiter()\n\n\n92\n\n\n\n\nCode\nsquare1.area()\n\n\n529\n\n\n2+2"
+  },
+  {
+    "objectID": "what-is-data-analysis.html",
+    "href": "what-is-data-analysis.html",
+    "title": "1  What is Data Analysis?",
+    "section": "",
+    "text": "When people talk about “data” what exactly do they mean? To understand data we’ll discuss three perspectives about the notion of data:\n\nHow do we store and organize data?\nWhat are some of the things that analysts tend to think when discussing data?\nHow do programs handle data?\n\nSo, in general, what is data? What is data analysis? Who is a data analyst and what do they do? We can define these terms as the following\n\nData\n\nIn general, data are facts and statistics collected together for reference or analysis.\n\nData Analysis\n\nData analysis is the collection, transformation, organization of data in order to draw conclusions, make predictions, and drive informed decision-making.\n\nData Analyst\n\nA data analyst is someone who collects, transforms, and organizes data in order to help make informed decisions.\n\nData Analytics\n\nData analytics is the science of data.\n\n\nLet’s take a look at the following example:\n\n\nExample:\n\nLuke Skywalker grew up in Tatooine. He is a force sensitive male, 1.72 meters tall, and uses a lightsaber.\n\n\nThere are numerous ways to store this data:\n\nPen and paper\nPhoto\nAudio\nWord Document\nPlain text file\n\n\nIn a compter, this data will be stored in a file.\n\nFile\n\nA file is simply a block of computer memory. It’s a collection of related data typically organized as records.\n\ncan be a few bytes to gigabytes in size\na file format is a way of interpreting the bytes in a file\n\n\nFile Extension\n\nA file extension is used to identify the file (i.e. the type of file)."
   }
 ]

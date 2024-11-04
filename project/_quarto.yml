@@ -10,10 +10,13 @@ book:
     - index.qmd
     - part: "PART 1. ABOUT DATA"
       chapters: 
-        - data-tables.qmd
+        - what-is-data-analysis.qmd
+        - data-storage.qmd
+        - data-perspectives.qmd
     - part: "PART 2. DATA VISUALIZATIONS"
       chapters: 
         - visualization-basics.qmd
+        - colors.qmd
     - part: "PART 3. PROGRAMMING IN R"
       chapters: 
         - intro-to-r.qmd
