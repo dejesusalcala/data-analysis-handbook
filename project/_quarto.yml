@@ -6,6 +6,17 @@ book:
   title: "Data Analysis Notes"
   author: "Angel Alcala Ruiz"
   date: "10/19/2023"
+  navbar: 
+    search: true
+    right:
+      - icon: globe2
+        href: https://dejesusalcala.com
+        text: personal website
+        target: _blank
+      - icon: github
+        href: https://github.com/dejesusalcala
+        text: github
+        target: _blank
   chapters:
     - index.qmd
     - part: "PART 1. ABOUT DATA"
