@@ -30,23 +30,23 @@
   {
     "objectID": "data-collection.html#scraping-html",
     "href": "data-collection.html#scraping-html",
-    "title": "5  Data Collection",
-    "section": "5.1 Scraping HTML",
-    "text": "5.1 Scraping HTML\n\nOverview\nThis lesson will introduce you to HTML, then show you how to apply this knowledge to scraping a website. In the first part of class, you’ll go over the basic structure of how HTML and CSS build a webpage so that you will have the foundational knowledge you need in order to scrape a website. In the second part of class, you will complete your first web scraping project by using the Python package Beautiful Soup.\n\n\nWhat You’ll Learn\n\nIdentify HTML components in a website.\nCreate a basic HTML document.\nScrape data from a website by using BeautifulSoup.\nStyle HTML elements by using CSS."
+    "title": "12  Data Collection",
+    "section": "12.1 Scraping HTML",
+    "text": "12.1 Scraping HTML\n\nOverview\nThis lesson will introduce you to HTML, then show you how to apply this knowledge to scraping a website. In the first part of class, you’ll go over the basic structure of how HTML and CSS build a webpage so that you will have the foundational knowledge you need in order to scrape a website. In the second part of class, you will complete your first web scraping project by using the Python package Beautiful Soup.\n\n\nWhat You’ll Learn\n\nIdentify HTML components in a website.\nCreate a basic HTML document.\nScrape data from a website by using BeautifulSoup.\nStyle HTML elements by using CSS."
   },
   {
     "objectID": "data-collection.html#web-scraping-with-css-selectors",
     "href": "data-collection.html#web-scraping-with-css-selectors",
-    "title": "5  Data Collection",
-    "section": "5.2 Web Scraping with CSS Selectors",
-    "text": "5.2 Web Scraping with CSS Selectors\n\nOverview\nThis lesson will build on the topics from the previous lesson, so it’s important that you are comfortable with HTML, CSS, and Beautiful Soup. You will work on more advanced web scraping activities by using CSS selectors to identify elements to extract. In addition, you will use Chrome DevTools to explore elements within websites that you are targeting.\n\n\nWhat You’ll Learn\n\nUse CSS selectors to scrape targeted elements.\nUse Chrome DevTools to identify elements and their CSS selectors."
+    "title": "12  Data Collection",
+    "section": "12.2 Web Scraping with CSS Selectors",
+    "text": "12.2 Web Scraping with CSS Selectors\n\nOverview\nThis lesson will build on the topics from the previous lesson, so it’s important that you are comfortable with HTML, CSS, and Beautiful Soup. You will work on more advanced web scraping activities by using CSS selectors to identify elements to extract. In addition, you will use Chrome DevTools to explore elements within websites that you are targeting.\n\n\nWhat You’ll Learn\n\nUse CSS selectors to scrape targeted elements.\nUse Chrome DevTools to identify elements and their CSS selectors."
   },
   {
     "objectID": "data-collection.html#automated-browsing",
     "href": "data-collection.html#automated-browsing",
-    "title": "5  Data Collection",
-    "section": "5.3 Automated Browsing",
-    "text": "5.3 Automated Browsing\n\nOverview\nThis lesson will introduce you to automated web browsing and scraping by using Splinter. By using Splinter alongside Beautiful Soup, you will be able to automate the scraping process and perform more advanced web scraping projects. Since you’ll be scraping real websites, rather than saved HTML, you’ll learn about the ethics and legality of web scraping. This will help you make good choices if you decide to pursue your own web scraping projects.\n\n\nWhat You’ll Learn\n\nUse Splinter to perform automated browser actions.\nAutomate the web scraping process by using Splinter and Beautiful Soup.\nOrganize scraped information into a Python data structure."
+    "title": "12  Data Collection",
+    "section": "12.3 Automated Browsing",
+    "text": "12.3 Automated Browsing\n\nOverview\nThis lesson will introduce you to automated web browsing and scraping by using Splinter. By using Splinter alongside Beautiful Soup, you will be able to automate the scraping process and perform more advanced web scraping projects. Since you’ll be scraping real websites, rather than saved HTML, you’ll learn about the ethics and legality of web scraping. This will help you make good choices if you decide to pursue your own web scraping projects.\n\n\nWhat You’ll Learn\n\nUse Splinter to perform automated browser actions.\nAutomate the web scraping process by using Splinter and Beautiful Soup.\nOrganize scraped information into a Python data structure."
   },
   {
     "objectID": "nosql-databases.html#introduction-to-nosql-and-mongodb",
@@ -107,23 +107,23 @@
   {
     "objectID": "advanced-interactive-visualizations.html#data-visualization-with-leaflet",
     "href": "advanced-interactive-visualizations.html#data-visualization-with-leaflet",
-    "title": "9  Advanced Interactive Visualizations",
-    "section": "9.1 Data Visualization with Leaflet",
-    "text": "9.1 Data Visualization with Leaflet\n\nOverview\nIn this lesson, you’ll learn to create data visualizations with maps. First, your instructor will lead a brief demonstration of creating a Leaflet map. Next, you’ll have the opportunity to create your own map using Leaflet and complete a brief labeling exercise. Then the class will transition to a discussion of Scalable Vector Graphics (SVG) shapes to use as markers such as points, circles, polygons, polylines and rectangles. With these new skills under your belt, you’ll complete two more advanced activities: a visualization of the world GDP per capita, and enhancement to your existing US Cities map to include populations for the states and cities. Finally, the class will end with an introduction to working with GeoJSON data and an activity in which you will plot the occurrences of earthquakes\n\n\nWhat You’ll Learn\nBy the end of this lesson, you will be able to:\n\nExplain the benefits of visualizing data with maps.\nCreate maps and plot data with the Leaflet.js library.\nParse data from the GeoJSON format to create map-based data visualizations.\nDescribe the concepts of layers and layer controls and how they are applied to add interactivity to maps."
+    "title": "16  Advanced Interactive Visualizations",
+    "section": "16.1 Data Visualization with Leaflet",
+    "text": "16.1 Data Visualization with Leaflet\n\nOverview\nIn this lesson, you’ll learn to create data visualizations with maps. First, your instructor will lead a brief demonstration of creating a Leaflet map. Next, you’ll have the opportunity to create your own map using Leaflet and complete a brief labeling exercise. Then the class will transition to a discussion of Scalable Vector Graphics (SVG) shapes to use as markers such as points, circles, polygons, polylines and rectangles. With these new skills under your belt, you’ll complete two more advanced activities: a visualization of the world GDP per capita, and enhancement to your existing US Cities map to include populations for the states and cities. Finally, the class will end with an introduction to working with GeoJSON data and an activity in which you will plot the occurrences of earthquakes\n\n\nWhat You’ll Learn\nBy the end of this lesson, you will be able to:\n\nExplain the benefits of visualizing data with maps.\nCreate maps and plot data with the Leaflet.js library.\nParse data from the GeoJSON format to create map-based data visualizations.\nDescribe the concepts of layers and layer controls and how they are applied to add interactivity to maps."
   },
   {
     "objectID": "advanced-interactive-visualizations.html#geojson-and-leaflet-plugins",
     "href": "advanced-interactive-visualizations.html#geojson-and-leaflet-plugins",
-    "title": "9  Advanced Interactive Visualizations",
-    "section": "9.2 GeoJSON and Leaflet Plugins",
-    "text": "9.2 GeoJSON and Leaflet Plugins\n\nOverview\nIn this lesson, we’ll continue our discussion of GeoJSON and learn how to extend the functionality of Leaflet with third-party plugins. The class will begin with an activity mapping New York City neighborhoods. Then your instructor will introduce you to Leaflet plugins, which are third party libraries that integrate with Leaflet to provide additional features. To ensure you’re familiar with these new tools, you’ll complete an activity to create a heatmap of crime in San Francisco using the leaflet.heat plug in. Next, you’ll complete two additional activities with the guidance of your instructor: First you will rodent clusters in New York City, then you’ll work with a partner to complete a Chroropleth map of Florida’s school districts. The class will end with a group activity where you will create a map on your own and present it to the class.\n\n\nWhat You’ll Learn\nBy the end of this lesson, you will be able to:\n\nProduce heat maps, marker clusters, and choropleth maps using third-party Leaflet.js plugins.\nResearch how to use additional third-party Leaflet.js plugins and JavaScript libraries.\nDifferentiate between maps and map elements for visualizing different datasets.\nCreate and deploy custom interactive dashboards."
+    "title": "16  Advanced Interactive Visualizations",
+    "section": "16.2 GeoJSON and Leaflet Plugins",
+    "text": "16.2 GeoJSON and Leaflet Plugins\n\nOverview\nIn this lesson, we’ll continue our discussion of GeoJSON and learn how to extend the functionality of Leaflet with third-party plugins. The class will begin with an activity mapping New York City neighborhoods. Then your instructor will introduce you to Leaflet plugins, which are third party libraries that integrate with Leaflet to provide additional features. To ensure you’re familiar with these new tools, you’ll complete an activity to create a heatmap of crime in San Francisco using the leaflet.heat plug in. Next, you’ll complete two additional activities with the guidance of your instructor: First you will rodent clusters in New York City, then you’ll work with a partner to complete a Chroropleth map of Florida’s school districts. The class will end with a group activity where you will create a map on your own and present it to the class.\n\n\nWhat You’ll Learn\nBy the end of this lesson, you will be able to:\n\nProduce heat maps, marker clusters, and choropleth maps using third-party Leaflet.js plugins.\nResearch how to use additional third-party Leaflet.js plugins and JavaScript libraries.\nDifferentiate between maps and map elements for visualizing different datasets.\nCreate and deploy custom interactive dashboards."
   },
   {
     "objectID": "advanced-interactive-visualizations.html#citi-bike-project-with-leaflet",
     "href": "advanced-interactive-visualizations.html#citi-bike-project-with-leaflet",
-    "title": "9  Advanced Interactive Visualizations",
-    "section": "9.3 Citi Bike Project with Leaflet",
-    "text": "9.3 Citi Bike Project with Leaflet\n\nOverview\nYou will further develop your Leaflet skills in this lesson. To get started, your instructor will demonstrate how to use the Python HTTP server. Next, you’ll use the Citi Bike API to create a Leaflet map displaying the locations of Citi Bike stations in New York. After you’ve created your map, you will deploy the Citi Bike project to GitHub Pages.\n\n\nWhat You’ll Learn\nBy the end of this lesson, you will be able to:\n\nComplete an in-class group project using Leaflet.js.\nDeploy data visualizations to GitHub Pages.\nDraft a project proposal in a team setting."
+    "title": "16  Advanced Interactive Visualizations",
+    "section": "16.3 Citi Bike Project with Leaflet",
+    "text": "16.3 Citi Bike Project with Leaflet\n\nOverview\nYou will further develop your Leaflet skills in this lesson. To get started, your instructor will demonstrate how to use the Python HTTP server. Next, you’ll use the Citi Bike API to create a Leaflet map displaying the locations of Citi Bike stations in New York. After you’ve created your map, you will deploy the Citi Bike project to GitHub Pages.\n\n\nWhat You’ll Learn\nBy the end of this lesson, you will be able to:\n\nComplete an in-class group project using Leaflet.js.\nDeploy data visualizations to GitHub Pages.\nDraft a project proposal in a team setting."
   },
   {
     "objectID": "tableau.html#introduction-to-tableau",
@@ -317,37 +317,37 @@
   {
     "objectID": "intro-to-python.html#variables-and-assignments",
     "href": "intro-to-python.html#variables-and-assignments",
-    "title": "5  Introduction to Python",
-    "section": "5.1 Variables and Assignments",
-    "text": "5.1 Variables and Assignments"
+    "title": "8  Introduction to Python",
+    "section": "8.1 Variables and Assignments",
+    "text": "8.1 Variables and Assignments"
   },
   {
     "objectID": "intro-to-python.html#loops-in-python",
     "href": "intro-to-python.html#loops-in-python",
-    "title": "5  Introduction to Python",
-    "section": "5.2 Loops in Python",
-    "text": "5.2 Loops in Python"
+    "title": "8  Introduction to Python",
+    "section": "8.2 Loops in Python",
+    "text": "8.2 Loops in Python"
   },
   {
     "objectID": "intro-to-python.html#conditionals",
     "href": "intro-to-python.html#conditionals",
-    "title": "5  Introduction to Python",
-    "section": "5.3 Conditionals",
-    "text": "5.3 Conditionals"
+    "title": "8  Introduction to Python",
+    "section": "8.3 Conditionals",
+    "text": "8.3 Conditionals"
   },
   {
     "objectID": "intro-to-python.html#functions",
     "href": "intro-to-python.html#functions",
-    "title": "5  Introduction to Python",
-    "section": "5.4 Functions",
-    "text": "5.4 Functions"
+    "title": "8  Introduction to Python",
+    "section": "8.4 Functions",
+    "text": "8.4 Functions"
   },
   {
     "objectID": "intro-to-python.html#classes-in-python",
     "href": "intro-to-python.html#classes-in-python",
-    "title": "5  Introduction to Python",
-    "section": "5.5 Classes in Python",
-    "text": "5.5 Classes in Python\nA Class in Python acts as a “blueprint” for creating objects. They are extremely useful for the reusability and organization of code.\nAn instance is an object that belongs to a class.\nLet’s consider the following example\n\n\nCode\n# Create a class Square\nclass Square():\n    \n    def __init__(self, length):\n        self.length = length\n\n    def area(self):\n        return self.length*self.length\n\n    def perimiter(self):\n        return self.length*4\n\n\nIn this case we have created a class\n\n\nCode\nsquare1 = Square(23)\nsquare2 = Square(23.123)\n\n\n\n\nCode\nsquare1.length\n\n\n23\n\n\n\n\nCode\nsquare1.perimiter()\n\n\n92\n\n\n\n\nCode\nsquare1.area()\n\n\n529\n\n\n2+2"
+    "title": "8  Introduction to Python",
+    "section": "8.5 Classes in Python",
+    "text": "8.5 Classes in Python\nA Class in Python acts as a “blueprint” for creating objects. They are extremely useful for the reusability and organization of code.\nAn instance is an object that belongs to a class.\nLet’s consider the following example\n\n\nCode\n# Create a class Square\nclass Square():\n    \n    def __init__(self, length):\n        self.length = length\n\n    def area(self):\n        return self.length*self.length\n\n    def perimiter(self):\n        return self.length*4\n\n\nIn this case we have created a class\n\n\nCode\nsquare1 = Square(23)\nsquare2 = Square(23.123)\n\n\n\n\nCode\nsquare1.length\n\n\n23\n\n\n\n\nCode\nsquare1.perimiter()\n\n\n92\n\n\n\n\nCode\nsquare1.area()\n\n\n529\n\n\n2+2"
   },
   {
     "objectID": "what-is-data-analysis.html",

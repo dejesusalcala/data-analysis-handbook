@@ -62,7 +62,9 @@ bibliography: references.bib
 
 format:
   html:
-    theme: simplex
+    theme:
+      light: simplex
+      dark: [theme-dark.scss]
     code-fold: show
     code-tools: true
     number-depth: 3
