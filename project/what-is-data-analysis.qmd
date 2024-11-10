@@ -49,4 +49,14 @@ File
     - a file format is a way of interpreting the bytes in a file
 
 File Extension
-: A *file extension* is used to identify the file (i.e. the type of file).
+: A *file extension* is the suffix that appears at the end of the file name and it indicates the type of file (i.e. the type of file).
+
+    - *.txt*, *.pdf*, *.docx*, *.mp3*, *.jpg* are all examples of file extensions.   
+
+Data analysis can be broken down into multiple parts and each plays a key role. These parts together define what's often referred to as the **data analysis process**.
+
+1. **Identify** the question or problem 
+2. **Collect** the data
+3. **Clean** the data
+4. **Analyze** the data
+5. **Interpret** the results 
