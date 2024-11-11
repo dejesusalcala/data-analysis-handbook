@@ -1,6 +1,6 @@
 ---
 title: "Advanced Interactive Visualizations"
-editor: visual
+format: html
 ---
 
 Creating effective, interactive maps is a critical skill for anyone in the data field. Used across a wide variety of applications and fields, maps allow us to explore, understand and make decisions about our world. In this module, you’ll build on your JavaScript skills and the D3 library to create interactive maps. You’ll use GeoJSON, a type of JSON file specifically designed to host geographical information, to develop points, linestrings, and polygons. You’ll also explore non-spatial attributes, or data that is independent of all geometric considerations, and packaged in the hierarchical structure of GeoJSON files.

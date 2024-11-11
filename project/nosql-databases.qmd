@@ -1,6 +1,6 @@
 ---
 title: "NoSQL Databases"
-editor: visual
+format: html
 ---
 
 In this module, you'll be introduced to the concept of the NoSQL database with MongoDB, the leading database management system for this language. You will then expand on your data skills to work with non-relational documents, utilizing the PyMongo library to interface with your Mongo databases using Python. Finally, you'll learn how to build aggregation pipelines when retrieving data, and integrate skills you have learned in previous classes, such as Pandas, APIs, and Matplotlib.

@@ -64,7 +64,7 @@ format:
   html:
     theme:
       light: simplex
-      dark: [theme-dark.scss]
+      dark: [simplex, theme-dark.scss]
     code-fold: show
     code-tools: true
     number-depth: 3

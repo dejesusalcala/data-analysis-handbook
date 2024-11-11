@@ -1,6 +1,6 @@
 ---
 title: "Advanced SQL"
-editor: visual
+format: html
 ---
 
 In this module, you'll receive an introduction to three new tools: SQLite, SQLAlchemy, and Flask. You'll use these tools to build on your knowledge of SQL database structures and querying methods. You'll also write and run Python code in a Jupyter notebook and create graphs by using Python.

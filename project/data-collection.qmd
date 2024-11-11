@@ -1,5 +1,6 @@
 ---
 title: "Data Collection"
+format: html
 ---
 
 This week will focus on collecting data from websites via web scraping techniques. First, you'll learn about how websites are made by using HTML and CSS. You will build your own simple websites to make sure that you understand how HTML and CSS work together to design the content and style of web pages. Then, you'll use your knowledge of HTML and CSS, alongside the Python package Beautiful Soup, to extract specific information from HTML code.
