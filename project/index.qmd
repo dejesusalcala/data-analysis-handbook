@@ -1,3 +1,6 @@
+---
+format: html
+---
 # Preface {.unnumbered}
 
 The purpose of this book is to organize the notes from a couple of data analysis courses that I've taken. In a way I want to merge both into one that can be a comprehensize guide to data analysis. This will be in an online book format that I believe can be beneficial for both learning and reviewing some of the material.  
