@@ -22,33 +22,31 @@ book:
     - part: "PART 1. ABOUT DATA"
       chapters: 
         - what-is-data-analysis.qmd
-        - data-storage.qmd
         - data-perspectives.qmd
-    - part: "PART 2. DATA VISUALIZATIONS"
-      chapters: 
-        - visualization-basics.qmd
-        - colors.qmd
-    - part: "PART 3. PROGRAMMING IN R"
+        - data-storage.qmd
+    - part: "PART 2. PROGRAMMING IN R"
       chapters: 
         - intro-to-r.qmd
         - r-api.qmd
-    - part: "PART 4. PROGRAMMING IN PYTHON"
+    - part: "PART 3. PROGRAMMING IN PYTHON"
       chapters:
         - intro-to-python.qmd
         - python-api.qmd
-    - part: "PART 5. SQL"
-      chapters:
+    - part: "PART 4. SQL"
+      chapters: 
         - sql.qmd
         - advanced-sql.qmd
         - data-collection.qmd
         - nosql-databases.qmd
         - etl.qmd
-    - part: "PART 6. INTERACTIVE VISUALIZATIONS"
-      chapters:
+    - part: "PART 5. DATA VISUALIZATIONS"
+      chapters: 
+        - visualization-basics.qmd
+        - colors.qmd
         - interactive-visualizations.qmd
         - advanced-interactive-visualizations.qmd
         - tableau.qmd
-    - part: "PART 7. MACHINE LEARNING"
+    - part: "PART 6. MACHINE LEARNING"
       chapters:
         - unsupervised-learning.qmd
         - supervised-learning.qmd
