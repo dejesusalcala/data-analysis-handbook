@@ -4,7 +4,7 @@ format: html
 
 # Preface {.unnumbered}
 
-The purpose of this book is to organize the notes from a couple of data analysis courses that I've taken. In a way I want to merge both into one that can be a comprehensize guide to data analysis. This will be in an online book format that I believe can be beneficial for both learning and reviewing some of the material.  
+The purpose of this book is to organize the notes from a couple of data analysis courses that I've taken. In a way, I want to merge both into one that can be a comprehensize guide to data analysis. This will be in an online book format that I believe can be beneficial for both learning and reviewing some of the material.  
 
-This book will cover various data analysis topics sush data storage, cleaning, visualizations, R, Python, SQL, data collection, and much more. As I continue to learn more about data analytics I would also be able to add more content to refine the book.
+This book will cover various data analysis topics such data collection, data storage,  cleaning, visualizations. The book will also cover useful tools such as SQL, R, Python, and a few others. As I continue to learn more about data analytics I would also be able to add more content to refine the book.
 

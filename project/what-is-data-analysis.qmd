@@ -3,6 +3,8 @@ title: "What is Data Analysis?"
 format: html
 ---
 
+## Talking About Data
+
 When people talk about "data" what exactly do they mean? To understand data we'll discuss three perspectives about the notion of data:
 
 - How do we store and organize data?
@@ -53,6 +55,9 @@ File Extension
 
     - *.txt*, *.pdf*, *.docx*, *.mp3*, *.jpg* are all examples of file extensions.   
 
+
+## The Data Analysis Process
+
 Data analysis can be broken down into multiple parts and each plays a key role. These parts together define what's often referred to as the **data analysis process**.
 
 1. **Identify** the question or problem 
@@ -60,3 +65,23 @@ Data analysis can be broken down into multiple parts and each plays a key role. 
 3. **Clean** the data
 4. **Analyze** the data
 5. **Interpret** the results 
+
+#### 1. Identify
+
+The data analysis process first begins with identifying the questions that we want to answer or the problems that we want to solve. In this step we want to ask smart and effective questions and also begin by putting things into context. It's also important to manage team and stakeholder expetations.
+
+#### 2. Collect
+
+Once we've identified our questions and/or problems we can begin by collecting the data that will help us answer these questions. In this book we'll learn the tools that can be used to collect data and the best practices on how to store data. 
+
+#### 3. Clean
+
+In this step we clean the data which prepares it prior to analysis. Cleaning also allows for a much more efficient and organized analysis. Most data collected is dirty data, so in this book we will learn about tools in both Python and R on how to clean data.
+
+#### 4. Analyze
+
+The analysis step is where we begin to answer our questions and solve our problems. Here, there are many methods that can be used for anlysis such as mathematical methods, statistical methods, and visualizations that are used. This book will cover a few of these while also covering some very important preliminary concepts for visualizing data. 
+
+#### 5. Interpret
+
+The final step is to interpret and share our findings. Communication is highly important here because we have to be very considerate of who our audience is. This can be our team, our stakeholder's, the public, or even our family and friends. Each can require a different approach for sharing our results which presents a unique challenge from the other steps, but a highly important and highly rewarding one.  
