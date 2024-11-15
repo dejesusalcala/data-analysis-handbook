@@ -5,13 +5,9 @@ format: html
 
 ## Talking About Data
 
-When people talk about "data" what exactly do they mean? To understand data we'll discuss three perspectives about the notion of data:
+When people talk about "data" what exactly do they mean? 
 
-- How do we store and organize data?
-- What are some of the things that analysts tend to think when discussing data?
-- How do programs handle data?
-
-So, in general, what is data? What is data analysis? Who is a data analyst and what do they do?  We can define these terms as the following
+And what is data analysis? Who is a data analyst and what do they do?  We can start by defining these terms as the following
 
 Data
 : In general, *data* are facts and statistics collected together for reference or analysis.
