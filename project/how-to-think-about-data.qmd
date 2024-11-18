@@ -7,3 +7,41 @@ When a data analyst thinks about data they will likely view that data in a table
 
 ![](../images/output-images/scatter-plot-1.png)
 
+A data analyst likely thinks of mathematical and statistical abstractions. This may involve putting things in terms of relationships or associations, perhaps theoretical mathematical models that take various forms; **linear**, **quadratic**, **non-parametric**.
+
+In general, we should have the following in our minds when thinking of variables in our data
+
+- quantitative vs. qualitative
+- continuous vs. discrete
+- numerical vs. categorical
+- scales: ratio, interval, ordinal, nominal
+- dependent vs. independent
+- descriptors (predictors) vs, response
+- input vs. output
+- correlations
+- theoretical models (linear, quadratic, etc.)
+
+Let's define so of these terms
+
+Quantitative:
+: Relating to, measuring, or measured by the quantity of something rather than its quality.
+
+Example
+: The folllowing are all examples of quantitative data
+
+- weight in pounds
+- length in centimeters
+- dollar value of a company's stocks
+
+
+Qualitative:
+: Relating to, measuring, or measured by the quality of something rather than its quantity.
+
+Continuous:
+: 
+
+Discrete: 
+: 
+
+Numerical: 
+: 
