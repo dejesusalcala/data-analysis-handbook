@@ -23,8 +23,9 @@ book:
     - part: "PART 1. ABOUT DATA"
       chapters: 
         - what-is-data-analysis.qmd
-        - data-perspectives.qmd
+        - how-to-think-about-data.qmd
         - data-storage.qmd
+        - how-programs-handle-data.qmd
     - part: "PART 2. PROGRAMMING IN R"
       chapters: 
         - intro-to-r.qmd

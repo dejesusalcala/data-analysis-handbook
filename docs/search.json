@@ -361,7 +361,7 @@
     "href": "what-is-data-analysis.html#talking-about-data",
     "title": "1  What is Data Analysis?",
     "section": "1.1 Talking About Data",
-    "text": "1.1 Talking About Data\nWhen people talk about “data” what exactly do they mean?\nAnd what is data analysis? Who is a data analyst and what do they do? We can start by defining these terms as the following\n\nData\n\nIn general, data are facts and statistics collected together for reference or analysis.\n\nData Analysis\n\nData analysis is the collection, transformation, organization of data in order to draw conclusions, make predictions, and drive informed decision-making.\n\nData Analyst\n\nA data analyst is someone who collects, transforms, and organizes data in order to help make informed decisions.\n\nData Analytics\n\nData analytics is the science of data.\n\n\nLet’s take a look at the following example:\n\n\nExample:\n\nLuke Skywalker grew up in Tatooine. He is a force sensitive male, 1.72 meters tall, and uses a lightsaber.\n\n\nThere are numerous ways to store this data:\n\nPen and paper\nPhoto\nAudio\nWord Document\nPlain text file\n\n\nIn a compter, this data will be stored in a file.\n\nFile\n\nA file is simply a block of computer memory. It’s a collection of related data typically organized as records.\n\ncan be a few bytes to gigabytes in size\na file format is a way of interpreting the bytes in a file\n\n\nFile Extension\n\nA file extension is the suffix that appears at the end of the file name and it indicates the type of file (i.e. the type of file).\n\n.txt, .pdf, .docx, .mp3, .jpg are all examples of file extensions."
+    "text": "1.1 Talking About Data\nWhen people talk about “data” what exactly do they mean? And what is data analysis? Who is a data analyst and what do they do? To help us to really complete our understanding of data, in the next few chapters, we will also discuss the following three notions of data:\n\nWhat are some of the things that analysts tend to think when discussing data?\nHow do we store and organize data?\nHow do programs handle data?\n\nBut first we can start by defining some of these terms:\n\nData\n\nIn general, data are facts and statistics collected together for reference or analysis.\n\nData Analysis\n\nData analysis is the collection, transformation, organization of data in order to draw conclusions, make predictions, and drive informed decision-making.\n\nData Analyst\n\nA data analyst is someone who collects, transforms, and organizes data in order to help make informed decisions.\n\nData Analytics\n\nData analytics is the science of data.\n\n\nLet’s take a look at the following example:\n\n\nExample:\n\nLuke Skywalker grew up in Tatooine. He is a force sensitive male, 1.72 meters tall, and uses a lightsaber.\n\n\nThere are numerous ways to store this data:\n\nPen and paper\nPhoto\nAudio\nWord Document\nPlain text file\n\n\nIn a compter, this data will be stored in a file.\n\nFile\n\nA file is simply a block of computer memory. It’s a collection of related data typically organized as records.\n\ncan be a few bytes to gigabytes in size\na file format is a way of interpreting the bytes in a file\n\n\nFile Extension\n\nA file extension is the suffix that appears at the end of the file name and it indicates the type of file (i.e. the type of file).\n\n.txt, .pdf, .docx, .mp3, .jpg are all examples of file extensions."
   },
   {
     "objectID": "what-is-data-analysis.html#the-data-analysis-process",
@@ -397,5 +397,12 @@
     "title": "2  Data Perspectives",
     "section": "2.3 How Programs Handle Data",
     "text": "2.3 How Programs Handle Data"
+  },
+  {
+    "objectID": "how-to-think-about-data.html",
+    "href": "how-to-think-about-data.html",
+    "title": "2  How to Think About Data",
+    "section": "",
+    "text": "When a data analyst thinks about data they will likely view that data in a table format with some visualization of that data"
   }
 ]

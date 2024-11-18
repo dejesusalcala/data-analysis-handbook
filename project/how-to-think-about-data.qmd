@@ -1,0 +1,9 @@
+---
+title: "How to Think About Data"
+format: html
+---
+
+When a data analyst thinks about data they will likely view that data in a table format with some visualization of that data 
+
+![](../images/output-images/scatter-plot-1.png)
+
