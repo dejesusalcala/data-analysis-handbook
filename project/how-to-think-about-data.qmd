@@ -11,10 +11,10 @@ A data analyst likely thinks of mathematical and statistical abstractions. This 
 
 In general, we should have the following in our minds when thinking of variables in our data
 
-- quantitative vs. qualitative
+- quantitative (numerical) vs. qualitative (categorical)
 - continuous vs. discrete
-- numerical vs. categorical
-- scales: ratio, interval, ordinal, nominal
+- ordinal vs nominal
+- scales: ratio, interval
 - dependent vs. independent
 - descriptors (predictors) vs. response
 - input vs. output
@@ -24,7 +24,9 @@ In general, we should have the following in our minds when thinking of variables
 Let's define some of these terms
 
 Quantitative:
-: Relating to, measuring, or measured by the quantity of something rather than its quality.
+: Relating to, measuring, or measured by the quantity of something rather than its quality. This data is expressed in numbers and can be measured. Quantitative data is also referred to as numerical data.
+
+Quantitative data is grouped into two main types; continuous and discrete.
 
 Example
 : The folllowing are all examples of quantitative data
@@ -35,7 +37,9 @@ Example
 
 
 Qualitative:
-: Relating to, measuring, or measured by the quality of something rather than its quantity.
+: Relating to, measuring, or measured by the quality of something rather than its quantity. This data is usually expressed as labels, groups, or categories. **Qualitative** data is also referred to as categorical data.
+
+Qualitative data is grouped into two main types; nominal or ordinal.
 
 Continuous:
 : Suppose $f$ is a function that's defined on a set $X$ of real numbers and $x_o \in X$. The $f$ is **continuous** at $x_o$ if 
@@ -67,7 +71,7 @@ $$
 $$
 
 Discrete: 
-: 
+: Discrete refers to distinct elements. In other words, objects or elements that are unconnected.
 
 Numerical: 
 : 
