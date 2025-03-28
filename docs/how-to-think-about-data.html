@@ -98,6 +98,8 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   }
 }</script>
 
+  <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
 
 </head>
 
@@ -420,12 +422,12 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <li>numerical vs.&nbsp;categorical</li>
 <li>scales: ratio, interval, ordinal, nominal</li>
 <li>dependent vs.&nbsp;independent</li>
-<li>descriptors (predictors) vs, response</li>
+<li>descriptors (predictors) vs.&nbsp;response</li>
 <li>input vs.&nbsp;output</li>
 <li>correlations</li>
 <li>theoretical models (linear, quadratic, etc.)</li>
 </ul>
-<p>Let’s define so of these terms</p>
+<p>Let’s define some of these terms</p>
 <dl>
 <dt>Quantitative:</dt>
 <dd>
@@ -448,8 +450,33 @@ Relating to, measuring, or measured by the quality of something rather than its 
 </dd>
 <dt>Continuous:</dt>
 <dd>
-
+Suppose <span class="math inline">\(f\)</span> is a function that’s defined on a set <span class="math inline">\(X\)</span> of real numbers and <span class="math inline">\(x_o \in X\)</span>. The <span class="math inline">\(f\)</span> is <strong>continuous</strong> at <span class="math inline">\(x_o\)</span> if
 </dd>
+</dl>
+<p><span class="math display">\[
+    \lim_{x \to x_0} f(x) = f(x_0).
+\]</span></p>
+<p>Then we say that <span class="math inline">\(f\)</span> is <strong>continuous on the set</strong> <span class="math inline">\(X\)</span> if it is continuous at each number in <span class="math inline">\(X\)</span>.</p>
+<p>What this definition is saying is that a function has no discontinuous points such as a <em>jump</em> or a <em>break</em> along a given interval.</p>
+<ol type="1">
+<li>Jump discontinuity</li>
+</ol>
+<p><span class="math display">\[
+\lim_{x \to x_0} f(x) \; \text{does not exist}
+\]</span></p>
+<ol start="2" type="1">
+<li>Removable discontinuity</li>
+</ol>
+<p><span class="math display">\[
+\lim_{x \to x_0} f(x) \neq f(x_o)
+\]</span></p>
+<ol start="3" type="1">
+<li>Infinite discontinuity</li>
+</ol>
+<p><span class="math display">\[
+\lim_{x \to x_0} f(x) = \infty
+\]</span></p>
+<dl>
 <dt>Discrete:</dt>
 <dd>
 
@@ -894,12 +921,12 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 <span id="cb1-16"><a href="#cb1-16" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>numerical vs. categorical</span>
 <span id="cb1-17"><a href="#cb1-17" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>scales: ratio, interval, ordinal, nominal</span>
 <span id="cb1-18"><a href="#cb1-18" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>dependent vs. independent</span>
-<span id="cb1-19"><a href="#cb1-19" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>descriptors (predictors) vs, response</span>
+<span id="cb1-19"><a href="#cb1-19" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>descriptors (predictors) vs. response</span>
 <span id="cb1-20"><a href="#cb1-20" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>input vs. output</span>
 <span id="cb1-21"><a href="#cb1-21" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>correlations</span>
 <span id="cb1-22"><a href="#cb1-22" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>theoretical models (linear, quadratic, etc.)</span>
 <span id="cb1-23"><a href="#cb1-23" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-24"><a href="#cb1-24" aria-hidden="true" tabindex="-1"></a>Let's define so of these terms</span>
+<span id="cb1-24"><a href="#cb1-24" aria-hidden="true" tabindex="-1"></a>Let's define some of these terms</span>
 <span id="cb1-25"><a href="#cb1-25" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb1-26"><a href="#cb1-26" aria-hidden="true" tabindex="-1"></a>Quantitative:</span>
 <span id="cb1-27"><a href="#cb1-27" aria-hidden="true" tabindex="-1"></a>: Relating to, measuring, or measured by the quantity of something rather than its quality.</span>
@@ -916,13 +943,39 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 <span id="cb1-38"><a href="#cb1-38" aria-hidden="true" tabindex="-1"></a>: Relating to, measuring, or measured by the quality of something rather than its quantity.</span>
 <span id="cb1-39"><a href="#cb1-39" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb1-40"><a href="#cb1-40" aria-hidden="true" tabindex="-1"></a>Continuous:</span>
-<span id="cb1-41"><a href="#cb1-41" aria-hidden="true" tabindex="-1"></a>: </span>
+<span id="cb1-41"><a href="#cb1-41" aria-hidden="true" tabindex="-1"></a>: Suppose $f$ is a function that's defined on a set $X$ of real numbers and $x_o \in X$. The $f$ is **continuous** at $x_o$ if </span>
 <span id="cb1-42"><a href="#cb1-42" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-43"><a href="#cb1-43" aria-hidden="true" tabindex="-1"></a>Discrete: </span>
-<span id="cb1-44"><a href="#cb1-44" aria-hidden="true" tabindex="-1"></a>: </span>
-<span id="cb1-45"><a href="#cb1-45" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-46"><a href="#cb1-46" aria-hidden="true" tabindex="-1"></a>Numerical: </span>
-<span id="cb1-47"><a href="#cb1-47" aria-hidden="true" tabindex="-1"></a>: </span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<span id="cb1-43"><a href="#cb1-43" aria-hidden="true" tabindex="-1"></a>$$</span>
+<span id="cb1-44"><a href="#cb1-44" aria-hidden="true" tabindex="-1"></a>    \lim_{x \to x_0} f(x) = f(x_0).</span>
+<span id="cb1-45"><a href="#cb1-45" aria-hidden="true" tabindex="-1"></a>$$</span>
+<span id="cb1-46"><a href="#cb1-46" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-47"><a href="#cb1-47" aria-hidden="true" tabindex="-1"></a>Then we say that $f$ is **continuous on the set** $X$ if it is continuous at each number in $X$.</span>
+<span id="cb1-48"><a href="#cb1-48" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-49"><a href="#cb1-49" aria-hidden="true" tabindex="-1"></a>What this definition is saying is that a function has no discontinuous points such as a *jump* or a *break* along a given interval. </span>
+<span id="cb1-50"><a href="#cb1-50" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-51"><a href="#cb1-51" aria-hidden="true" tabindex="-1"></a><span class="ss">1. </span>Jump discontinuity</span>
+<span id="cb1-52"><a href="#cb1-52" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-53"><a href="#cb1-53" aria-hidden="true" tabindex="-1"></a>$$</span>
+<span id="cb1-54"><a href="#cb1-54" aria-hidden="true" tabindex="-1"></a>\lim_{x \to x_0} f(x) \; \text{does not exist}</span>
+<span id="cb1-55"><a href="#cb1-55" aria-hidden="true" tabindex="-1"></a>$$</span>
+<span id="cb1-56"><a href="#cb1-56" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-57"><a href="#cb1-57" aria-hidden="true" tabindex="-1"></a><span class="ss">2. </span>Removable discontinuity </span>
+<span id="cb1-58"><a href="#cb1-58" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-59"><a href="#cb1-59" aria-hidden="true" tabindex="-1"></a>$$</span>
+<span id="cb1-60"><a href="#cb1-60" aria-hidden="true" tabindex="-1"></a>\lim_{x \to x_0} f(x) \neq f(x_o)</span>
+<span id="cb1-61"><a href="#cb1-61" aria-hidden="true" tabindex="-1"></a>$$</span>
+<span id="cb1-62"><a href="#cb1-62" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-63"><a href="#cb1-63" aria-hidden="true" tabindex="-1"></a><span class="ss">3. </span>Infinite discontinuity</span>
+<span id="cb1-64"><a href="#cb1-64" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-65"><a href="#cb1-65" aria-hidden="true" tabindex="-1"></a>$$</span>
+<span id="cb1-66"><a href="#cb1-66" aria-hidden="true" tabindex="-1"></a>\lim_{x \to x_0} f(x) = \infty</span>
+<span id="cb1-67"><a href="#cb1-67" aria-hidden="true" tabindex="-1"></a>$$</span>
+<span id="cb1-68"><a href="#cb1-68" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-69"><a href="#cb1-69" aria-hidden="true" tabindex="-1"></a>Discrete: </span>
+<span id="cb1-70"><a href="#cb1-70" aria-hidden="true" tabindex="-1"></a>: </span>
+<span id="cb1-71"><a href="#cb1-71" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-72"><a href="#cb1-72" aria-hidden="true" tabindex="-1"></a>Numerical: </span>
+<span id="cb1-73"><a href="#cb1-73" aria-hidden="true" tabindex="-1"></a>: </span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div></div></div></div></div>
 </div> <!-- /content -->
 

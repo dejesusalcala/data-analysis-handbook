@@ -16,12 +16,12 @@ In general, we should have the following in our minds when thinking of variables
 - numerical vs. categorical
 - scales: ratio, interval, ordinal, nominal
 - dependent vs. independent
-- descriptors (predictors) vs, response
+- descriptors (predictors) vs. response
 - input vs. output
 - correlations
 - theoretical models (linear, quadratic, etc.)
 
-Let's define so of these terms
+Let's define some of these terms
 
 Quantitative:
 : Relating to, measuring, or measured by the quantity of something rather than its quality.
@@ -38,7 +38,33 @@ Qualitative:
 : Relating to, measuring, or measured by the quality of something rather than its quantity.
 
 Continuous:
-: 
+: Suppose $f$ is a function that's defined on a set $X$ of real numbers and $x_o \in X$. The $f$ is **continuous** at $x_o$ if 
+
+$$
+    \lim_{x \to x_0} f(x) = f(x_0).
+$$
+
+Then we say that $f$ is **continuous on the set** $X$ if it is continuous at each number in $X$.
+
+What this definition is saying is that a function has no discontinuous points such as a *jump* or a *break* along a given interval. 
+
+1. Jump discontinuity
+
+$$
+\lim_{x \to x_0} f(x) \; \text{does not exist}
+$$
+
+2. Removable discontinuity 
+
+$$
+\lim_{x \to x_0} f(x) \neq f(x_o)
+$$
+
+3. Infinite discontinuity
+
+$$
+\lim_{x \to x_0} f(x) = \infty
+$$
 
 Discrete: 
 : 
