@@ -12,7 +12,7 @@ book:
     right:
       - icon: globe2
         href: https://alcalar.com
-        text: personal website
+        text: Personal Website
         target: _blank
       - icon: github
         href: https://github.com/dejesusalcala
