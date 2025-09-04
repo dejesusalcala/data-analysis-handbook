@@ -11,8 +11,8 @@ book:
     search: true
     right:
       - icon: globe2
-        href: https://google.com
-        text: Personal Website
+        href: https://alcalar.com
+        text: personal website
         target: _blank
       - icon: github
         href: https://github.com/dejesusalcala
