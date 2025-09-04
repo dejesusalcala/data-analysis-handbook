@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>Data Analysis Handbook - 18&nbsp; Unsupervised Learning</title>
+<title>Data Analysis Handbook - 19&nbsp; Unsupervised Learning</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -120,7 +120,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
           <div class="collapse navbar-collapse" id="navbarCollapse">
             <ul class="navbar-nav navbar-nav-scroll ms-auto">
   <li class="nav-item">
-    <a class="nav-link" href="https://dejesusalcala.com" rel="" target="_blank"><i class="bi bi-globe2" role="img">
+    <a class="nav-link" href="https://alcalar.com" rel="" target="_blank"><i class="bi bi-globe2" role="img">
 </i> 
  <span class="menu-text">personal website</span></a>
   </li>  
@@ -141,7 +141,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar,#quarto-sidebar-glass" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-      <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./unsupervised-learning.html">PART 6. MACHINE LEARNING</a></li><li class="breadcrumb-item"><a href="./unsupervised-learning.html"><span class="chapter-number">18</span>&nbsp; <span class="chapter-title">Unsupervised Learning</span></a></li></ol></nav>
+      <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./unsupervised-learning.html">PART 6. MACHINE LEARNING</a></li><li class="breadcrumb-item"><a href="./unsupervised-learning.html"><span class="chapter-number">19</span>&nbsp; <span class="chapter-title">Unsupervised Learning</span></a></li></ol></nav>
       <a class="flex-grow-1" role="button" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar,#quarto-sidebar-glass" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
       </a>
       <button type="button" class="btn quarto-search-button" aria-label="" onclick="window.quartoOpenSearch();">
@@ -184,14 +184,20 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./data-perspectives.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">Data Perspectives</span></span></a>
+  <a href="./how-to-think-about-data.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">How to Think About Data</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./data-storage.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">Data Storage</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./how-programs-handle-data.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">How Programs Handle Data</span></span></a>
   </div>
 </li>
       </ul>
@@ -208,13 +214,13 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./intro-to-r.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">Intro to R</span></span></a>
+ <span class="menu-text"><span class="chapter-number">5</span>&nbsp; <span class="chapter-title">Intro to R</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./r-api.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">5</span>&nbsp; <span class="chapter-title">R API’s</span></span></a>
+ <span class="menu-text"><span class="chapter-number">6</span>&nbsp; <span class="chapter-title">R API’s</span></span></a>
   </div>
 </li>
       </ul>
@@ -231,13 +237,13 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./intro-to-python.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">6</span>&nbsp; <span class="chapter-title">Introduction to Python</span></span></a>
+ <span class="menu-text"><span class="chapter-number">7</span>&nbsp; <span class="chapter-title">Introduction to Python</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./python-api.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">7</span>&nbsp; <span class="chapter-title">Python API’s</span></span></a>
+ <span class="menu-text"><span class="chapter-number">8</span>&nbsp; <span class="chapter-title">Python API’s</span></span></a>
   </div>
 </li>
       </ul>
@@ -254,31 +260,31 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./sql.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">8</span>&nbsp; <span class="chapter-title">SQL</span></span></a>
+ <span class="menu-text"><span class="chapter-number">9</span>&nbsp; <span class="chapter-title">SQL</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./advanced-sql.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">9</span>&nbsp; <span class="chapter-title">Advanced SQL</span></span></a>
+ <span class="menu-text"><span class="chapter-number">10</span>&nbsp; <span class="chapter-title">Advanced SQL</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./data-collection.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">10</span>&nbsp; <span class="chapter-title">Data Collection</span></span></a>
+ <span class="menu-text"><span class="chapter-number">11</span>&nbsp; <span class="chapter-title">Data Collection</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./nosql-databases.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">11</span>&nbsp; <span class="chapter-title">NoSQL Databases</span></span></a>
+ <span class="menu-text"><span class="chapter-number">12</span>&nbsp; <span class="chapter-title">NoSQL Databases</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./etl.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">12</span>&nbsp; <span class="chapter-title">Extract, Transform, and Load</span></span></a>
+ <span class="menu-text"><span class="chapter-number">13</span>&nbsp; <span class="chapter-title">Extract, Transform, and Load</span></span></a>
   </div>
 </li>
       </ul>
@@ -295,31 +301,31 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./visualization-basics.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">13</span>&nbsp; <span class="chapter-title">Visualization Basics</span></span></a>
+ <span class="menu-text"><span class="chapter-number">14</span>&nbsp; <span class="chapter-title">Visualization Basics</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./colors.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">14</span>&nbsp; <span class="chapter-title">Colors</span></span></a>
+ <span class="menu-text"><span class="chapter-number">15</span>&nbsp; <span class="chapter-title">Colors</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./interactive-visualizations.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">15</span>&nbsp; <span class="chapter-title">Interactive Visualizations</span></span></a>
+ <span class="menu-text"><span class="chapter-number">16</span>&nbsp; <span class="chapter-title">Interactive Visualizations</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./advanced-interactive-visualizations.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">16</span>&nbsp; <span class="chapter-title">Advanced Interactive Visualizations</span></span></a>
+ <span class="menu-text"><span class="chapter-number">17</span>&nbsp; <span class="chapter-title">Advanced Interactive Visualizations</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./tableau.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">17</span>&nbsp; <span class="chapter-title">Tableau</span></span></a>
+ <span class="menu-text"><span class="chapter-number">18</span>&nbsp; <span class="chapter-title">Tableau</span></span></a>
   </div>
 </li>
       </ul>
@@ -336,19 +342,19 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./unsupervised-learning.html" class="sidebar-item-text sidebar-link active">
- <span class="menu-text"><span class="chapter-number">18</span>&nbsp; <span class="chapter-title">Unsupervised Learning</span></span></a>
+ <span class="menu-text"><span class="chapter-number">19</span>&nbsp; <span class="chapter-title">Unsupervised Learning</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./supervised-learning.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">19</span>&nbsp; <span class="chapter-title">Supervised Learning</span></span></a>
+ <span class="menu-text"><span class="chapter-number">20</span>&nbsp; <span class="chapter-title">Supervised Learning</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./neural-networks-and-deep-learning.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">20</span>&nbsp; <span class="chapter-title">Neural Networks and Deep Learning</span></span></a>
+ <span class="menu-text"><span class="chapter-number">21</span>&nbsp; <span class="chapter-title">Neural Networks and Deep Learning</span></span></a>
   </div>
 </li>
       </ul>
@@ -365,7 +371,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./big-data.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">21</span>&nbsp; <span class="chapter-title">Big Data</span></span></a>
+ <span class="menu-text"><span class="chapter-number">22</span>&nbsp; <span class="chapter-title">Big Data</span></span></a>
   </div>
 </li>
       </ul>
@@ -386,9 +392,9 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
     <h2 id="toc-title">Table of contents</h2>
    
   <ul>
-  <li><a href="#introduction-to-machine-learning" id="toc-introduction-to-machine-learning" class="nav-link active" data-scroll-target="#introduction-to-machine-learning"><span class="header-section-number">18.1</span> Introduction to Machine Learning</a></li>
-  <li><a href="#machine-learning-in-practice" id="toc-machine-learning-in-practice" class="nav-link" data-scroll-target="#machine-learning-in-practice"><span class="header-section-number">18.2</span> Machine Learning in Practice</a></li>
-  <li><a href="#principal-component-analysis-pca" id="toc-principal-component-analysis-pca" class="nav-link" data-scroll-target="#principal-component-analysis-pca"><span class="header-section-number">18.3</span> Principal Component Analysis (PCA)</a></li>
+  <li><a href="#introduction-to-machine-learning" id="toc-introduction-to-machine-learning" class="nav-link active" data-scroll-target="#introduction-to-machine-learning"><span class="header-section-number">19.1</span> Introduction to Machine Learning</a></li>
+  <li><a href="#machine-learning-in-practice" id="toc-machine-learning-in-practice" class="nav-link" data-scroll-target="#machine-learning-in-practice"><span class="header-section-number">19.2</span> Machine Learning in Practice</a></li>
+  <li><a href="#principal-component-analysis-pca" id="toc-principal-component-analysis-pca" class="nav-link" data-scroll-target="#principal-component-analysis-pca"><span class="header-section-number">19.3</span> Principal Component Analysis (PCA)</a></li>
   </ul>
 </nav>
     </div>
@@ -397,7 +403,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<div class="quarto-title-block"><div><h1 class="title"><span class="chapter-number">18</span>&nbsp; <span class="chapter-title">Unsupervised Learning</span></h1><button type="button" class="btn code-tools-button" id="quarto-code-tools-source"><i class="bi"></i> Code</button></div></div>
+<div class="quarto-title-block"><div><h1 class="title"><span class="chapter-number">19</span>&nbsp; <span class="chapter-title">Unsupervised Learning</span></h1><button type="button" class="btn code-tools-button" id="quarto-code-tools-source"><i class="bi"></i> Code</button></div></div>
 </div>
 
 
@@ -415,8 +421,8 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <p>Welcome to your first module about machine learning! Machine learning is a type of artificial intelligence that uses algorithms and statistical models to make decisions or predictions about data. With today’s computing power, machine learning is changing the world faster than ever before.</p>
 <p>This module focuses on a machine learning concept known as unsupervised learning. With unsupervised learning, algorithms use test data to build models that categorize the relationships among data points. For example, when you review an item for purchase on a website, unsupervised learning algorithms might identify related items that people frequently purchase together.</p>
 <p>For using unsupervised learning models, you’ll get introduced to a powerful Python package named <code>scikit-learn</code>.</p>
-<section id="introduction-to-machine-learning" class="level2" data-number="18.1">
-<h2 data-number="18.1" class="anchored" data-anchor-id="introduction-to-machine-learning"><span class="header-section-number">18.1</span> Introduction to Machine Learning</h2>
+<section id="introduction-to-machine-learning" class="level2" data-number="19.1">
+<h2 data-number="19.1" class="anchored" data-anchor-id="introduction-to-machine-learning"><span class="header-section-number">19.1</span> Introduction to Machine Learning</h2>
 <section id="overview" class="level4">
 <h4 class="anchored" data-anchor-id="overview">Overview</h4>
 <p>This lesson will introduce you to machine learning, especially to one approach that we use in this field called unsupervised learning. Often with unsupervised learning, the goal is to let the machine learning help us figure out what groups, patterns, and structures to use for our data. The machine learning can do all that on its own—without us telling it what those groups, patterns, and structures are. Instead, it learns from the data that we give it and figures them out by itself. In this lesson, we’ll learn how to use an unsupervised learning algorithm named K-means to help cluster our data into groups.</p>
@@ -432,8 +438,8 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </ul>
 </section>
 </section>
-<section id="machine-learning-in-practice" class="level2" data-number="18.2">
-<h2 data-number="18.2" class="anchored" data-anchor-id="machine-learning-in-practice"><span class="header-section-number">18.2</span> Machine Learning in Practice</h2>
+<section id="machine-learning-in-practice" class="level2" data-number="19.2">
+<h2 data-number="19.2" class="anchored" data-anchor-id="machine-learning-in-practice"><span class="header-section-number">19.2</span> Machine Learning in Practice</h2>
 <section id="overview-1" class="level4">
 <h4 class="anchored" data-anchor-id="overview-1">Overview</h4>
 <p>This lesson delves more deeply into machine learning by beginning with a recap of the previous lesson and then delving into normalizing, preprocessing, and segmenting data. The goal of the lesson is to enable you to refine your unsupervised learning algorithms and flexibly apply them to various applications.</p>
@@ -450,8 +456,8 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </ul>
 </section>
 </section>
-<section id="principal-component-analysis-pca" class="level2" data-number="18.3">
-<h2 data-number="18.3" class="anchored" data-anchor-id="principal-component-analysis-pca"><span class="header-section-number">18.3</span> Principal Component Analysis (PCA)</h2>
+<section id="principal-component-analysis-pca" class="level2" data-number="19.3">
+<h2 data-number="19.3" class="anchored" data-anchor-id="principal-component-analysis-pca"><span class="header-section-number">19.3</span> Principal Component Analysis (PCA)</h2>
 <section id="overview-2" class="level4">
 <h4 class="anchored" data-anchor-id="overview-2">Overview</h4>
 <p>With machine learning, accuracy isn’t the only performance metric to consider. Clustering algorithms, such as K-means, often suffer from something known as the <strong>curse of dimensionality</strong>—or too many features than we can make sense of in a single model. However, we can often fix this and improve the efficiency of our clustering by applying a technique called principal component analysis (PCA).</p>
@@ -875,12 +881,12 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 <nav class="page-navigation">
   <div class="nav-page nav-page-previous">
       <a href="./tableau.html" class="pagination-link">
-        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-number">17</span>&nbsp; <span class="chapter-title">Tableau</span></span>
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-number">18</span>&nbsp; <span class="chapter-title">Tableau</span></span>
       </a>          
   </div>
   <div class="nav-page nav-page-next">
       <a href="./supervised-learning.html" class="pagination-link">
-        <span class="nav-page-text"><span class="chapter-number">19</span>&nbsp; <span class="chapter-title">Supervised Learning</span></span> <i class="bi bi-arrow-right-short"></i>
+        <span class="nav-page-text"><span class="chapter-number">20</span>&nbsp; <span class="chapter-title">Supervised Learning</span></span> <i class="bi bi-arrow-right-short"></i>
       </a>
   </div>
 </nav><div class="modal fade" id="quarto-embedded-source-code-modal" tabindex="-1" aria-labelledby="quarto-embedded-source-code-modal-label" aria-hidden="true"><div class="modal-dialog modal-dialog-scrollable"><div class="modal-content"><div class="modal-header"><h5 class="modal-title" id="quarto-embedded-source-code-modal-label">Source Code</h5><button class="btn-close" data-bs-dismiss="modal"></button></div><div class="modal-body"><div class="">
