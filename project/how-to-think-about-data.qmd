@@ -42,7 +42,7 @@ Qualitative:
 **Qualitative** data is grouped into two main types; nominal or ordinal.
 
 Continuous:
-: Suppose $f$ is a function that's defined on a set $X$ of real numbers and $x_o \in X$. The $f$ is **continuous** at $x_o$ if 
+: Suppose $f$ is a function that's defined on a set $X$ of real numbers and $x_o \in X$. Then $f$ is **continuous** at $x_o$ if 
 
 $$
     \lim_{x \to x_0} f(x) = f(x_0).
