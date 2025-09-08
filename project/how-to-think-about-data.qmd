@@ -13,8 +13,7 @@ In general, we should have the following in our minds when thinking of variables
 
 - quantitative (numerical) vs. qualitative (categorical)
 - continuous vs. discrete
-- ordinal vs nominal
-- scales: ratio, interval
+- scales: nominal, ordinal, interval, ratio
 - dependent vs. independent
 - descriptors (predictors) vs. response
 - input vs. output
@@ -71,7 +70,18 @@ $$
 $$
 
 Discrete: 
-: A numerical type of data that refers to distinct elements. In other words, objects or elements that are unconnected. Discrete elements almost always *finite*.
+: A numerical type of data that refers to distinct elements. In other words, objects or elements that are unconnected. **Discrete** elements are almost always *finite*.
+
+There are 4 main types of scales of measurement with how variables are defined and quantified; nominal, ordinal, interval, ratio
+
+Nominal:
+: A categorical type of data that represents a group or category that does not have any order or ranking.
+
+Example:
+: The following are examples of nominal data
+
+- Hair color (black, brown, blonde, etc.)
+- Vehicle types (SUV, coupe, sedan, crossovers, etc.)
 
 Ordinal:
 : A categorical type of data that represents a group or category that does have an order or ranking.
@@ -82,11 +92,5 @@ Example:
 - Education level (high school, bacehelor's, master's, etc.)
 - Socioeconomic status (low, middle, upper)
 
-Nominal:
-: A categorical type of data that represents a group or category that does not have any order or ranking.
-
-Example:
-: The following are examples of nominal data
-
-- Hair color (black, brown, blonde, etc.)
-- Vehicle types (SUV, coupe, sedan, crossovers, etc.)
+Interval:
+: **Interval** data is a type of quantitative data that represents measurements with a consistent scale but without a true zero point. The differences between the values are meaningful, but the data lacks a meaningful absulote zero. That is, it doesn't make sense to say that something is "twice as much" as something else.
