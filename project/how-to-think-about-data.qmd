@@ -94,3 +94,10 @@ Example:
 
 Interval:
 : **Interval** data is a type of quantitative data that represents measurements with a consistent scale but without a true zero point. The differences between the values are meaningful, but the data lacks a meaningful absulote zero. That is, it doesn't make sense to say that something is "twice as much" as something else.
+
+Example:
+: The following are some examples interval data
+
+- **Temperature:** the difference between $10\textcelsius$ and $25\textcelsius$ is the same as $-5\textcelsius$ and $10\textcelsius$. Notice that there's a lack of a true zero point because $0\textcelsius$ doesn't reperesent a lack of temperature.
+
+- **Time of day:**
