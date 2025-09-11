@@ -100,4 +100,12 @@ Example:
 
 - **Temperature:** the difference between $10\textcelsius$ and $25\textcelsius$ is the same as $-5\textcelsius$ and $10\textcelsius$. Notice that there's a lack of a true zero point because $0\textcelsius$ doesn't reperesent a lack of temperature.
 
-- **Time of day:**
+- **Time of day:** there's also an equal interval between the times and on the 24 hour clock 00:00 does not represent a lack of time
+
+
+| Scale | Measure Property | Mathematical Operators | Central Tendency |
+| --- | --- | --- | --- |
+| Nominal | Named | Equals | Mode |
+| Ordinal | Named, Order | Equals, Greater/less than | Mean, Median |
+| Interval | Named, Order, Equal interval | Equals, Greater/less than, +, - | Mean, Median, Deviation |
+| Ratio | Named, Order, Equal interval, Absolute zero | Equals, Greater/less than, +, -, *, / | Geometric mean, coefficient of variation |
