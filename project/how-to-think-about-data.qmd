@@ -5,7 +5,9 @@ format: html
 
 When a data analyst thinks about data they will likely view that data in a table format with some visualization of that data 
 
-![](../images/output-images/scatter-plot-1.png)
+
+
+<center>![Plot](../images/output-images/scatter-plot-1.png){width="50%"}</center>
 
 A data analyst likely thinks of mathematical and statistical abstractions. This may involve putting things in terms of relationships or associations, perhaps theoretical mathematical models that take various forms; **linear**, **quadratic**, **non-parametric**.
 
@@ -93,7 +95,7 @@ Example:
 - Socioeconomic status (low, middle, upper)
 
 Interval:
-: **Interval** data is a type of quantitative data that represents measurements with a consistent scale but without a true zero point. The differences between the values are meaningful, but the data lacks a meaningful absulote zero. That is, it doesn't make sense to say that something is "twice as much" as something else.
+: **Interval** data is a type of quantitative data that represents measurements with a consistent scale but without an absolute zero point. The differences between the values are meaningful, but the data lacks a meaningful absulote zero. That is, it doesn't make sense to say that something is "twice as much" as something else.
 
 Example:
 : The following are some examples interval data
@@ -102,13 +104,10 @@ Example:
 
 - **Time of day:** there's also an equal interval between the times and on the 24 hour clock 00:00 does not represent a lack of time
 
+Ratio:
+: **Ratio** data is a type of quantitative data that represents measurements with a consistent scale and it also contains an absolute zero point. This absolute zero point allows for meaningful calculations of proportions and ratios between measurements.
 
-| Scale | Measure Property | Mathematical Operators | Central Tendency |
-| --- | --- | --- | --- |
-| Nominal | Named | Equals | Mode |
-| Ordinal | Named, Order | Equals, Greater/less than | Mean, Median |
-| Interval | Named, Order, Equal interval | Equals, Greater/less than, +, - | Mean, Median, Deviation |
-| Ratio | Named, Order, Equal interval, Absolute zero | Equals, Greater/less than, +, -, *, / | Geometric mean, coefficient of variation |
+**Ratio** data allows for the most comprehensive statistical analysis when compared to the other types of data due to the ability to perform mathematical operations such as multiplication and division.
 
 | Property: | Nominal | Ordinal | Interval | Ratio |
 | :--- | :---: | :---: | :---: | :---: |
@@ -117,13 +116,20 @@ Example:
 | Frequency | $\checkmark$ | $\checkmark$ | $\checkmark$ | $\checkmark$ |
 | Mode | $\checkmark$ | $\checkmark$ | $\checkmark$ | $\checkmark$ |
 | **Order** | | $\checkmark$ | $\checkmark$ | $\checkmark$ |
-| Greater/less than (>, <) | | $\checkmark$ | $\checkmark$ | $\checkmark$ |
+| Greater/less than | | $\checkmark$ | $\checkmark$ | $\checkmark$ |
 | Median | | $\checkmark$ | $\checkmark$ | $\checkmark$ |
-| **Equal interval** | | | $\checkmark$ | $\checkmark$ |
-| Add, Subtract (+,- )| | | $\checkmark$ | $\checkmark$ |
+| **Equal interval** | | | $\checkmark$ | $\checkmark$ | $\checkmark$ |
+| Add, Subtract | | | $\checkmark$ | $\checkmark$ |
 | Arithmetic mean | | | $\checkmark$ | $\checkmark$ |
 | Deviation | | | $\checkmark$ | $\checkmark$ |
 | **Absolute zero** | | | | $\checkmark$ |
-| Multiply, divide (*, /) | | | | $\checkmark$ | 
+| Multiply, divide | | | | $\checkmark$ | 
 | Geometric mean | | | | $\checkmark$ |
 | Coefficient of variation | | | | $\checkmark$ |
+
+Independant:
+: An **independent** variable is the factor in an experiment that the researcher intentionally manipulates or changes to observe its effect. It's considered the cause or reason for an observed effect. Any changes in the dependent variable are hypothesized to be directly caused by variations in the independent variable.
+
+Dependent:
+
+![](../images/output-images/scatter-plot-1.png)
