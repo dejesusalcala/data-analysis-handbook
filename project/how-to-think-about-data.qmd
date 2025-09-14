@@ -128,8 +128,17 @@ Ratio:
 | Coefficient of variation | | | | $\checkmark$ |
 
 Independant:
-: An **independent** variable is the factor in an experiment that the researcher intentionally manipulates or changes to observe its effect. It's considered the cause or reason for an observed effect. Any changes in the dependent variable are hypothesized to be directly caused by variations in the independent variable.
+: An **independent** variable is the factor in an experiment that the researcher intentionally manipulates or changes to observe its effect. It's considered the cause or reason for an observed effect. Any changes in the dependent variable are hypothesized to be directly caused by variations in the **independent** variable. Also called:
+
+- Input variable
+- Exposure variable
+- Explanatory or Manipulated variable
 
 Dependent:
+: The **dependent** variable is what the researcher measures to see if it changes as a result of the manipulation of the independent variable. It represents the outcome or effect in an experiment. Changes in the **dependent** variable are considered to be **dependent** on the variations in the independent variable. Also called:
+
+- Output variable
+- Outcome variable
+- Response variable
 
 ![](../images/output-images/scatter-plot-1.png)
