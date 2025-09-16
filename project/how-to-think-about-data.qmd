@@ -142,3 +142,7 @@ Dependent:
 - Response variable
 
 ![](../images/output-images/scatter-plot-1.png)
+
+
+Correlation:
+: **Correlation** is a statistical measure that describes the extent to which two variables are linearly related, that is they change together at a constant rate. Correlation is a common tool that is used to describe relationships without necessarily making a statement about cause and effect.
