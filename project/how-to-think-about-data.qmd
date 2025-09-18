@@ -7,7 +7,7 @@ When a data analyst thinks about data they will likely view that data in a table
 
 
 
-<center>![Plot](../images/output-images/scatter-plot-1.png){width="50%"}</center>
+![Plot](/project/images/output-images/scatter-plot-1.png){width="50%"}
 
 A data analyst likely thinks of mathematical and statistical abstractions. This may involve putting things in terms of relationships or associations, perhaps theoretical mathematical models that take various forms; **linear**, **quadratic**, **non-parametric**.
 
@@ -140,8 +140,6 @@ Dependent:
 - Output variable
 - Outcome variable
 - Response variable
-
-![](../images/output-images/scatter-plot-1.png)
 
 
 Correlation:
