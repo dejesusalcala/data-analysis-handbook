@@ -14,7 +14,7 @@ View(mtcars)
 
 ```{r}
 Plot1 = ggplot(data = mtcars, aes(x = hp, y = mpg)) +
-  geom_point(size = 5,
+  geom_point(size = 6,
              color = "red",
              alpha = .6) +
   labs(title = "Relation Between Horsepower & Miles Per Gallon",

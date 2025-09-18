@@ -146,7 +146,7 @@ Independant
 - Exposure variable
 - Explanatory or Manipulated variable
 
-Dependent:
+Dependent
 : The **dependent** variable is what the researcher measures to see if it changes as a result of the manipulation of the independent variable. It represents the outcome or effect in an experiment. Changes in the **dependent** variable are considered to be **dependent** on the variations in the independent variable. Also called:
 
 - Output variable
@@ -154,6 +154,6 @@ Dependent:
 - Response variable
 
 
-Correlation:
+Correlation
 : **Correlation** is a statistical measure that describes the extent to which two variables are linearly related, that is they change together at a constant rate. Correlation is a common tool that is used to describe relationships without necessarily making a statement about cause and effect.
 

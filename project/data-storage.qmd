@@ -3,4 +3,12 @@ title: "Data Storage"
 format: html
 ---
 
+In this chapter, we describe some of the common ways in which data is stored, under what format, and with what structure.
 
+#### Learning Objectives
+
+- Get exposed to a handful of common file-formats for data tables.
+- Explain the difference between field delimeter files, and fixed width files.
+- List three of the most common types of delimeters for delimited-based files.
+
+## Data Tables
