@@ -438,6 +438,6 @@
     "href": "data-storage.html#data-tables",
     "title": "3  Data Storage",
     "section": "3.1 Data Tables",
-    "text": "3.1 Data Tables"
+    "text": "3.1 Data Tables\nMost data in tabular form can be stored in spreadsheets (.xls, x.lxs), but it’s best to store in a text file (.txt,.csv).\nTables generally have the following format"
   }
 ]

@@ -12,3 +12,9 @@ In this chapter, we describe some of the common ways in which data is stored, un
 - List three of the most common types of delimeters for delimited-based files.
 
 ## Data Tables
+
+Most data in tabular form can be stored in **spreadsheets** (*.xls*, *x.lxs*), but it's best to store in a **text** file (*.txt*,*.csv*).
+
+Tables generally have the following format
+
+![](/images/screenshots/data-table.jpg){width="85%" fig-align="center"}
