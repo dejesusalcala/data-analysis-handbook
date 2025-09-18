@@ -1,22 +1,35 @@
 ---
 title: "How to Think About Data"
-format: html
+format: 
+    html:
+        toc: true
+        toc-depth: 4 
+
 ---
 
-When a data analyst thinks about data they will likely view that data in a table format with some visualization of that data 
-
-
-
-![](/images/output-images/scatter-plot-1.png){width="100%"}
+## Introduction
 
 A data analyst likely thinks of mathematical and statistical abstractions. This may involve putting things in terms of relationships or associations, perhaps theoretical mathematical models that take various forms; **linear**, **quadratic**, **non-parametric**.
 
+Even before any analysis has begun when a data analyst thinks about data in general they will likely view that data in a table format with some visualization of that. 
+
+- - -
+
+Example:
+: Suppose we have some data about cars and we want to analyze their horsepower and miles per gallon. An analyst's view of this data should be some scatterplot of the following format   
+
+![](/images/output-images/scatter-plot-1.png){width="85%" fig-align="center"}
+
+- - -
+
+## Referring to Variables in Data
+
 In general, we should have the following in our minds when thinking of variables in our data
 
-- quantitative (numerical) vs. qualitative (categorical)
+- qualitative (categorical) vs quantitative (numerical)
 - continuous vs. discrete
-- scales: nominal, ordinal, interval, ratio
-- dependent vs. independent
+- scales of measurement: nominal, ordinal, interval, ratio
+- independent vs. dependent
 - descriptors (predictors) vs. response
 - input vs. output
 - correlations
@@ -24,23 +37,23 @@ In general, we should have the following in our minds when thinking of variables
 
 Let's define some of these terms
 
-Quantitative:
-: Relating to, measuring, or measured by the quantity of something rather than its quality. This data is expressed in numbers and can be measured. **Quantitative** data is also referred to as **numerical** data.
-
-**Quantitative** data is grouped into two main types; **continuous** and **discrete**.
-
-Example
-: The folllowing are all examples of quantitative data
-
-- weight in pounds
-- length in centimeters
-- dollar value of a company's stocks
-
+### Qualitative vs Quantitative
 
 Qualitative:
 : Relating to, measuring, or measured by the quality of something rather than its quantity. This data is usually expressed as labels, groups, or categories. **Qualitative** data is also referred to as **categorical** data.
 
 **Qualitative** data is grouped into two main types; nominal or ordinal.
+
+Quantitative
+: Relating to, measuring, or measured by the quantity of something rather than its quality. This data is expressed in numbers and can be measured. **Quantitative** data is also referred to as **numerical** data.
+
+**Quantitative** data is grouped into two main types; **continuous** and **discrete**. The folllowing are all examples of quantitative data
+
+- weight in pounds
+- length in centimeters
+- dollar value of a company's stocks
+
+### Continuous vs Discrete
 
 Continuous:
 : Suppose $f$ is a function that's defined on a set $X$ of real numbers and $x_o \in X$. Then $f$ is **continuous** at $x_o$ if 
@@ -71,43 +84,40 @@ $$
 \lim_{x \to x_0} f(x) = \infty
 $$
 
-Discrete: 
+Discrete 
 : A numerical type of data that refers to distinct elements. In other words, objects or elements that are unconnected. **Discrete** elements are almost always *finite*.
+
+### Scales of Measurement
 
 There are 4 main types of scales of measurement with how variables are defined and quantified; nominal, ordinal, interval, ratio
 
-Nominal:
-: A categorical type of data that represents a group or category that does not have any order or ranking.
-
-Example:
-: The following are examples of nominal data
+Nominal
+: A categorical type of data that represents a group or category that does not have any order or ranking. The following are examples of nominal data
 
 - Hair color (black, brown, blonde, etc.)
 - Vehicle types (SUV, coupe, sedan, crossovers, etc.)
 
-Ordinal:
-: A categorical type of data that represents a group or category that does have an order or ranking.
 
-Example:
-: The following are some examples of ordinal data
+Ordinal:
+: A categorical type of data that represents a group or category that does have an order or ranking. The following are some examples of ordinal data
 
 - Education level (high school, bacehelor's, master's, etc.)
 - Socioeconomic status (low, middle, upper)
 
-Interval:
-: **Interval** data is a type of quantitative data that represents measurements with a consistent scale but without an absolute zero point. The differences between the values are meaningful, but the data lacks a meaningful absulote zero. That is, it doesn't make sense to say that something is "twice as much" as something else.
 
-Example:
-: The following are some examples interval data
+Interval
+: **Interval** data is a type of quantitative data that represents measurements with a consistent scale but without an absolute zero point. The differences between the values are meaningful, but the data lacks a meaningful absulote zero. That is, it doesn't make sense to say that something is "twice as much" as something else. The following are some examples interval data
 
 - **Temperature:** the difference between $10\textcelsius$ and $25\textcelsius$ is the same as $-5\textcelsius$ and $10\textcelsius$. Notice that there's a lack of a true zero point because $0\textcelsius$ doesn't reperesent a lack of temperature.
 
 - **Time of day:** there's also an equal interval between the times and on the 24 hour clock 00:00 does not represent a lack of time
 
-Ratio:
+Ratio
 : **Ratio** data is a type of quantitative data that represents measurements with a consistent scale and it also contains an absolute zero point. This absolute zero point allows for meaningful calculations of proportions and ratios between measurements.
 
 **Ratio** data allows for the most comprehensive statistical analysis when compared to the other types of data due to the ability to perform mathematical operations such as multiplication and division.
+
+#### Table 
 
 | Property: | Nominal | Ordinal | Interval | Ratio |
 | :--- | :---: | :---: | :---: | :---: |
@@ -127,7 +137,9 @@ Ratio:
 | Geometric mean | | | | $\checkmark$ |
 | Coefficient of variation | | | | $\checkmark$ |
 
-Independant:
+### Independent vs Dependent
+
+Independant
 : An **independent** variable is the factor in an experiment that the researcher intentionally manipulates or changes to observe its effect. It's considered the cause or reason for an observed effect. Any changes in the dependent variable are hypothesized to be directly caused by variations in the **independent** variable. Also called:
 
 - Input variable
