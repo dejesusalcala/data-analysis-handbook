@@ -13,8 +13,25 @@ In this chapter, we describe some of the common ways in which data is stored, un
 
 ## Data Tables
 
-Most data in tabular form can be stored in **spreadsheets** (*.xls*, *x.lxs*), but it's best to store in a **text** file (*.txt*,*.csv*).
+Data is commonly dislayed in tabular form. This tabular form means that there are rows and columns to display data.
 
-Tables generally have the following format
+In rows items are arranged from left to right.
+
+In columns items are are arranged from top to bottom.
+
+Therefore tables generally have the following format
 
 ![](/images/screenshots/data-table.jpg){width="85%" fig-align="center"}
+
+Generally speaking the columns in a table represent **variables** of the dataset while the rows contain the **observations** or **attributes** for each record or entity. When data is stored like this it allows for the following:
+
+- each row typically represents a single comlete record or entity
+- rows allow us to compare different data points related to the same entity
+- each column represents a specific characteristic, attribute, or data field
+- columns allow for the analysis of a single data field across all records
+
+Most data in tabular form can be stored in **spreadsheets** (*.xls*, *x.lxs*), but it's best to store in a **text** file (*.txt*,*.csv*).
+
+The difference between rows and columns? For databases, a row usually describes the properties or fields of a single entity. A column will represent a field that is common to all entities, not just one.
+
+## Field Delimeters

@@ -393,6 +393,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
    
   <ul>
   <li><a href="#data-tables" id="toc-data-tables" class="nav-link active" data-scroll-target="#data-tables"><span class="header-section-number">3.1</span> Data Tables</a></li>
+  <li><a href="#field-delimeters" id="toc-field-delimeters" class="nav-link" data-scroll-target="#field-delimeters"><span class="header-section-number">3.2</span> Field Delimeters</a></li>
   </ul>
 </nav>
     </div>
@@ -427,13 +428,27 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </section>
 <section id="data-tables" class="level2" data-number="3.1">
 <h2 data-number="3.1" class="anchored" data-anchor-id="data-tables"><span class="header-section-number">3.1</span> Data Tables</h2>
-<p>Most data in tabular form can be stored in <strong>spreadsheets</strong> (<em>.xls</em>, <em>x.lxs</em>), but it’s best to store in a <strong>text</strong> file (<em>.txt</em>,<em>.csv</em>).</p>
-<p>Tables generally have the following format</p>
+<p>Data is commonly dislayed in tabular form. This tabular form means that there are rows and columns to display data.</p>
+<p>In rows items are arranged from left to right.</p>
+<p>In columns items are are arranged from top to bottom.</p>
+<p>Therefore tables generally have the following format</p>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
 <p><img src="./images/screenshots/data-table.jpg" class="img-fluid figure-img" style="width:85.0%"></p>
 </figure>
 </div>
+<p>Generally speaking the columns in a table represent <strong>variables</strong> of the dataset while the rows contain the <strong>observations</strong> or <strong>attributes</strong> for each record or entity. When data is stored like this it allows for the following:</p>
+<ul>
+<li>each row typically represents a single comlete record or entity</li>
+<li>rows allow us to compare different data points related to the same entity</li>
+<li>each column represents a specific characteristic, attribute, or data field</li>
+<li>columns allow for the analysis of a single data field across all records</li>
+</ul>
+<p>Most data in tabular form can be stored in <strong>spreadsheets</strong> (<em>.xls</em>, <em>x.lxs</em>), but it’s best to store in a <strong>text</strong> file (<em>.txt</em>,<em>.csv</em>).</p>
+<p>The difference between rows and columns? For databases, a row usually describes the properties or fields of a single entity. A column will represent a field that is common to all entities, not just one.</p>
+</section>
+<section id="field-delimeters" class="level2" data-number="3.2">
+<h2 data-number="3.2" class="anchored" data-anchor-id="field-delimeters"><span class="header-section-number">3.2</span> Field Delimeters</h2>
 
 
 <!-- -->
@@ -867,11 +882,28 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 <span id="cb1-13"><a href="#cb1-13" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb1-14"><a href="#cb1-14" aria-hidden="true" tabindex="-1"></a><span class="fu">## Data Tables</span></span>
 <span id="cb1-15"><a href="#cb1-15" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-16"><a href="#cb1-16" aria-hidden="true" tabindex="-1"></a>Most data in tabular form can be stored in **spreadsheets** (*.xls*, *x.lxs*), but it's best to store in a **text** file (*.txt*,*.csv*).</span>
+<span id="cb1-16"><a href="#cb1-16" aria-hidden="true" tabindex="-1"></a>Data is commonly dislayed in tabular form. This tabular form means that there are rows and columns to display data.</span>
 <span id="cb1-17"><a href="#cb1-17" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-18"><a href="#cb1-18" aria-hidden="true" tabindex="-1"></a>Tables generally have the following format</span>
+<span id="cb1-18"><a href="#cb1-18" aria-hidden="true" tabindex="-1"></a>In rows items are arranged from left to right.</span>
 <span id="cb1-19"><a href="#cb1-19" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-20"><a href="#cb1-20" aria-hidden="true" tabindex="-1"></a><span class="al">![](/images/screenshots/data-table.jpg)</span>{width="85%" fig-align="center"}</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<span id="cb1-20"><a href="#cb1-20" aria-hidden="true" tabindex="-1"></a>In columns items are are arranged from top to bottom.</span>
+<span id="cb1-21"><a href="#cb1-21" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-22"><a href="#cb1-22" aria-hidden="true" tabindex="-1"></a>Therefore tables generally have the following format</span>
+<span id="cb1-23"><a href="#cb1-23" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-24"><a href="#cb1-24" aria-hidden="true" tabindex="-1"></a><span class="al">![](/images/screenshots/data-table.jpg)</span>{width="85%" fig-align="center"}</span>
+<span id="cb1-25"><a href="#cb1-25" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-26"><a href="#cb1-26" aria-hidden="true" tabindex="-1"></a>Generally speaking the columns in a table represent **variables** of the dataset while the rows contain the **observations** or **attributes** for each record or entity. When data is stored like this it allows for the following:</span>
+<span id="cb1-27"><a href="#cb1-27" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-28"><a href="#cb1-28" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>each row typically represents a single comlete record or entity</span>
+<span id="cb1-29"><a href="#cb1-29" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>rows allow us to compare different data points related to the same entity</span>
+<span id="cb1-30"><a href="#cb1-30" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>each column represents a specific characteristic, attribute, or data field</span>
+<span id="cb1-31"><a href="#cb1-31" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>columns allow for the analysis of a single data field across all records</span>
+<span id="cb1-32"><a href="#cb1-32" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-33"><a href="#cb1-33" aria-hidden="true" tabindex="-1"></a>Most data in tabular form can be stored in **spreadsheets** (*.xls*, *x.lxs*), but it's best to store in a **text** file (*.txt*,*.csv*).</span>
+<span id="cb1-34"><a href="#cb1-34" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-35"><a href="#cb1-35" aria-hidden="true" tabindex="-1"></a>The difference between rows and columns? For databases, a row usually describes the properties or fields of a single entity. A column will represent a field that is common to all entities, not just one.</span>
+<span id="cb1-36"><a href="#cb1-36" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-37"><a href="#cb1-37" aria-hidden="true" tabindex="-1"></a><span class="fu">## Field Delimeters</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div></div></div></div></div>
 </div> <!-- /content -->
 

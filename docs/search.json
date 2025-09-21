@@ -438,6 +438,13 @@
     "href": "data-storage.html#data-tables",
     "title": "3  Data Storage",
     "section": "3.1 Data Tables",
-    "text": "3.1 Data Tables\nMost data in tabular form can be stored in spreadsheets (.xls, x.lxs), but it’s best to store in a text file (.txt,.csv).\nTables generally have the following format"
+    "text": "3.1 Data Tables\nData is commonly dislayed in tabular form. This tabular form means that there are rows and columns to display data.\nIn rows items are arranged from left to right.\nIn columns items are are arranged from top to bottom.\nTherefore tables generally have the following format\n\n\n\n\n\nGenerally speaking the columns in a table represent variables of the dataset while the rows contain the observations or attributes for each record or entity. When data is stored like this it allows for the following:\n\neach row typically represents a single comlete record or entity\nrows allow us to compare different data points related to the same entity\neach column represents a specific characteristic, attribute, or data field\ncolumns allow for the analysis of a single data field across all records\n\nMost data in tabular form can be stored in spreadsheets (.xls, x.lxs), but it’s best to store in a text file (.txt,.csv).\nThe difference between rows and columns? For databases, a row usually describes the properties or fields of a single entity. A column will represent a field that is common to all entities, not just one."
+  },
+  {
+    "objectID": "data-storage.html#field-delimeters",
+    "href": "data-storage.html#field-delimeters",
+    "title": "3  Data Storage",
+    "section": "3.2 Field Delimeters",
+    "text": "3.2 Field Delimeters"
   }
 ]
