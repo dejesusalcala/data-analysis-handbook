@@ -20,6 +20,8 @@ Example:
 
 ![](/images/output-images/scatter-plot-1.png){width="85%" fig-align="center"}
 
+Here, each point represents a specific car with its horspower and mpg. Even before any analysis begins, an analyst is likely viewing the relationship between horsepower and mpg in this way.
+
 - - -
 
 ## Referring to Variables in Data
