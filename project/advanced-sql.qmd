@@ -34,7 +34,7 @@ To help us begin to connect to a database we will use the function `create_engin
 ```{python}
 from sqlalchemy import create_engine, text
 
-# Path too sqlite file
+# Path to sqlite file
 database_path = "../data/sql-files/Census_Data.sqlite"
 
 # Create engine to talk to the database
@@ -43,25 +43,30 @@ engine = create_engine(f"sqlite:///{database_path}")
 
 The `engine` above creates a `Dialect` object that is tailored towards SQLite and `Pool` object that will establish a DBAPI connection. So far we have **not** established the connection to the database. The connection happens when we make a function call to `engine.connect()` or `engine.begin()`.
 
-First, let's use `engine.execute()` to perform a SQL query. Inside of `engine.execute()` we can pass a SQL query in the form of a string
+First, let's use `engine.connect()` to perform a SQL query. Inside of `engine.conntect()` we can pass a SQL query in the form of a string
 
 ```{python}
-# Query the the first five records the databse
-data = engine.execute("SELECT * FROM Census_Data LIMIT 5")
-
-# Print the results
-for i in data:
-    print(i)
+# Query first 5 records in the the Database
+with engine.connect() as connection:
+    # Append LIMIT directly to your SQL string
+    query = text("SELECT * FROM Census_Data LIMIT 5")
+    result = connection.execute(query)
+    
+    for row in result:
+        print(row)
 ```
+
 
 Now let's establish a connection to get our data and we can also use the `pandas` library to work with our data
 
 ```{python}
 import pandas as pd
 
-connection = engine.connect()
+query_data = text("SELECT * FROM Census_Data")
 
-df = pd.read_sql("SELECT * FROM Census_Data", connection)
+with engine.connect() as connection:
+
+    df = pd.read_sql(query_data, connection)
 
 df.head()
 ```
@@ -75,7 +80,7 @@ Classes are essentially blueprints for Python objects; they allow developers to 
 For example we can have the following
 
 ```{python}
-from sqlalchemy.ext.declarative import declarative_base
+from sqlalchemy.orm import declarative_base
 from sqlalchemy import Column, Integer, String, Float
 
 # Sets an object to use the default declarative base in SQLAlchemy
