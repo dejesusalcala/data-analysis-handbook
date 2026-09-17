@@ -30,7 +30,7 @@ By the end of this lesson, you will be able to:
 
 ### Variables, Objects, Arrays
 
-Javascript variables are are assigned with the keyword `let`
+Javascript variables are assigned with the keyword `let`
 
 ```{python}
 %%javascript
