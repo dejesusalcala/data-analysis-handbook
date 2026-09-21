@@ -10,6 +10,8 @@ In this chapter, we describe some of the common ways in which data is stored, un
 - Get exposed to a handful of common file-formats for data tables.
 - Explain the difference between field delimeter files, and fixed width files.
 - List three of the most common types of delimeters for delimited-based files.
+- Discuss at least three spreadsheet  data organization recomendations
+- Describe what a data dictionary is ("metadata", "code book")
 
 ## Data Tables
 
@@ -30,8 +32,11 @@ Generally speaking the columns in a table represent **variables** of the dataset
 - each column represents a specific characteristic, attribute, or data field
 - columns allow for the analysis of a single data field across all records
 
-Most data in tabular form can be stored in **spreadsheets** (*.xls*, *x.lxs*), but it's best to store in a **text** file (*.txt*,*.csv*).
-
 The difference between rows and columns? For databases, a row usually describes the properties or fields of a single entity. A column will represent a field that is common to all entities, not just one.
 
-## Field Delimeters
+Most data in tabular form can be stored in **spreadsheets** (*.xls*, *x.lxs*), but it's best to store in a **text** file (*.txt*, *.csv*, etc). In these text files data is separated by *field delimeters*.
+
+Field Delimiters
+: A **field delimeter** is a specific character that's used to separate data values in a text file
+
+## Data Organization
